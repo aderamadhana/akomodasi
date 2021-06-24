@@ -1,13 +1,12 @@
 <?php
 
-class Login_model extends CI_model
+class LoginModel extends CI_model
 {
-    function login($nipd,$pass)
+    function aksiLogin($username, $password)
     {   
-        $this->db->where('nipd',$nipd);
-        $this->db->where('password',$pass);
-        $result = $this->db->get('user_siswa',1);
-        return $result;
+        $this->db->where('username',$username);
+        $this->db->where('password',$password);
+        return $this->db->get('user');
     }
 
     function validate($nipd,$nm_ibu){

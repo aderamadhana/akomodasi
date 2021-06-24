@@ -9,10 +9,10 @@ class Admin extends CI_Controller
         $this->load->model('Guru_model');
         $this->load->model('Kuesioner_model');
         $this->load->model('Siswa_model');
-        $this->load->model('login_model');
+        $this->load->model('LoginModel');
         $this->load->library('form_validation');
         
-        if($this->login_model->is_role() != "1"){
+        if($this->session->userdata('role') != 1){
             redirect("forbidden/");
         }
     }
@@ -24,11 +24,11 @@ class Admin extends CI_Controller
 // Dashboard
     public function surveiGuru()
     {
-        $data['page']='surveiGuru';
-        $data['jml'] = $this->Kuesioner_model->getJumlahKuesionerGuru();
-        $data['survei'] = $this->Kuesioner_model->getAllSurveiGuru();
-        $this->load->view('templates/header', $data);
-        $this->load->view('admin/surveiGuru',$data);  
+        // $data['page']='surveiGuru';
+        // $data['jml'] = $this->Kuesioner_model->getJumlahKuesionerGuru();
+        // $data['survei'] = $this->Kuesioner_model->getAllSurveiGuru();
+        $this->load->view('templates/header');
+        $this->load->view('admin/surveiGuru');  
         $this->load->view('templates/footer');  
     }
 

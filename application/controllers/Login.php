@@ -4,73 +4,45 @@ class Login extends CI_controller
 {
     function __construct(){
 		parent::__construct();
-		$this->load->model('login_model');
-        $this->load->library('form_validation');
+		$this->load->model('LoginModel');
 	}
 
     public function login()
 	{
-		$nipd    = $this->input->post('nipd',TRUE);
-		$pass = md5($this->input->post('password',TRUE));
-		$validate = $this->login_model->login($nipd,$pass);
-		if($validate->num_rows() > 0){
-			$data  = $validate->row_array();
-			$nipd  = $data['nipd'];
-			$kelas  = $data['id_kelas'];
-			$nama  = $data['nama'];
-			$role = $data['role'];
-			$sesdata = array(
-				'nama'  => $nama,
-				'id_kelas'  => $kelas,
-				'nipd'     => $nipd,
-				'role'    => $role,
-				'logged_in' => TRUE
-			);
-			$this->session->set_userdata($sesdata);
-			if($role==2){
-				redirect('siswa/');
-			}else{
-				redirect('admin/');}
-			
-		}else{
-			echo $this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert"><b>NIPD</b> dan <b>Password</b> tidak cocok</div>');
-			redirect('welcome/');
-		}
-    }
-      
-    public function auth()
-    {
-        $nipd    = $this->input->post('nipd',TRUE);
-        $nama_ibu = $this->input->post('namaIbu',TRUE);
-        $validate = $this->login_model->validate($nipd,$nama_ibu);
-        if($validate->num_rows() > 0){
-            $data  = $validate->row_array();
-            $id  = $data['id'];
-            $nama  = $data['nama'];
-            $namaibu  = $data['nama_ibu'];
-            $kelas  = $data['id_kelas'];
-            $no = $data['nipd'];
-            $sesdata = array(
-                'id'  => $id,
-                'nama'  => $nama,
-                'nipd'     => $no,
-                'nama_ibu'     => $namaibu,
-                'id_kelas'  => $kelas,
-                'logged_in' => TRUE
+		$username       = $this->input->post('username');
+        $password       = $this->input->post('password');
+        
+        $query = $this->LoginModel->aksiLogin($username, $password)->result();
+
+        if($query > 0){
+            foreach($query as $data){
+                $id_user    = $data->id_user;
+                $username   = $data->username;
+                $role       = $data->role;
+            }
+
+            $sessionData = array(
+                'id_user'   => $id_user,
+                'username'  => $username,
+                'role'      => $role,
+                'logged_in' =>TRUE
             );
-            $this->session->set_userdata($sesdata);
-            if($no){
-                $data['nama'] =$nama;
-                redirect('login/regis',$data);
-            }else{
-                redirect('login/');}
+
+            $this->session->set_userdata($sessionData);
             
+            if($role == 1){
+               redirect('dashboardadmin');
+            }else if($role == 2){
+               redirect('dashboardpetugas');
+            }
+
+
         }else{
-            echo $this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert"><b>NIPD</b> dan <b>Nama Ibu</b> tidak cocok</div>');
-            redirect('login/validasi');
+            $this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert"><b>Username</b> atau <b>Password</b> salah</div>');
+            redirect('welcome');
         }
     }
-
+    
     public function tbhUser()
     {
         $this->form_validation->set_rules('password', 'Password', 'required');
@@ -84,14 +56,9 @@ class Login extends CI_controller
         }
     }
 
-    public function validasi()
-    {
-        $this->load->view('login/validasi');
-    }
-
     public function regis()
 	{
-		$this->load->view('login/register');
+		$this->load->view('login/vRegister');
     }
 
     function logout(){

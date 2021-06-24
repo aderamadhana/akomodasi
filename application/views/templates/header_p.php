@@ -21,12 +21,7 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
  
 </head>
 
@@ -54,48 +49,22 @@
                                         Dashboards
                                         <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
-                                    
                                 </li>
+
                                 <li class="">
                                     <a href="#">
-                                        <i class="metismenu-icon fa fa-briefcase"></i>
-                                        Kuis
+                                        <i class="metismenu-icon fa fa-area-chart"></i>
+                                        Job Desc
                                         <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
-                                    
                                 </li>
-                                <li>
+                                
+                                <li class="">
                                     <a href="#">
-                                        <i class="metismenu-icon fa fa-group"></i>
-                                        Petugas
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
-                                    </a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-gear"></i>
-                                        Hasil Survei
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
-                                    </a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-user-circle"></i>
+                                        <i class="metismenu-icon fa fa-area-chart"></i>
                                         Lokasi
                                         <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
-                                    
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-user-circle"></i>
-                                        Job Desc Petugas
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
-                                    </a>
-                                    
                                 </li>
                                 
                         </div>
@@ -130,7 +99,7 @@
                         <div class="page-title-heading">
                             E-Survei SMA Bopkri 1 Yogyakarta
                             <div class="page-title-subheading">
-                                Selamat Datang di Halaman Admin
+                                Selamat Datang <?php echo $this->session->userdata('username') ?>
                             </div>
                         </div>
                         <div class="app-header-right">
@@ -158,5 +127,4 @@
                         <div class="app-inner-layout__wrapper">
                             <div class="app-inner-layout__content">
                                     <div class="container-fluid">
-                                    
                                        
