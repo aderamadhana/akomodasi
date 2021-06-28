@@ -52,10 +52,9 @@
                                 </li>
 
                                 <li class="">
-                                    <a href="#">
+                                    <a href="<?php echo site_url('Survey')?>">
                                         <i class="metismenu-icon fa fa-area-chart"></i>
-                                        Job Desc
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
+                                        Survey Jobs
                                     </a>
                                 </li>
                                 
