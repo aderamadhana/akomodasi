@@ -11,13 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>E-Survei SMA Bopkri 1 Yogyakarta</title>
+    <title>E-Survei</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <link href="<?= base_url(); ?>assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/font-awesome/css/font-awesome.min.css">
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
@@ -27,7 +27,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
- 
+
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             <div class="app-sidebar-wrapper">
                 <div class="app-sidebar sidebar-shadow">
                     <div class="app-header__logo">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="E-Survei BOSA"
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="E-Survei"
                             class="logo-src"></a>
                         <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
                             <span class="hamburger-box">
@@ -49,51 +49,45 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Menu</li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="<?php echo site_url('DashboardAdmin')?>">
                                         <i class="metismenu-icon fa fa-area-chart"></i>
                                         Dashboards
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
                                     
                                 </li>
                                 <li class="">
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-briefcase"></i>
-                                        Kuis
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
+                                    <a href="<?php echo site_url('Kuisioner')?>">
+                                        <i class="metismenu-icon fa fa-tasks"></i>
+                                        Kuisioner
                                     </a>
                                     
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo site_url('Petugas')?>">
                                         <i class="metismenu-icon fa fa-group"></i>
                                         Petugas
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
                                     
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-gear"></i>
+                                    <a href="<?php echo site_url('HasilSurvei')?>">
+                                        <i class="metismenu-icon fa fa-list"></i>
                                         Hasil Survei
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
                                     
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-user-circle"></i>
-                                        Lokasi
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
+                                    <a href="<?php echo site_url('Lokasi')?>">
+                                        <i class="metismenu-icon fa fa-map-marker"></i>
+                                        Lokasi Akomodasi
                                     </a>
                                     
                                 </li>
 
                                 <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-user-circle"></i>
+                                    <a href="<?php echo site_url('JobDesc')?>">
+                                        <i class="metismenu-icon fa fa-group"></i>
                                         Job Desc Petugas
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
                                     
                                 </li>
@@ -128,7 +122,7 @@
                     </div>
                     <div class="app-header">
                         <div class="page-title-heading">
-                            E-Survei SMA Bopkri 1 Yogyakarta
+                            E-Survei Jasa Akomodasi Kota Batu
                             <div class="page-title-subheading">
                                 Selamat Datang di Halaman Admin
                             </div>

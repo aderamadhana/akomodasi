@@ -1,6 +1,6 @@
 <?php
 
-class DashboardAdmin extends CI_Controller
+class Kuisioner extends CI_Controller
 {
     public function __construct()
     {
@@ -15,7 +15,7 @@ class DashboardAdmin extends CI_Controller
     public function index()
     {
         $this->load->view('templates/header');
-        $this->load->view('admin/dashboard/vdashboard');
+        $this->load->view('admin/kuisioner/vkuisioner');
         $this->load->view('templates/footer');
     }
 }
