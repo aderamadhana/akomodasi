@@ -2,13 +2,16 @@
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Tambah Data Job Petugas</h5>
-        <form id="signupForm" action="<?php echo site_url('petugas/tambahPetugas');?>" method="post">
+        <form id="signupForm" action="<?php echo site_url('jobdesc/tambahJobDesc');?>" method="post">
             <div class="form-row">
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Nama Petugas</label>
-                        <select name="id_user" class="form-control">
+                        <select name="id_user" class="form-control" required>
                             <option value="">-- Pilih Petugas</option>
+                            <?php foreach($petugas as $data){?>
+                            <option value="<?php echo $data->id_user?>"><?php echo $data->nama_petugas?></option>
+                            <?php }?>
                         </select>
                     </div>
                 </div>
@@ -16,8 +19,11 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Lokasi Survei</label>
-                        <select name="id_blok1" class="form-control">
+                        <select name="id_blok1" class="form-control" required>
                             <option value="">-- Pilih Lokasi</option>
+                            <?php foreach($lokasi as $data){?>
+                            <option value="<?php echo $data->id_blok1?>"><?php echo $data->nama_perusahaan?></option>
+                            <?php }?>
                         </select>
                     </div>
                 </div>
@@ -25,7 +31,7 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Tanggal Survei</label>
-                        <input name="tanggal_survey" type="date" class="form-control" required>
+                        <input name="tanggal_survei" type="date" class="form-control" required>
                     </div>
                 </div>
 
@@ -62,13 +68,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <?php $no=1; foreach($job as $data){?>
+                    <?php $no=1; foreach($job as $data){
+                        if($data->status_job == 0){
+                            $status_job ='<span class="badge badge-danger">Belum Selesai</span>';
+                        }else if($data->status_job == 1){
+                            $status_job ='<span class="badge badge-success">Sudah Selesai</span>';
+                        }
+                    ?>
                     <tr>
                         <td><?php echo $no++?></td>
-                        <td><?php echo $data->id_user?></td>
-                        <td><?php echo $data->id_blok1?></td>
-                        <td><?php echo $data->tanggal_survey?></td>
-                        <td><?php echo $data->status_job?></td>
+                        <td><?php echo $data->nama_petugas?></td>
+                        <td><?php echo $data->nama_perusahaan?></td>
+                        <td><?php echo $data->tanggal_survei?></td>
+                        <td><?php echo $status_job?></td>
                         <td>
                             <a class="btn btn-success btn-lg active btn-sm" type="button" href="#">
                                 <i class="fa fa-pencil"></i>

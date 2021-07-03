@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>E-Survei SMA Bopkri 1 Yogyakarta</title>
+    <title>E-Survei</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -45,25 +45,23 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Menu</li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="<?php echo site_url('DashboardPetugas')?>">
                                         <i class="metismenu-icon fa fa-area-chart"></i>
                                         Dashboards
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
                                 </li>
 
                                 <li class="">
-                                    <a href="<?php echo site_url('Survey')?>">
-                                        <i class="metismenu-icon fa fa-area-chart"></i>
-                                        Survey Jobs
+                                    <a href="<?php echo site_url('Survei')?>">
+                                        <i class="metismenu-icon fa fa-list"></i>
+                                        Survei Jobs
                                     </a>
                                 </li>
                                 
                                 <li class="">
-                                    <a href="#">
-                                        <i class="metismenu-icon fa fa-area-chart"></i>
+                                    <a href="<?php echo site_url('LokasiPetugas')?>">
+                                        <i class="metismenu-icon fa fa-map"></i>
                                         Lokasi
-                                        <i class="metismenu-state-icon fa fa-caret-down"></i>
                                     </a>
                                 </li>
                                 
@@ -97,7 +95,7 @@
                     </div>
                     <div class="app-header">
                         <div class="page-title-heading">
-                            E-Survei SMA Bopkri 1 Yogyakarta
+                            E-Survei Jasa Akomodasi Kota Batu
                             <div class="page-title-subheading">
                                 Selamat Datang <?php echo $this->session->userdata('username') ?>
                             </div>

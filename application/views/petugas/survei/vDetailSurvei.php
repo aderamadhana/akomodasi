@@ -1,13 +1,11 @@
-
-<?php if ($this->session->flashdata('flash')) : ?>
-    
-<?php endif; ?> -->
-
-
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <p class="h5 mb-0 text-gray-800"><a onclick="goBack()" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
+    </div>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK I: PENGENALAN TEMPAT
+            <strong>BLOK I: PENGENALAN TEMPAT</strong>
         </div>
         
     </div>
@@ -110,7 +108,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK II: KETERANGAN PETUGAS
+        <strong>BLOK II: KETERANGAN PETUGAS</strong>
         </div>
         
     </div>
@@ -167,7 +165,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK III.A: KETERANGAN UMUM PERUSAHAAN/USAHA
+            <strong>BLOK III.A: KETERANGAN UMUM PERUSAHAAN/USAHA</strong>
         </div>
         
     </div>
@@ -344,7 +342,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA
+            <strong>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA</strong>
         </div>
         
     </div>
@@ -357,7 +355,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)
+            <strong>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)</strong>
         </div>
         
     </div>
@@ -374,7 +372,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)
+            <strong>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)</strong>
         </div>
         
     </div>
@@ -386,7 +384,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)
+            <strong>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)</strong>
         </div>
         
     </div>
@@ -398,7 +396,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK III.B: TENAGA KERJA DAN BALAS JASA SELAMA TAHUN 2019 
+            <strong>BLOK III.B: TENAGA KERJA DAN BALAS JASA SELAMA TAHUN 2019</strong>
         </div>
         
     </div>
@@ -410,7 +408,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK V: PENDAPATAN SELAMA TAHUN 2019
+            <strong>BLOK V: PENDAPATAN SELAMA TAHUN 2019</strong>
         </div>
         
     </div>
@@ -422,7 +420,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK VI: BIAYA/PENGELUARAN SELAMA TAHUN 2019
+            <strong>BLOK VI: BIAYA/PENGELUARAN SELAMA TAHUN 2019</strong>
         </div>
         
     </div>
@@ -434,7 +432,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK VI: BIAYA/PENGELUARAN SELAMA TAHUN 2019 (LANJJUTAN)
+            <strong>BLOK VI: BIAYA/PENGELUARAN SELAMA TAHUN 2019 (LANJJUTAN)</strong>
         </div>
         
     </div>
@@ -446,7 +444,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK VI: BIAYA/PENGELUARAN SELAMA TAHUN 2019 (LANJJUTAN)
+        <strong>BLOK VI: BIAYA/PENGELUARAN SELAMA TAHUN 2019 (LANJJUTAN)</strong>
         </div>
         
     </div>
@@ -458,7 +456,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK VII: PENAMBAHAN DAN PENGURANGAN BARANG MODAL SELAMA TAHUN 2019
+        <strong>BLOK VII: PENAMBAHAN DAN PENGURANGAN BARANG MODAL SELAMA TAHUN 2019</strong>
         </div>
         
     </div>
@@ -470,7 +468,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK VIII: PENGGUNAAN BAHAN POKOK SELAMA TAHUN 2019
+        <strong>BLOK VIII: PENGGUNAAN BAHAN POKOK SELAMA TAHUN 2019</strong>
         </div>
         
     </div>
@@ -482,7 +480,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK VIII: PENGGUNAAN BAHAN POKOK SELAMA TAHUN 2019 (LANJJUTAN)
+        <strong>BLOK VIII: PENGGUNAAN BAHAN POKOK SELAMA TAHUN 2019 (LANJJUTAN)</strong>
         </div>
         
     </div>
@@ -494,7 +492,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK IX: MODAL DAN LINGKUNGAN
+        <strong>BLOK IX: MODAL DAN LINGKUNGAN</strong>
         </div>
         
     </div>
@@ -506,7 +504,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK X: CATATAN
+        <strong>BLOK X: CATATAN</strong>
         </div>
         
     </div>
@@ -518,7 +516,7 @@
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>BLOK XI: PENGESAHAN
+        <strong>BLOK XI: PENGESAHAN</strong>
         </div>
         
     </div>

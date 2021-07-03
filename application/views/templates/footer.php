@@ -641,6 +641,11 @@
     <script src="<?= base_url(); ?>assets/scripts/select.js"></script>
     <script src="<?= base_url(); ?>assets/scripts/edit.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>assets/scripts/main.07a59de7b920cd76b874.js"></script>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+</script> 
 </body>
 
 <!-- Mirrored from demo.dashboardpack.com/kero-html-sidebar-pro/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Oct 2019 09:05:35 GMT -->

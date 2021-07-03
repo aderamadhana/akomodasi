@@ -55,17 +55,28 @@
                                     </a>
                                     
                                 </li>
-                                <li class="">
-                                    <a href="<?php echo site_url('Kuisioner')?>">
-                                        <i class="metismenu-icon fa fa-tasks"></i>
-                                        Kuisioner
+                                
+                                <li>
+                                    <a href="<?php echo site_url('Lokasi')?>">
+                                        <i class="metismenu-icon fa fa-map-marker"></i>
+                                        Lokasi Akomodasi
                                     </a>
                                     
                                 </li>
+                                
                                 <li>
                                     <a href="<?php echo site_url('Petugas')?>">
                                         <i class="metismenu-icon fa fa-group"></i>
                                         Petugas
+                                    </a>
+                                    
+                                </li>
+                                
+
+                                <li>
+                                    <a href="<?php echo site_url('JobDesc')?>">
+                                        <i class="metismenu-icon fa fa-group"></i>
+                                        Job Desc Petugas
                                     </a>
                                     
                                 </li>
@@ -76,18 +87,11 @@
                                     </a>
                                     
                                 </li>
-                                <li>
-                                    <a href="<?php echo site_url('Lokasi')?>">
-                                        <i class="metismenu-icon fa fa-map-marker"></i>
-                                        Lokasi Akomodasi
-                                    </a>
-                                    
-                                </li>
 
-                                <li>
-                                    <a href="<?php echo site_url('JobDesc')?>">
-                                        <i class="metismenu-icon fa fa-group"></i>
-                                        Job Desc Petugas
+                                <li class="">
+                                    <a href="<?php echo site_url('Kuisioner')?>">
+                                        <i class="metismenu-icon fa fa-tasks"></i>
+                                        Kuisioner
                                     </a>
                                     
                                 </li>

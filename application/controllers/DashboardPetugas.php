@@ -15,7 +15,7 @@ class DashboardPetugas extends CI_Controller
     public function index()
     {
         $this->load->view('templates/header_p');
-        $this->load->view('petugas/dashboard');
+        $this->load->view('petugas/dashboard/vdashboard');
         $this->load->view('templates/footer');
     }
 }
