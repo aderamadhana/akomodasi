@@ -10,9 +10,9 @@
         
     </div>
     <div class="card-body">
+        <form action="" method="post">
         <div class="row mb-3">
             <div class="col-sm-6 col-md-4 col-lg-6">
-                <form action="" method="post">
                 <div class="form-group">
                     <label class="mt-4">1. Provinsi</label>
                     <input type="text" class="form-control" name="provinsi">
@@ -102,7 +102,9 @@
             <label class="mt-4">Nama Pengusaha/penaggung jawab</label>
             <input type="text" class="form-control" name="namaPengusaha">
         </div>
+        <button type="submit" class="btn btn-success">Simpan</button>
     </div>
+    </form>
 </div>
 
 <div class="card mb-3 ">
@@ -347,8 +349,198 @@
         
     </div>
     <div class="card-body">
-    
-    
+        <label><b>1. a. Apakah usaha akomodasi ini mempunyai sertifikasi syariah?</b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="sertifikasiSyariah1" name="sertifikasiSyariah" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="sertifikasiSyariah1">Ya</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="sertifikasiSyariah2" name="sertifikasiSyariah" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="sertifikasiSyariah2">Tidak</label>
+                </div>
+            </div>
+        </div>
+
+        <label><b>1. b. Jika "Ya" (R.1.a = 1), sertifikasi syariah yang dimiliki: </b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="jenisSertifikasiSyariah1" name="jenisSertifikasiSyariah" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="jenisSertifikasiSyariah1">Hilal 1</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="jenisSertifikasiSyariah2" name="jenisSertifikasiSyariah" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="jenisSertifikasiSyariah2">Hilal 2</label>
+                </div>
+            </div>
+        </div>
+
+        <label><b>2. a. Status pengelolaan usaha penyediaan akomodasi ini: </b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="statusPengelolaanUsaha1" name="statusPengelolaanUsaha" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="statusPengelolaanUsaha1">Chain Internasional</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="statusPengelolaanUsaha2" name="jenisSertifikasiSyariah" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="statusPengelolaanUsaha2">chain Lokal</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="statusPengelolaanUsaha3" name="statusPengelolaanUsaha" value="3" class="custom-control-input">
+                    <label class="custom-control-label" for="statusPengelolaanUsaha3">Waralaba</label>
+                </div>
+                
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="statusPengelolaanUsaha4" name="statusPengelolaanUsaha" value="4" class="custom-control-input">
+                    <label class="custom-control-label" for="statusPengelolaanUsaha4">Sendiri</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-12">
+                <div class="form-group">     
+                    <label>2. b. Jika isian pertanyaan no 2.a adalah kode 1, 2, atau 3, tuliskan nama kelompok (group) pengelolaan usaha akomodasi tersebut</label>
+                    <input type="text" name="namaGroupPengelolaanUsaha" class="form-control">           
+                </div>
+            </div>
+        </div>
+
+        <label><b>3. a. Apakah usaha ini menerima pemesanan kamar atau melakukan penjualan secara online/melalui internet?</b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="ifOnline1" name="ifOnline" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="ifOnline1">Ya</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="ifOnline2" name="ifOnline" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="ifOnline2">Tidak</label>
+                </div>
+            </div>
+        </div>
+
+        <label><b>3. b. Jika "Ya" (R.3.a = 1), maka: </b></label><br>
+        <label><b>3. b. I. Sarana apa saja yang digunakan untuk melakukan penjualan secara online </b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="saranaPenjualan1" name="saranaPenjualan" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="saranaPenjualan1">Website</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="saranaPenjualan2" name="saranaPenjualan" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="saranaPenjualan2">Media Sosial</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="saranaPenjualan3" name="saranaPenjualan" value="4" class="custom-control-input">
+                    <label class="custom-control-label" for="saranaPenjualan3">Layanan penjualan pihak ketiga</label>
+                </div>
+            </div>
+        </div>
+        
+        <label><b>3. b. II. Cara pembayaran: </b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran1" name="caraPembayaran" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="saranaPenjualan1">Tunai</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran2" name="caraPembayaran" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="caraPembayaran2">Kartu kredit tau kredit online</label>
+                </div>
+                
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran3" name="caraPembayaran" value="3" class="custom-control-input">
+                    <label class="custom-control-label" for="caraPembayaran3">Kartu debit atau transfer bank online</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran4" name="caraPembayaran" value="4" class="custom-control-input">
+                    <label class="custom-control-label" for="caraPembayaran4">Uang elektronik</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran5" name="caraPembayaran" value="5" class="custom-control-input">
+                    <label class="custom-control-label" for="caraPembayaran5">Voucher</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran6" name="caraPembayaran" value="6" class="custom-control-input">
+                    <label class="custom-control-label" for="caraPembayaran6">Poin dari program berhadiah</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="caraPembayaran7" name="caraPembayaran" value="7" class="custom-control-input">
+                    <label class="custom-control-label" for="caraPembayaran7">Lainnya</label>
+                </div>
+            </div>
+        </div>
+        
+        <label><b>3. c. Berapa persen kamar yang terjual melalui internet/online selama tahun 2019? ..% </b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="form-group">     
+                    <label>i. Agoda</label>
+                    <input type="text" name="agoda" class="form-control">           
+                </div>
+                <div class="form-group">     
+                    <label>ii. Booking.com</label>
+                    <input type="text" name="bookingcom" class="form-control">           
+                </div>
+                <div class="form-group">     
+                    <label>iii. Traveloka</label>
+                    <input type="text" name="traveloka" class="form-control">           
+                </div>
+                <div class="form-group">     
+                    <label>iv. OYO</label>
+                    <input type="text" name="oyo" class="form-control">           
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="form-group">     
+                    <label>v. AirBnB</label>
+                    <input type="text" name="airbnb" class="form-control">           
+                </div>
+                <div class="form-group">     
+                    <label>vi. Airy</label>
+                    <input type="text" name="airy" class="form-control">           
+                </div>
+                <div class="form-group">     
+                    <label>vi. RedDoorz</label>
+                    <input type="text" name="reddoorz" class="form-control">           
+                </div>
+                <div class="form-group">     
+                    <label>vi. Laiinyya</label>
+                    <input type="text" name="kamarLainnya" class="form-control">           
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -360,10 +552,475 @@
         
     </div>
     <div class="card-body">
-    <div class="form-group">
-            <label class="mt-4">Saran / Masukan</label>
-            <div>
-                <textarea id="exampleText" class="form-control" name="saran" placeholder="" ></textarea>
+        <label><b>4. Banyaknya kamar, tempat tidur yang tersedia, kapasitas tamu hotel, dan harga kamar setelah pajak per malam pada saat pencacahan </b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-12">
+                <table class="table table-bordered">
+                    <tr class="text-center">
+                        <th rowspan="3" >Jenis kamar</th>
+                        <th rowspan="3">Banyaknya kamar</th>
+                        <th rowspan="3">Banyaknya tempat tidur</th>
+                        <th rowspan="3">Kapasitas tamu hotel</th>
+                        <th colspan="4">Harga kamar per malam</th>
+                    </tr>
+                    <tr class="text-center">
+                        <td colspan="2">Umum</td>
+                        <td colspan="2">Pemerintah</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Single Occupancies</td>
+                        <td>Double Occupancies</td>
+                        <td>Single Occupancies</td>
+                        <td>Double Occupancies</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Standar</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kamarStandar">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tempatTidurStandar">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kapasitasStandar">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumSingle">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDouble">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahSingle">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDouble">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Superior</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kamarSuperior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tempatTidurSuperior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kapasitasSuperior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumSingleSuperior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDoubleSuperior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahSingleSuperior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDoubleSuperior">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Deluxe</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kamarDeluxe">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tempatTidurDeluxe">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kapasitasDeluxer">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumSingleDeluxe">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDoubleDeluxe">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahSingleDeluxe">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDoubleDeluxe">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Junior Suite</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kamarJunior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tempatTidurJunior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kapasitasJunior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumSingleJunior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDoubleJunior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahSingleJunior">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDoubleJunior">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suite</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kamarSuite">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tempatTidurSuite">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kapasitasSuite">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumSingleSuite">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDoubleSuite">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahSingleSuite">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDoubleSuite">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>President Suite</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kamarPresident">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tempatTidurPresident">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kapasitasPresident">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumSinglePresident">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDoublePresident">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahSinglePresident">
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDoublePresident">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <label><b>5. a. Apakah tersedia ruang pertemuan?</b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="ruangPertemuan1" name="ruangPertemuan" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="ruangPertemuan1">Ya</label>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="ruangPertemuan2" name="ruangPertemuan" value="2" class="custom-control-input">
+                    <label class="custom-control-label" for="ruangPertemuan2">Tidak</label>
+                </div>
+            </div>
+        </div>
+        <label><b>5. b. Nama, tarif, luas, dan kapasitas masing-masing ruang rapat</b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-12">
+                <table class="table table-bordered">
+                    <tr class="text-center">
+                        <th rowspan="2">No</th>
+                        <th rowspan="2">Nama ruang rapat</th>
+                        <th colspan="2">Harga setelah pajak (termasuk pajak)</th>
+                        <th rowspan="2">Luas (m2)</th>
+                        <th colspan="4">Kapasitas (kursi)</th>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Umum</td>
+                        <td>Pemerintah</td>
+                        <td>U-Shape</td>
+                        <td>Class Room</td>
+                        <td>Round Table</td>
+                        <td>Theatre</td>
+                    </tr>
+                    <?php for($i=1; $i<=5; $i++){?>
+                    <tr>
+                        <td><?php echo $i?></td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="namaRuangRapat<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umum<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintah<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="luas<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="ushape<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="classRoom<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="roundTable<?php echo $i?>">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="theater<?php echo $i?>">
+                            </div>
+                        </td>
+                    </tr>
+                    <?php }?>
+                </table>
+            </div>
+        </div>
+        <label><b>5. c. Harga Paket per orang per pax(pada tahun 2020)</b></label>
+        <div class="row mb-3">
+            <div class="col-sm-6 col-md-4 col-lg-12">
+                <table class="table table-bordered">
+                    <tr class="text-center">
+                        <th rowspan="2">Jenis Paket</th>
+                        <th colspan="2">Harga setelah pajak (termasuk pajak)</th>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Umum</td>
+                        <td>Pemerintah</td>
+                    </tr>
+                    <tr>
+                        <td>i. Pertemuan</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>a) Fullboard Single Occupancy (1 kamar isi 1 orang per pax)</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumFullboard">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahFullboard">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>b) Fullboard Double Occupancy (1 kamar isi 1 orang per pax)</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumDoubleFullboard">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahDoubleFullboard">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>c) Fullday</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumFullday">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahFullday">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>d) Holiday</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumHoliday">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahHoliday">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ii. Makan per orang per pax</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumMakan">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahMakan">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>iii. Coffee break per orang per pax</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="umumCoffee">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pemerintahCoffee">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
