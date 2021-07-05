@@ -12,15 +12,11 @@ class JobDescModel extends CI_model
         return $this->db->get();
     }
 
-    function getJobByPetugas()
+    function getJob($data)
     {   
         $this->db->select('*');
         $this->db->from('job_desc');
-        $this->db->join('user', 'user.id_user = job_desc.id_user');
-        $this->db->join('blok1_pengenalan_tempat', 'blok1_pengenalan_tempat.id_blok1 = job_desc.id_blok1');
-        $this->db->where('job_desc.id_user', $this->session->userdata('id_user'));
-        $this->db->where('tanggal_survei', date('Y-m-d'));
-        $this->db->order_by('tanggal_survei', 'asc');
+        $this->db->where($data);
         return $this->db->get();
     }
 

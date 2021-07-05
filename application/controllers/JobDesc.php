@@ -9,6 +9,7 @@ class JobDesc extends CI_Controller
         $this->load->model('JobDescModel');
         $this->load->model('PetugasModel');
         $this->load->model('LokasiModel');
+        $this->load->model('SurveiModel');
 
         if($this->session->userdata('role') != 1){
             echo $this->session->userdata('role');
@@ -28,6 +29,8 @@ class JobDesc extends CI_Controller
     }
 
     public function tambahJobDesc(){
+        $id_job_desc = null;
+
         $data = array(
             'id_user'           => $this->input->post('id_user'),
             'id_blok1'          => $this->input->post('id_blok1'),
@@ -43,6 +46,18 @@ class JobDesc extends CI_Controller
             $query = $this->db->select('*')->from('job_desc')->where('tanggal_survei', $this->input->post('tanggal_survei'))->where('id_blok1', $this->input->post('id_blok1'))->get()->num_rows();
             if($query == 0){
                 $this->JobDescModel->insertJobDesc($data);
+
+                $dataJobDesc = $this->JobDescModel->getJob($data)->result();
+                foreach($dataJobDesc as $djd){
+                    $id_job_desc = $djd->id_job_desc;
+                }
+
+                $dataSurvei = array(
+                    'id_job_desc' => $id_job_desc
+                );
+
+                $this->SurveiModel->insertBlok1($dataSurvei);
+
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil tambah job! </div>');
         
                 redirect('JobDesc');

@@ -28,6 +28,7 @@ class Lokasi extends CI_Controller
             'provinsi'                      => $this->input->post('provinsi'),
             'kabupatenkota'                 => $this->input->post('kabupatenkota'),
             'kelurahan'                     => $this->input->post('kelurahan'),
+            'kecamatan'                     => $this->input->post('kecamatan'),
             'nomor_sbr'                     => $this->input->post('nomorSBR'),
             'id_infrastruktur_wilkerstat'   => $this->input->post('idInfrastruktur'),
             'nama_komersial_usaha'          => $this->input->post('namaKemersialUsaha'),

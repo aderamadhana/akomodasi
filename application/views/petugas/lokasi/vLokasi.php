@@ -20,7 +20,7 @@
                     <tr>
                         <td><?php echo $no++?></td>
                         <td><?php echo $data->nama_perusahaan?></td>
-                        <td><?php echo $data->jalan?>, <?php echo $data->kelurahan?>, <?php echo $data->kabupatenkota?>, <?php echo $data->provinsi?></td>
+                        <td><?php echo $data->jalan?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenkota?>, <?php echo $data->provinsi?></td>
                         <td>
                             <a class="btn btn-success btn-lg active btn-sm" title="Detail Lokasi" type="button" href="#">
                                 <i class="fa fa-eye"></i>
