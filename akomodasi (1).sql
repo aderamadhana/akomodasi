@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2021 at 07:00 AM
+-- Generation Time: Jul 05, 2021 at 12:18 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -31,6 +31,7 @@ CREATE TABLE `blok1_pengenalan_tempat` (
   `id_blok1` int(11) NOT NULL,
   `provinsi` varchar(30) NOT NULL,
   `kabupatenkota` varchar(50) NOT NULL,
+  `kecamatan` varchar(50) NOT NULL,
   `kelurahan` varchar(50) NOT NULL,
   `nomor_sbr` varchar(30) NOT NULL,
   `id_infrastruktur_wilkerstat` varchar(20) NOT NULL,
@@ -52,26 +53,9 @@ CREATE TABLE `blok1_pengenalan_tempat` (
 -- Dumping data for table `blok1_pengenalan_tempat`
 --
 
-INSERT INTO `blok1_pengenalan_tempat` (`id_blok1`, `provinsi`, `kabupatenkota`, `kelurahan`, `nomor_sbr`, `id_infrastruktur_wilkerstat`, `nama_komersial_usaha`, `nama_perusahaan`, `jalan`, `kode_pos`, `no_telepon`, `facebook`, `email`, `twitter`, `website`, `nama_pengusaha`, `lat`, `longi`) VALUES
-(1, 'Jawa Timur', 'Kota Malang', 'Polowijen', '12345', '157', 'Bisnis', 'Kampung Budaya Polowijen', 'Jalan Cakalang 172 E', '65125', '081234', 'kbp_malang', 'kbp@gmail.com', 'kbp_malang', 'kbp_malang.com', 'Ade Ramadhana Pratama', '-7.9297054', '112.6410554'),
-(2, 'Jawa Timur', 'Kota Malang', 'Rampal', '21878', '800', 'Hotel', 'Savana Hotel & Convention', 'Jalan Letjen Sutoyo no 30-34', '65141', '+62341495555', 'hotel_sava', 'savana@gmail.com', 'hotel_savana', 'hotel_savana.com', 'Savana Group', '-7.962238', '112.6341093');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `blok3a_keterangan_umum_perusahaan`
---
-
-CREATE TABLE `blok3a_keterangan_umum_perusahaan` (
-  `id_blok3a` int(11) NOT NULL,
-  `klasifikasi_usaha` varchar(10) NOT NULL,
-  `jenis_izin` varchar(10) NOT NULL,
-  `if_lsu` varchar(10) NOT NULL,
-  `if_anggota_asosiasi` varchar(10) NOT NULL,
-  `nama_asosiasi` varchar(10) NOT NULL,
-  `sarana_promosi` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
--- Error reading data for table akomodasi.blok3a_keterangan_umum_perusahaan: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `akomodasi`.`blok3a_keterangan_umum_perusahaan`' at line 1
+INSERT INTO `blok1_pengenalan_tempat` (`id_blok1`, `provinsi`, `kabupatenkota`, `kecamatan`, `kelurahan`, `nomor_sbr`, `id_infrastruktur_wilkerstat`, `nama_komersial_usaha`, `nama_perusahaan`, `jalan`, `kode_pos`, `no_telepon`, `facebook`, `email`, `twitter`, `website`, `nama_pengusaha`, `lat`, `longi`) VALUES
+(1, 'Jawa Timur', 'Kota Malang', 'Blimbing', 'Polowijen', '12345', '157', 'Bisnis', 'Kampung Budaya Polowijen', 'Jalan Cakalang 172 E', '65125', '081234', 'kbp_malang', 'kbp@gmail.com', 'kbp_malang', 'kbp_malang.com', 'Ade Ramadhana Pratama', '-7.9297054', '112.6410554'),
+(2, 'Jawa Timur', 'Kota Malang', 'Klojen', 'Rampal', '21878', '800', 'Hotel', 'Savana Hotel & Convention', 'Jalan Letjen Sutoyo no 30-34', '65141', '+62341495555', 'hotel_sava', 'savana@gmail.com', 'hotel_savana', 'hotel_savana.com', 'Savana Group', '-7.962238', '112.6341093');
 
 -- --------------------------------------------------------
 
@@ -87,7 +71,56 @@ CREATE TABLE `job_desc` (
   `keterangan` varchar(250) NOT NULL,
   `status_job` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
--- Error reading data for table akomodasi.job_desc: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `akomodasi`.`job_desc`' at line 1
+
+--
+-- Dumping data for table `job_desc`
+--
+
+INSERT INTO `job_desc` (`id_job_desc`, `id_user`, `id_blok1`, `tanggal_survei`, `keterangan`, `status_job`) VALUES
+(5, 2, 1, '2021-07-05', 'oi', 0),
+(6, 2, 2, '2021-07-05', 'oi', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `survei`
+--
+
+CREATE TABLE `survei` (
+  `id_survei` int(11) NOT NULL,
+  `id_job_desc` int(11) NOT NULL,
+  `ttd_petugas` varchar(250) DEFAULT NULL,
+  `klasifikasiUsaha` int(11) NOT NULL,
+  `jenisIzin` int(11) NOT NULL,
+  `sertifikasi` int(11) NOT NULL,
+  `anggotaAsosiasi` int(11) NOT NULL,
+  `asosiasi` int(11) NOT NULL,
+  `saranaPromosi` varchar(50) NOT NULL,
+  `sertifikasiSyariah` int(11) NOT NULL,
+  `jenisSertifikasiSyariah` int(11) NOT NULL,
+  `statusPengelolaanUsaha` int(11) NOT NULL,
+  `namaGroupPengelolaanUsaha` varchar(50) NOT NULL,
+  `ifOnline` int(11) NOT NULL,
+  `saranaPenjualan` int(11) NOT NULL,
+  `caraPembayaran` int(11) NOT NULL,
+  `agoda` int(11) NOT NULL,
+  `bookingcom` int(11) NOT NULL,
+  `traveloka` int(11) NOT NULL,
+  `oyo` int(11) NOT NULL,
+  `airbnb` int(11) NOT NULL,
+  `airy` int(11) NOT NULL,
+  `reddoorz` int(11) NOT NULL,
+  `kamarLainnya` int(11) NOT NULL,
+  `status_survei` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `survei`
+--
+
+INSERT INTO `survei` (`id_survei`, `id_job_desc`, `ttd_petugas`, `klasifikasiUsaha`, `jenisIzin`, `sertifikasi`, `anggotaAsosiasi`, `asosiasi`, `saranaPromosi`, `sertifikasiSyariah`, `jenisSertifikasiSyariah`, `statusPengelolaanUsaha`, `namaGroupPengelolaanUsaha`, `ifOnline`, `saranaPenjualan`, `caraPembayaran`, `agoda`, `bookingcom`, `traveloka`, `oyo`, `airbnb`, `airy`, `reddoorz`, `kamarLainnya`, `status_survei`) VALUES
+(1, 5, 'http://localhost/akomodasi/upload/ttd/1.PNG', 6, 1, 2, 1, 1, '1,3,4', 1, 1, 2, 'group', 1, 2, 5, 10, 0, 15, 0, 0, 0, 0, 0, 0),
+(2, 6, NULL, 0, 0, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -130,16 +163,16 @@ ALTER TABLE `blok1_pengenalan_tempat`
   ADD PRIMARY KEY (`id_blok1`);
 
 --
--- Indexes for table `blok3a_keterangan_umum_perusahaan`
---
-ALTER TABLE `blok3a_keterangan_umum_perusahaan`
-  ADD PRIMARY KEY (`id_blok3a`);
-
---
 -- Indexes for table `job_desc`
 --
 ALTER TABLE `job_desc`
   ADD PRIMARY KEY (`id_job_desc`);
+
+--
+-- Indexes for table `survei`
+--
+ALTER TABLE `survei`
+  ADD PRIMARY KEY (`id_survei`);
 
 --
 -- Indexes for table `user`
@@ -158,16 +191,16 @@ ALTER TABLE `blok1_pengenalan_tempat`
   MODIFY `id_blok1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `blok3a_keterangan_umum_perusahaan`
---
-ALTER TABLE `blok3a_keterangan_umum_perusahaan`
-  MODIFY `id_blok3a` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `job_desc`
 --
 ALTER TABLE `job_desc`
-  MODIFY `id_job_desc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_job_desc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `survei`
+--
+ALTER TABLE `survei`
+  MODIFY `id_survei` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
