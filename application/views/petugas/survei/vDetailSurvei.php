@@ -357,7 +357,7 @@
         </section>
         <?php echo $this->session->flashdata('message3a')?>
         </form>
-    </div>
+    </div> 
 </div>
 
 <div class="card mb-3 ">
@@ -579,7 +579,7 @@
         
     </div>
     <div class="card-body">
-        <form action="<?php echo site_url('sdadsa')?>" method="post">
+        <form action="#>" method="post">
         <label><b>4. Banyaknya kamar, tempat tidur yang tersedia, kapasitas tamu hotel, dan harga kamar setelah pajak per malam pada saat pencacahan </b></label>
         <div class="row mb-3">
             <div class="col-sm-6 col-md-4 col-lg-12">
@@ -1053,32 +1053,231 @@
             </div>
         </div>
         
+        <section id="blok3blanjutan1">
         <button type="submit" class="btn btn-success">Simpan</button>
+        </section>
+
+        <?php echo $this->session->flashdata('message3b')?>
+        </form>
         </form>
     </div>
 </div>
 
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
-        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <strong>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)</strong>
+        <div class=" card-header-title font-size-lg text-capitalize font-weight-normal">
+            <strong>BLOK III.B: KETERANGAN KHUSUS PERUSAHAAN/USAHA (LANJUTAN)</strong>
         </div>
         
     </div>
     <div class="card-body">
+        <form action="" method="post">
+        <label><b>6. Fasilitas hotel</b></label>
+        <div class="row mb-3">
             
-    </div>
-</div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>a. Portable Screen</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="portableScreen1" name="portableScreen" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="portableScreen1">Ada</label>
+                        </div>
 
-<div class="card mb-3 ">
-    <div class="card-header-tab card-header">
-        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <strong>BLOK III.B: KETERANGAN KHUSUS PEUSAHAAN/USAHA (LANJUTAN)</strong>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="portableScreen2" name="portableScreen" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="portableScreen2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaPortableScreen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>b. Projector</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="projector1" name="projector" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="projector">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="projector2" name="projector" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="projector2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaProjector">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>c. Wifi Internet Access</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="wifi1" name="wifi" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="wifi1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="wifi2" name="wifi" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="wifi2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaWifi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>d. Parkir</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="parkir1" name="parkir" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="parkir1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="parkir2" name="parkir" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="parkir2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaParkir">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>e. Flipchart</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="flipchart1" name="flipchart" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="flipchart1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="flipchart2" name="flipchart" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="flipchart2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaFlipchart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>f. Sound System</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="soundSystem1" name="soundSystem" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="soundSystem1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="soundSystem2" name="soundSystem" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="soundSystem2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaSoundSystem">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>g. Buku Catatan dan Pensil</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="bukuCatatan1" name="bukuCatatan" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="bukuCatatan1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="bukuCatatan2" name="bukuCatatan" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="bukuCatatan2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaBukuCatatan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>h. Executiver/VIP Room</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="executiver1" name="executiver" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="executiver1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="executiver2" name="executiver" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="executiver2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaExecutiver">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>i. Pick Up Service</strong></label>
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="pickUp1" name="pickUp" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="pickUp1">Ada</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="pickUp2" name="pickUp" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="pickUp2">Tidak Ada</label>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label>Harga per satuan</label>
+                            <input type="text" class="form-control" name="hargaPickUp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
-    </div>
-    <div class="card-body">
-            
+        <section id="blok3blanjutan1">
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </section>
+        </form>
     </div>
 </div>
 
@@ -1090,7 +1289,601 @@
         
     </div>
     <div class="card-body">
+        <form action="" method="post">
+        <label><b>1. Banyaknya pekerja/karyawan menurut status pekerja, jenjang pendidikan yang ditamatkan dan jenis kelamin</b></label>
+        <div class="row mb-3">
             
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>a. < SLTP</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiSLTP">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanSLTP">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiSLTP">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanSLTP">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiSLTP">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanSLTP">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiSLTP">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanSLTP">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>b. SMK Kejuruan Pariwisata</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiSMK">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanSMK">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiSMK">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanSMK">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiSMK">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanSMK">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiSMK">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanSMK">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>c. SMA Lainnya</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiSMA">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanSMA">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiSMA">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanSMA">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiSMA">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanSMA">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiSMA">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanSMA">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>d. DI/DII/DIII kejuruan pariwisata</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiDIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanDIPariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiDIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanDIPariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiDIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanDIPariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiDIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanDIPariwisata">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>e. DI/DII/DII lainnya</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiDILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanDILainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiDILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanDILainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiDILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanDILainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiDILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanDILainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>f. DIV/SI kejuruan pariwisata</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiSIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanSIPariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiSIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanSIPariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiSIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanSIPariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiSIPariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanSIPariwisata">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>g. DIV/SI Lainnya</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiSILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanSILainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiSILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanSILainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiSILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanSILainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiSILainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanSILainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>h. S2/S3 kejuruan pariwisata</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiS2Pariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanS2Pariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiS2Pariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanS2Pariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiS2Pariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanS2Pariwisata">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiS2Pariwisata">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanS2Pariwisata">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>i. S2/S3 lainnya</strong></label><br>
+                    
+                    <label><strong>Pekerja Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiS2Lainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapPerempuanS2Lainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Tetap</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapLakiLakiS2Lainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakTetapPerempuanS2Lainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Tidak Dibayar</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarLakiLakiS2Lainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaTidakDibayarPerempuanS2Lainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Magang</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangLakiLakiS2Lainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahPekerjaMagangPerempuanS2Lainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <section id="blok4">
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </section>
+        </form>
     </div>    
 </div>
 
