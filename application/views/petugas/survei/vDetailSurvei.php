@@ -1091,7 +1091,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaPortableScreen">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaPortableScreen">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1113,7 +1118,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaProjector">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaProjector">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1135,7 +1145,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaWifi">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaWifi">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1157,7 +1172,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaParkir">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaParkir">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1179,7 +1199,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaFlipchart">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaFlipChart">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1201,7 +1226,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaSoundSystem">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaSoundSystem">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1223,7 +1253,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaBukuCatatan">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaBukuCatatan">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1245,7 +1280,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaExecutiver">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaExecutiver">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1267,7 +1307,12 @@
                         </br>
                         <div class="form-group">
                             <label>Harga per satuan</label>
-                            <input type="text" class="form-control" name="hargaPickUp">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Rp</div>
+                                </div>
+                                <input type="number" min=0 class="form-control" name="hargaPickUp">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1878,7 +1923,449 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <label><b>2. Banyaknya pekerja/karyawan menurut jenis pekerjaan dan jenis kelamin</b></label>
+        <div class="row mb-3">
             
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>a. Direktur/General Manager</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiGManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanGManager">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiGManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanGManager">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiGManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanGManager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>b. Manager</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiSLTPManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanManager">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanManager">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanManager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>c. Asisten Manager</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiAManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanAManager">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiAManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanAManager">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiAManager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanAManager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>d. Penyelia (Supervisor)</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiSupervisor">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanSupervisor">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiSupervisor">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanSupervisor">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiSupervisor">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanSupervisor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>e. Teknis (front office, koki, cook helper, baverages, dish washer, pemasaran)</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiTeknis">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanTeknis">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiTeknis">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanTeknis">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiTeknis">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanTeknis">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>f. Administrasi</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiAdministrasi">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanAdministrasi">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiAdministrasi">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanAdministrasi">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiAdministrasi">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanAdministrasi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label><strong>g. Lainnya</strong></label><br>
+                    
+                    <label><strong>WNI</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNILakiLakiLainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNIPerempuanLainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>WNA</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNALakiLakiLainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahWNAPerempuanLainnya">
+                        </div>
+                    </div>
+
+                    <label><strong>Pekerja Bersertifikasi Kompetensi</strong></label><br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Laki-Laki</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiLakiLakiLainnya">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Perempuan</label>
+                        <div class="col-sm-8">
+                            <input type="number" min=0 class="form-control" name="jumlahSertifikasiPerempuanLainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <label><b>3. Balas jasa pekerja selama tahun 2019</b></label>
+        <div class="row mb-3"> 
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>a. Upah dan Gaji</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="upah">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>b. Tunjangan</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="tunjangan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>c. Bonus</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="bonus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>d. Asuransi kecelakaan di tempat kerja</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="asuransi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>e. Jaminan sosial dan pembayaran pensiun</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="jamsos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>f. Lainnya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="jaminanLainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <section id="blok4">
             <button type="submit" class="btn btn-success">Simpan</button>
@@ -1895,7 +2382,152 @@
         
     </div>
     <div class="card-body">
+        <form action="" method="post">
+        <label><b>1. Pendapatan Utama</b></label><br>
+        <small>Isikan nilai pendapatan dari penyewaan kamar, penjualan makanan dan minuman, penyewaan ruang pertemuan dan fasilitas lainnya</small>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>a. Penyewaan Kamar</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="penyewaanKamar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>b. Penjualan makanan dan minuman (restoran/rumah makan/cafe)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="penjualanMakanMinum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>c. Penyewaan ruang pertemuan</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="penyewaanRuangPertemuan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>d. Penyewaan fasilitas lainnya (kolam renang, fitness center, dan lain-lain)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="penyewaanFasilitasLainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <label><b>2. Pendapatan Lainnya</b></label><br>
+        <small>Isikan pendapatan lain dari perusahaan. Pendapatan tersebut adalah pendapatan reto, yaitu pendapatan setelah dikurangi biaya-biaya</small>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>a. Menyewakan gedung/ruangan (untuk ruang kantor maupun resepsi)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="menyewakanGedung">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>b. Menyewakan gudang</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="menyewakanGudang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>c. Menyewakan mesin, kendaraan, peralatan (tanpa operator)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="penyewaanMesin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>d. Royalti/dividen yang diterima</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="royalti">
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>e. Waralaba yang diterima</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="waralaba">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>f. Lainnya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="pendapatanLainnya">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="blok5">
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </section>
+        </form>
     </div>
 </div>
 
@@ -1907,7 +2539,217 @@
         
     </div>
     <div class="card-body">
+    <form action="" method="post">
+        <label><b>1. Biaya Utama</b></label><br>
+        <small>Blok ini digunakan untuk mendapatakan informasi mengenai biaya khusus yang dikeluarkan perusahaan/usaha</small>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>a. Bahan baku makanan dan minuman</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="bahanBakuMakanMinum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>b. Pembelian makanan dan minuman siap saji</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="pembelianMakanMinumSiapSaji">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>c. Pembelian bahan kimia</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="pembelianBahanKimia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>d. Biaya jasa cuci</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="biayaJasaCuci">
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>e. Biaya amenity (biaya perlengkapan pribadi seperti: odol, sikat gigi)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="biayaAmenity">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <label><b>2. Biaya Pendukung</b></label><br>
+        <small>Blok ini digunakan untuk mendapatkan informasi mengenai biaya umum dikeluarkan perusahaan/usaha</small>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>a. Bahan bakar</strong></label><br>
+                        <label>1. Bahan bakar minyak</label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">liter</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakBBM">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaBBM">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Elpiji</label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">kg</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakLPG">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaLPG">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Gas kota</label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">m3</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakGas">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaGas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Bahan bakar lainnya</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaBahanBakarLain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>b. Pelumas</strong></label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">liter</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakPelumas">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPelumas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>c. Listrik</strong></label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">kWh</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakListrik">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaListrik">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="blok6">
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </section>
+        </form>  
     </div>
 </div>
 
@@ -1919,7 +2761,623 @@
         
     </div>
     <div class="card-body">
+    <form action="" method="post">
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>d. Penggunaan air</strong></label><br>
+                        <label>1. Membeli</label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">M3</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakMembeliAir">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaAir">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Tidak Membeli</label><br>
+                        <label>Banyaknya</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">M3</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="banyakTidakMembeli">
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>e. Angkutan</strong></label><br>
+                        <label>1. Rel</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaRel">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Jalan Raya</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaJalanRaya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Udara</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaUdata">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Laut</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaLaut">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>5. Sungai, danau, dan penyeberangan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSungai">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>f. Pos dan jasa kurir</strong></label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>g. Telepon, internet, dan komunikasi lainnya</strong></label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaTelepon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>h. Keperluan kantor dan kemasan</strong></label><br>
+                        <label>1. Alat tulis</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaATK">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Barang-barang dari kertas (kertas, map, amplop, karton, dll)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaKertas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Barang-barang kimia (tinta, karbon, dll)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaKimia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Alat perekam data (CD, Flashdisk)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaCD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>5. Barang-barang pengepakan/kemasan selain kertas</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPengepakan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>i. Sewa</strong></label><br>
+                        <label>1. Bangunan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSewaBangunan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Gudang</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSewaGudang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Inventaris kantor</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSewaInventarisKantor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Kendaraan (tanpa perantara)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSewaKendaraan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>5. Mesin dan Peralatan (tanpa perantara)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSewaMesin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>j. Pemeliharaan dan perbaikan kecil</strong></label><br>
+                        <label>1. Bangunan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPerbaikanBangunan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Kendaraan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPerbaikanKendaraan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Mesin dan peralatan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPerbaikanMesin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Inventaris kantor dan lainnya</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPerbaikanInventaris">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>k. Perjalanan dinas</strong></label><br>
+                        <label>1. Uang saku dan harian</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaUangSaku">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Akomodasi/penginapan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenginapan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Transportasi</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaTransportasi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>l. Pendidikan dan Pelatihan</strong></label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPendidikan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>m. Penelitian dan pengembangan</strong></label><br>
+                        <label>1. Dilakukan sendiri</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenelitianSendiri">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Dilakukan pihak lain (dalam negeri)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenelitianPihakDalam">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Dilakukan pihak lain (asing)</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenelitianPihakAsing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>n. Jasa-jasa</strong></label><br>
+                        <label>1. Tenaga ahli/ profesi(konsultan, notaris) dalam negeri</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaTenagaAhliDalam">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Tenaga ahli/ profesi(konsultan, notaris) asing</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaTenagaAhliAsing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Asuransi Krugian</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaAsuransiKerugian">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Promosi/iklan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPromosiIklan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>5. Jasa perusahaan lainnya</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaJasaPerusahaanLainnya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>o. Biaya penyusutan dan amortisasi</strong></label><br>
+                        <label>1. Bangunan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenyusutanBangunan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>2. Kendaraan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenyusutanKendaraan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>3. Mesin dan peralatan</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenyusutanMesin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>4. Inventaris dan kantor lainnya</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenyusutanInventaris">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label>5. Amortisasi</label><br>
+                        <label>Nilai</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPenyusutanAmortisasi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="blok6">
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </section>
+        </form>
     </div>
 </div>
 
@@ -1943,7 +3401,7 @@
         
     </div>
     <div class="card-body">
-            
+    
     </div>
 </div>
 

@@ -29,7 +29,7 @@
                             <div class="modal-dialog w-100 mx-auto">
                                 <div class="modal-content">
                                     <div class="modal-body">
-                                        <?php echo $this->session->flashdata('msg')?>
+                                        <?php echo $this->session->flashdata('message')?>
                                         <div class="h5 modal-title text-center">
                                             <h4 class="mt-2">
                                                 <div>Selamat Datang di Jasa Akomodasi BPS Kota Batu</div>

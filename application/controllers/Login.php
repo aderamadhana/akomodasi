@@ -13,8 +13,8 @@ class Login extends CI_controller
         $password       = $this->input->post('password');
         
         $query = $this->LoginModel->aksiLogin($username, $password)->result();
-
-        if($query > 0){
+        
+        if(count($query) > 0){
             foreach($query as $data){
                 $id_user    = $data->id_user;
                 $username   = $data->username;
@@ -35,10 +35,8 @@ class Login extends CI_controller
             }else if($role == 2){
                redirect('dashboardpetugas');
             }
-
-
         }else{
-            $this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert"><b>Username</b> atau <b>Password</b> salah</div>');
+            $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert"><b>Username</b> atau <b>Password</b> salah</div>');
             redirect('welcome');
         }
     }
