@@ -579,7 +579,7 @@
         
     </div>
     <div class="card-body">
-        <form action="#>" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok3BLanjutan1')?>" method="post">
         <label><b>4. Banyaknya kamar, tempat tidur yang tersedia, kapasitas tamu hotel, dan harga kamar setelah pajak per malam pada saat pencacahan </b></label>
         <div class="row mb-3">
             <div class="col-md-4">
@@ -587,15 +587,16 @@
                     <div class="form-group">
                         <label><strong>1. Standar</strong></label><br>
                         <label>Banyaknya</label>
-                        <input type="number" min=0 class="form-control" name="banyakKamarStandar">
+                        <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
+                        <input type="number" min=0 class="form-control" name="banyakKamarStandar" value="<?php echo $data->banyakKamarStandar?>">
                     </div>
                     <div class="form-group">
                         <label>Banyaknya tempat tidur</label>
-                        <input type="number" min=0 class="form-control" name="banyakTempatTidurStandar">
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurStandar" value="<?php echo $data->banyakTempatTidurStandar?>">
                     </div>
                     <div class="form-group">
                         <label>Kapasitas tamu hotel per kamar</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasStandar">
+                        <input type="number" min=0 class="form-control" name="kapasitasStandar" value="<?php echo $data->kapasitasStandar?>">
                     </div>
                     <div class="form-group">
                         <label>Harga Umum(Single Occupanies)</label>
@@ -603,7 +604,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSingleUmumStandar">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumStandar" value="<?php echo $data->hargaSingleUmumStandar?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -612,7 +613,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumStandar">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumStandar" value="<?php echo $data->hargaDoubleUmumStandar?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -621,7 +622,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahStandar">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahStandar" value="<?php echo $data->hargaSinglePemerintahStandar?>">
                         </div>
                     </div>
                     
@@ -631,7 +632,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahStandar">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahStandar" value="<?php echo $data->hargaDoublePemerintahStandar?>">
                         </div>
                     </div>
                 </div>
@@ -641,15 +642,15 @@
                     <div class="form-group">
                         <label><strong>2. Superior</strong></label><br>
                         <label>Banyaknya</label>
-                        <input type="number" min=0 class="form-control" name="banyakKamarSuperior">
+                        <input type="number" min=0 class="form-control" name="banyakKamarSuperior" value="<?php echo $data->banyakKamarSuperior?>">
                     </div>
                     <div class="form-group">
                         <label>Banyaknya tempat tidur</label>
-                        <input type="number" min=0 class="form-control" name="banyakTempatTidurSuperior">
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurSuperior" value="<?php echo $data->banyakTempatTidurSuperior?>">
                     </div>
                     <div class="form-group">
                         <label>Kapasitas tamu hotel per kamar</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasSuperior">
+                        <input type="number" min=0 class="form-control" name="kapasitasSuperior" value="<?php echo $data->kapasitasSuperior?>">
                     </div>
                     <div class="form-group">
                         <label>Harga Umum(Single Occupanies)</label>
@@ -657,7 +658,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSingleUmumSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumSuperior" value="<?php echo $data->hargaSingleUmumSuperior?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -666,7 +667,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumSuperior" value="<?php echo $data->hargaDoubleUmumSuperior?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -675,7 +676,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahSuperior" value="<?php echo $data->hargaSinglePemerintahSuperior?>">
                         </div>
                     </div>
                     
@@ -685,7 +686,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahSuperior" value="<?php echo $data->hargaDoublePemerintahSuperior?>">
                         </div>
                     </div>
                 </div>
@@ -695,15 +696,15 @@
                     <div class="form-group">
                         <label><strong>3. Deluxe</strong></label><br>
                         <label>Banyaknya</label>
-                        <input type="number" min=0 class="form-control" name="banyakKamarDeluxe">
+                        <input type="number" min=0 class="form-control" name="banyakKamarDeluxe" value="<?php echo $data->banyakKamarDeluxe?>">
                     </div>
                     <div class="form-group">
                         <label>Banyaknya tempat tidur</label>
-                        <input type="number" min=0 class="form-control" name="banyakTempatTidurDouble">
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurDouble" value="<?php echo $data->banyakTempatTidurDouble?>">
                     </div>
                     <div class="form-group">
                         <label>Kapasitas tamu hotel per kamar</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasDeluxe">
+                        <input type="number" min=0 class="form-control" name="kapasitasDeluxe" value="<?php echo $data->kapasitasDeluxe?>">
                     </div>
                     <div class="form-group">
                         <label>Harga Umum(Single Occupanies)</label>
@@ -711,7 +712,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSingleUmumDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumDeluxe" value="<?php echo $data->hargaSingleUmumDeluxe?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -720,7 +721,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumDeluxe" value="<?php echo $data->hargaDoubleUmumDeluxe?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -729,7 +730,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahDeluxe" value="<?php echo $data->hargaSinglePemerintahDeluxe?>">
                         </div>
                     </div>
                     
@@ -739,7 +740,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahDeluxe" value="<?php echo $data->hargaDoublePemerintahDeluxe?>">
                         </div>
                     </div>
                 </div>
@@ -749,15 +750,15 @@
                     <div class="form-group">
                         <label><strong>4. Junior Suite</strong></label><br>
                         <label>Banyaknya</label>
-                        <input type="number" min=0 class="form-control" name="banyakKamarJunior">
+                        <input type="number" min=0 class="form-control" name="banyakKamarJunior" value="<?php echo $data->banyakKamarJunior?>">
                     </div>
                     <div class="form-group">
                         <label>Banyaknya tempat tidur</label>
-                        <input type="number" min=0 class="form-control" name="banyakTempatTidurJunior">
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurJunior" value="<?php echo $data->banyakTempatTidurJunior?>">
                     </div>
                     <div class="form-group">
                         <label>Kapasitas tamu hotel per kamar</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasJunior">
+                        <input type="number" min=0 class="form-control" name="kapasitasJunior" value="<?php echo $data->kapasitasJunior?>">
                     </div>
                     <div class="form-group">
                         <label>Harga Umum(Single Occupanies)</label>
@@ -765,7 +766,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSingleUmumJunior">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumJunior" value="<?php echo $data->hargaSingleUmumJunior?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -774,7 +775,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumJunior">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumJunior" value="<?php echo $data->hargaDoubleUmumJunior?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -783,7 +784,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahJunior">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahJunior" value="<?php echo $data->hargaSinglePemerintahJunior?>">
                         </div>
                     </div>
                     
@@ -793,7 +794,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahJunior">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahJunior" value="<?php echo $data->hargaDoublePemerintahJunior?>">
                         </div>
                     </div>
                 </div>
@@ -803,15 +804,15 @@
                     <div class="form-group">
                         <label><strong>5. Suite</strong></label><br>
                         <label>Banyaknya</label>
-                        <input type="number" min=0 class="form-control" name="banyakKamarSuite">
+                        <input type="number" min=0 class="form-control" name="banyakKamarSuite" value="<?php echo $data->banyakKamarSuite?>">
                     </div>
                     <div class="form-group">
                         <label>Banyaknya tempat tidur</label>
-                        <input type="number" min=0 class="form-control" name="banyakTempatTidurSuite">
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurSuite" value="<?php echo $data->banyakTempatTidurSuite?>">
                     </div>
                     <div class="form-group">
                         <label>Kapasitas tamu hotel per kamar</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasSuite">
+                        <input type="number" min=0 class="form-control" name="kapasitasSuite" value="<?php echo $data->kapasitasSuite?>">
                     </div>
                     <div class="form-group">
                         <label>Harga Umum(Single Occupanies)</label>
@@ -819,7 +820,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSingleUmumSuite">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumSuite" value="<?php echo $data->hargaSingleUmumSuite?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -828,7 +829,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumSuite">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumSuite" value="<?php echo $data->hargaDoubleUmumSuite?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -837,7 +838,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahSuite">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahSuite" value="<?php echo $data->hargaSinglePemerintahSuite?>">
                         </div>
                     </div>
                     
@@ -847,7 +848,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahSuite">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahSuite" value="<?php echo $data->hargaDoublePemerintahSuite?>">
                         </div>
                     </div>
                 </div>
@@ -857,15 +858,15 @@
                     <div class="form-group">
                         <label><strong>6. President Suite</strong></label><br>
                         <label>Banyaknya</label>
-                        <input type="number" min=0 class="form-control" name="banyakKamarPresident">
+                        <input type="number" min=0 class="form-control" name="banyakKamarPresident" value="<?php echo $data->banyakKamarPresident?>">
                     </div>
                     <div class="form-group">
                         <label>Banyaknya tempat tidur</label>
-                        <input type="number" min=0 class="form-control" name="banyakTempatTidurPresident">
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurPresident" value="<?php echo $data->banyakTempatTidurPresident?>">
                     </div>
                     <div class="form-group">
                         <label>Kapasitas tamu hotel per kamar</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasPresident">
+                        <input type="number" min=0 class="form-control" name="kapasitasPresident" value="<?php echo $data->kapasitasPresident?>">
                     </div>
                     <div class="form-group">
                         <label>Harga Umum(Single Occupanies)</label>
@@ -873,7 +874,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSingleUmumPresident">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumPresident" value="<?php echo $data->hargaSingleUmumPresident?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -882,7 +883,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumPresident">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumPresident" value="<?php echo $data->hargaDoubleUmumPresident?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -891,7 +892,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahPresident">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahPresident" value="<?php echo $data->hargaSinglePemerintahPresident?>">
                         </div>
                     </div>
                     
@@ -901,7 +902,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahPresident">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahPresident" value="<?php echo $data->hargaDoublePemerintahPresident?>">
                         </div>
                     </div>
                 </div>
@@ -911,7 +912,7 @@
         <div class="row mb-3">
             <div class="col-sm-6 col-md-4 col-lg-6">
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="ruangPertemuan1" name="ruangPertemuan" value="1" class="custom-control-input">
+                    <input type="radio" id="ruangPertemuan1" name="ruangPertemuan" value="1" class="custom-control-input" <?php if($data->ruangPertemuan == 1) echo 'selected'; ?>>
                     <label class="custom-control-label" for="ruangPertemuan1">Ya</label>
                 </div>
 
@@ -919,7 +920,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-6">
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="ruangPertemuan2" name="ruangPertemuan" value="2" class="custom-control-input">
+                    <input type="radio" id="ruangPertemuan2" name="ruangPertemuan" value="2" class="custom-control-input" <?php if($data->ruangPertemuan == 2) echo 'selected'; ?>>
                     <label class="custom-control-label" for="ruangPertemuan2">Tidak</label>
                 </div>
             </div>
@@ -935,7 +936,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumRapat1">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat1" value="<?php echo $data->hargaUmumRapat1?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -944,7 +945,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat1">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat1" value="<?php echo $data->hargaPemerintahRapat1?>">
                         </div>
                     </div>
                     
@@ -954,26 +955,26 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">m2</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="luasRuangRapat1">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat1" value="<?php echo $data->hargaPemerintahRapat1?>">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>U-Shape</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasUshape1">
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape1" value="<?php echo $data->kapasitasUshape1?>">
                     </div>
                     <div class="form-group">
                         <label>Class room</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom1">
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom1" value="<?php echo $data->kapasitasClassRoom1?>">
                     </div>
                     
                     <div class="form-group">
                         <label>Round table</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable1">
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable1" value="<?php echo $data->kapasitasRoundTable1?>">
                     </div>
                     <div class="form-group">
                         <label>Theatre</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasTheatre1">
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre1" value="<?php echo $data->kapasitasTheatre1?>">
                     </div>
                 </div>
             </div>
@@ -986,7 +987,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumRapat2">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat2" value="<?php echo $data->hargaUmumRapat2?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -995,7 +996,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat2">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat2" value="<?php echo $data->hargaPemerintahRapat2?>">
                         </div>
                     </div>
                     
@@ -1005,26 +1006,26 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">m2</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="luasRuangRapat2">
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat2" value="<?php echo $data->luasRuangRapat2?>">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>U-Shape</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasUshape2">
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape2" value="<?php echo $data->kapasitasUshape2?>">
                     </div>
                     <div class="form-group">
                         <label>Class room</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom2">
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom2" value="<?php echo $data->kapasitasClassRoom2?>">
                     </div>
                     
                     <div class="form-group">
                         <label>Round table</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable2">
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable2" value="<?php echo $data->kapasitasRoundTable2?>">
                     </div>
                     <div class="form-group">
                         <label>Theatre</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasTheatre2">
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre2" value="<?php echo $data->kapasitasTheatre2?>">
                     </div>
                 </div>
             </div>
@@ -1037,7 +1038,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumRapat3">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat3" value="<?php echo $data->hargaUmumRapat3?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1046,7 +1047,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat3">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat3" value="<?php echo $data->hargaPemerintahRapat3?>">
                         </div>
                     </div>
                     
@@ -1056,26 +1057,26 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">m2</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="luasRuangRapat3">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat3" value="<?php echo $data->hargaPemerintahRapat3?>">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>U-Shape</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasUshape3">
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape3" value="<?php echo $data->kapasitasUshape3?>">
                     </div>
                     <div class="form-group">
                         <label>Class room</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom3">
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom3" value="<?php echo $data->kapasitasClassRoom3?>">
                     </div>
                     
                     <div class="form-group">
                         <label>Round table</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable3">
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable3" value="<?php echo $data->kapasitasRoundTable3?>">
                     </div>
                     <div class="form-group">
                         <label>Theatre</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasTheatre3">
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre3" value="<?php echo $data->kapasitasTheatre3?>">
                     </div>
                 </div>
             </div>
@@ -1088,7 +1089,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumRapat4">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat4" value="<?php echo $data->hargaUmumRapat4?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1097,7 +1098,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat4">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat4" value="<?php echo $data->hargaPemerintahRapat4?>">
                         </div>
                     </div>
                     
@@ -1107,26 +1108,26 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">m2</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="luasRuangRapat4">
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat4" value="<?php echo $data->luasRuangRapat4?>">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>U-Shape</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasUshape4">
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape4" value="<?php echo $data->kapasitasUshape4?>">
                     </div>
                     <div class="form-group">
                         <label>Class room</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom4">
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom4" value="<?php echo $data->kapasitasClassRoom4?>">
                     </div>
                     
                     <div class="form-group">
                         <label>Round table</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable4">
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable4" value="<?php echo $data->kapasitasRoundTable4?>">
                     </div>
                     <div class="form-group">
                         <label>Theatre</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasTheatre4">
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre4" value="<?php echo $data->kapasitasTheatre4?>">
                     </div>
                 </div>
             </div>
@@ -1139,7 +1140,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumRapat5">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat5" value="<?php echo $data->hargaUmumRapat5?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1148,7 +1149,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat5">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat5" value="<?php echo $data->hargaPemerintahRapat5?>">
                         </div>
                     </div>
                     
@@ -1158,26 +1159,26 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">m2</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="luasRuangRapat5">
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat5" value="<?php echo $data->luasRuangRapat5?>">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>U-Shape</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasUshape5">
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape5" value="<?php echo $data->kapasitasUshape5?>">
                     </div>
                     <div class="form-group">
                         <label>Class room</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom5">
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom5" value="<?php echo $data->kapasitasClassRoom5?>">
                     </div>
                     
                     <div class="form-group">
                         <label>Round table</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable5">
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable5" value="<?php echo $data->kapasitasRoundTable5?>">
                     </div>
                     <div class="form-group">
                         <label>Theatre</label>
-                        <input type="number" min=0 class="form-control" name="kapasitasTheatre5">
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre5" value="<?php echo $data->kapasitasTheatre5?>">
                     </div>
                 </div>
             </div>
@@ -1194,7 +1195,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumFullboardSingle">
+                            <input type="number" min=0 class="form-control" name="hargaUmumFullboardSingle" value="<?php echo $data->hargaUmumFullboardSingle?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1203,7 +1204,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullboardSingle">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullboardSingle" value="<?php echo $data->hargaPemerintahFullboardSingle?>">
                         </div>
                     </div>
                 </div>
@@ -1217,7 +1218,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumFullboardDouble">
+                            <input type="number" min=0 class="form-control" name="hargaUmumFullboardDouble" value="<?php echo $data->hargaUmumFullboardDouble?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1226,7 +1227,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullboardDouble">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullboardDouble" value="<?php echo $data->hargaPemerintahFullboardDouble?>">
                         </div>
                     </div>
                 </div>
@@ -1240,7 +1241,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumFullday">
+                            <input type="number" min=0 class="form-control" name="hargaUmumFullday" value="<?php echo $data->hargaUmumFullday?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1249,7 +1250,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullday">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullday" value="<?php echo $data->hargaPemerintahFullday?>">
                         </div>
                     </div>
                 </div>
@@ -1263,7 +1264,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumHalfday">
+                            <input type="number" min=0 class="form-control" name="hargaUmumHalfday" value="<?php echo $data->hargaUmumHalfday?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1272,7 +1273,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahHalfday">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahHalfday" value="<?php echo $data->hargaPemerintahHalfday?>">
                         </div>
                     </div>
                 </div>
@@ -1286,7 +1287,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumMakanperOrang">
+                            <input type="number" min=0 class="form-control" name="hargaUmumMakanperOrang" value="<?php echo $data->hargaUmumMakanperOrang?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1295,7 +1296,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahMakanperOrang">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahMakanperOrang" value="<?php echo $data->hargaPemerintahMakanperOrang?>">
                         </div>
                     </div>
                 </div>
@@ -1310,7 +1311,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaUmumCoffeeperOrang">
+                            <input type="number" min=0 class="form-control" name="hargaUmumCoffeeperOrang" value="<?php echo $data->hargaUmumCoffeeperOrang?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1319,7 +1320,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
-                            <input type="number" min=0 class="form-control" name="hargaPemerintahCoffeeperOrang">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahCoffeeperOrang" value="<?php echo $data->hargaPemerintahCoffeeperOrang?>">
                         </div>
                     </div>
                 </div>
@@ -1330,8 +1331,7 @@
         <button type="submit" class="btn btn-success">Simpan</button>
         </section>
 
-        <?php echo $this->session->flashdata('message3b')?>
-        </form>
+        <?php echo $this->session->flashdata('blok3blanjutan1')?>
         </form>
     </div>
 </div>
@@ -1344,7 +1344,7 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok3BLanjutan2')?>" method="post">
         <label><b>6. Fasilitas hotel</b></label>
         <div class="row mb-3">
             
@@ -1353,12 +1353,13 @@
                     <label><strong>a. Portable Screen</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="portableScreen1" name="portableScreen" value="1" class="custom-control-input">
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
+                            <input type="radio" id="portableScreen1" name="portableScreen" value="1" class="custom-control-input" <?php if($data->portableScreen == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="portableScreen1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="portableScreen2" name="portableScreen" value="2" class="custom-control-input">
+                            <input type="radio" id="portableScreen2" name="portableScreen" value="2" class="custom-control-input" <?php if($data->portableScreen == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="portableScreen2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1368,7 +1369,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaPortableScreen">
+                                <input type="number" min=0 class="form-control" name="hargaPortableScreen" value="<?php echo $data->hargaPortableScreen?>">
                             </div>
                         </div>
                     </div>
@@ -1380,12 +1381,12 @@
                     <label><strong>b. Projector</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="projector1" name="projector" value="1" class="custom-control-input">
-                            <label class="custom-control-label" for="projector">Ada</label>
+                            <input type="radio" id="projector1" name="projector" value="1" class="custom-control-input" <?php if($data->projector == 1) echo 'checked'?>>
+                            <label class="custom-control-label" for="projector1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="projector2" name="projector" value="2" class="custom-control-input">
+                            <input type="radio" id="projector2" name="projector" value="2" class="custom-control-input" <?php if($data->projector == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="projector2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1395,7 +1396,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaProjector">
+                                <input type="number" min=0 class="form-control" name="hargaProjector" value="<?php echo $data->hargaProjector?>">
                             </div>
                         </div>
                     </div>
@@ -1407,12 +1408,12 @@
                     <label><strong>c. Wifi Internet Access</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="wifi1" name="wifi" value="1" class="custom-control-input">
+                            <input type="radio" id="wifi1" name="wifi" value="1" class="custom-control-input" <?php if($data->wifi == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="wifi1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="wifi2" name="wifi" value="2" class="custom-control-input">
+                            <input type="radio" id="wifi2" name="wifi" value="2" class="custom-control-input" <?php if($data->wifi == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="wifi2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1422,7 +1423,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaWifi">
+                                <input type="number" min=0 class="form-control" name="hargaWifi" value="<?php echo $data->hargaWifi?>">
                             </div>
                         </div>
                     </div>
@@ -1434,12 +1435,12 @@
                     <label><strong>d. Parkir</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="parkir1" name="parkir" value="1" class="custom-control-input">
+                            <input type="radio" id="parkir1" name="parkir" value="1" class="custom-control-input" <?php if($data->parkir == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="parkir1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="parkir2" name="parkir" value="2" class="custom-control-input">
+                            <input type="radio" id="parkir2" name="parkir" value="2" class="custom-control-input" <?php if($data->parkir == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="parkir2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1449,7 +1450,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaParkir">
+                                <input type="number" min=0 class="form-control" name="hargaParkir" value="<?php echo $data->hargaParkir?>">
                             </div>
                         </div>
                     </div>
@@ -1461,12 +1462,12 @@
                     <label><strong>e. Flipchart</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="flipchart1" name="flipchart" value="1" class="custom-control-input">
+                            <input type="radio" id="flipchart1" name="flipchart" value="1" class="custom-control-input" <?php if($data->flipchart == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="flipchart1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="flipchart2" name="flipchart" value="2" class="custom-control-input">
+                            <input type="radio" id="flipchart2" name="flipchart" value="2" class="custom-control-input" <?php if($data->flipchart == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="flipchart2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1476,7 +1477,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaFlipChart">
+                                <input type="number" min=0 class="form-control" name="hargaFlipChart" value="<?php echo $data->hargaFlipChart?>">
                             </div>
                         </div>
                     </div>
@@ -1488,12 +1489,12 @@
                     <label><strong>f. Sound System</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="soundSystem1" name="soundSystem" value="1" class="custom-control-input">
+                            <input type="radio" id="soundSystem1" name="soundSystem" value="1" class="custom-control-input" <?php if($data->soundSystem == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="soundSystem1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="soundSystem2" name="soundSystem" value="2" class="custom-control-input">
+                            <input type="radio" id="soundSystem2" name="soundSystem" value="2" class="custom-control-input" <?php if($data->soundSystem == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="soundSystem2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1503,7 +1504,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaSoundSystem">
+                                <input type="number" min=0 class="form-control" name="hargaSoundSystem" value="<?php echo $data->hargaSoundSystem?>">
                             </div>
                         </div>
                     </div>
@@ -1515,12 +1516,12 @@
                     <label><strong>g. Buku Catatan dan Pensil</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="bukuCatatan1" name="bukuCatatan" value="1" class="custom-control-input">
+                            <input type="radio" id="bukuCatatan1" name="bukuCatatan" value="1" class="custom-control-input" <?php if($data->bukuCatatan == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="bukuCatatan1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="bukuCatatan2" name="bukuCatatan" value="2" class="custom-control-input">
+                            <input type="radio" id="bukuCatatan2" name="bukuCatatan" value="2" class="custom-control-input" <?php if($data->bukuCatatan == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="bukuCatatan2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1530,7 +1531,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaBukuCatatan">
+                                <input type="number" min=0 class="form-control" name="hargaBukuCatatan" value="<?php echo $data->hargaBukuCatatan?>">
                             </div>
                         </div>
                     </div>
@@ -1542,12 +1543,12 @@
                     <label><strong>h. Executiver/VIP Room</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="executiver1" name="executiver" value="1" class="custom-control-input">
+                            <input type="radio" id="executiver1" name="executiver" value="1" class="custom-control-input" <?php if($data->executiver == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="executiver1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="executiver2" name="executiver" value="2" class="custom-control-input">
+                            <input type="radio" id="executiver2" name="executiver" value="2" class="custom-control-input" <?php if($data->executiver == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="executiver2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1557,7 +1558,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaExecutiver">
+                                <input type="number" min=0 class="form-control" name="hargaExecutiver" value="<?php echo $data->hargaExecutiver?>">
                             </div>
                         </div>
                     </div>
@@ -1569,12 +1570,12 @@
                     <label><strong>i. Pick Up Service</strong></label>
                     <div class="form-group mb-2">
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="pickUp1" name="pickUp" value="1" class="custom-control-input">
+                            <input type="radio" id="pickUp1" name="pickUp" value="1" class="custom-control-input" <?php if($data->pickUp == 1) echo 'checked'?>>
                             <label class="custom-control-label" for="pickUp1">Ada</label>
                         </div>
 
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="pickUp2" name="pickUp" value="2" class="custom-control-input">
+                            <input type="radio" id="pickUp2" name="pickUp" value="2" class="custom-control-input" <?php if($data->pickUp == 2) echo 'checked'?>>
                             <label class="custom-control-label" for="pickUp2">Tidak Ada</label>
                         </div>
                         </br>
@@ -1584,7 +1585,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Rp</div>
                                 </div>
-                                <input type="number" min=0 class="form-control" name="hargaPickUp">
+                                <input type="number" min=0 class="form-control" name="hargaPickUp" value="<?php echo $data->hargaPickUp?>">
                             </div>
                         </div>
                     </div>
@@ -1592,9 +1593,11 @@
             </div>
 
         </div>
-        <section id="blok3blanjutan1">
+        <section id="blok3blanjutan2">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok3blanjutan2')?>
         </form>
     </div>
 </div>
@@ -1607,7 +1610,7 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok4')?>" method="post">
         <label><b>1. Banyaknya pekerja/karyawan menurut status pekerja, jenjang pendidikan yang ditamatkan dan jenis kelamin</b></label>
         <div class="row mb-3">
             
@@ -1619,6 +1622,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">Laki-Laki</label>
                         <div class="col-sm-8">
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="number" min=0 class="form-control" name="jumlahPekerjaTetapLakiLakiSLTP">
                         </div>
                     </div>
@@ -2643,6 +2647,8 @@
         <section id="blok4">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok4')?>
         </form>
     </div>    
 </div>
@@ -2655,7 +2661,7 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok5')?>" method="post">
         <label><b>1. Pendapatan Utama</b></label><br>
         <small>Isikan nilai pendapatan dari penyewaan kamar, penjualan makanan dan minuman, penyewaan ruang pertemuan dan fasilitas lainnya</small>
         <div class="row mb-3">
@@ -2667,6 +2673,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="number" min=0 class="form-control" name="penyewaanKamar">
                         </div>
                     </div>
@@ -2800,6 +2807,7 @@
         <section id="blok5">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        <?php echo $this->session->flashdata('blok5')?>
         </form>
     </div>
 </div>
@@ -2812,7 +2820,7 @@
         
     </div>
     <div class="card-body">
-    <form action="" method="post">
+    <form action="<?php echo site_url('Survei/updateBlok6')?>" method="post">
         <label><b>1. Biaya Utama</b></label><br>
         <small>Blok ini digunakan untuk mendapatakan informasi mengenai biaya khusus yang dikeluarkan perusahaan/usaha</small>
         <div class="row mb-3">
@@ -2824,6 +2832,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">Rp</div>
                             </div>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="number" min=0 class="form-control" name="bahanBakuMakanMinum">
                         </div>
                     </div>
@@ -3022,6 +3031,8 @@
         <section id="blok6">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok6')?>
         </form>  
     </div>
 </div>
@@ -3034,7 +3045,7 @@
         
     </div>
     <div class="card-body">
-    <form action="" method="post">
+    <form action="<?php echo site_url('Survei/updateBlok6lanjutan')?>" method="post">
         <div class="row mb-3">
             <div class="col-md-4">
                 <div class="position-relative form-group">
@@ -3046,6 +3057,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">M3</div>
                             </div>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="number" min=0 class="form-control" name="banyakMembeliAir">
                         </div>
                     </div>
@@ -3852,9 +3864,11 @@
             </div>
 
         </div>
-        <section id="blok6">
+        <section id="blok6lanjutan">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok6lanjutan')?>
         </form>
     </div>
 </div>
@@ -3867,13 +3881,14 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok7')?>" method="post">
         <div class="row mb-3">
             <div class="col-md-4">
                 <div class="position-relative form-group">
                     <div class="form-group">
                         <label><strong>1. Bangunan</strong></label><br>
                         <label>Posisi awal tahun</label>
+                        <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                         <input type="number" min=0 class="form-control" name="posisiAwalTahunBangunan">
                     </div>
                     <div class="form-group">
@@ -3977,6 +3992,8 @@
         <section id="blok7">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok7')?>
         </form>
     </div>
 </div>
@@ -3989,7 +4006,7 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok8')?>" method="post">
         <div class="row mb-3">
             <div class="col-md-4">
                 <div class="position-relative form-group">
@@ -4001,6 +4018,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">kg</div>
                             </div>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="number" min=0 class="form-control" name="volumeBeras">
                         </div>
                     </div>
@@ -4443,6 +4461,8 @@
         <section id="blok8">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok8')?>
         </form>
     </div>
 </div>
@@ -4455,7 +4475,7 @@
         
     </div>
     <div class="card-body">
-    <form action="" method="post">
+    <form action="<?php echo site_url('Survei/updateBlok9')?>" method="post">
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="position-relative form-group">
@@ -4466,6 +4486,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text">%</div>
                             </div>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="number" min=0 class="form-control" name="kepemilikanWNI">
                         </div>
                     </div>
@@ -4577,6 +4598,8 @@
         <section id="blok9">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok9')?>
         </form>
     </div>
 </div>
@@ -4589,12 +4612,13 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post">
+        <form action="<?php echo site_url('Survei/updateBlok10')?>" method="post">
         <div class="row mb-3">
             <div class="col-md-12">
                 <div class="position-relative form-group">
                     <div class="form-group">
                         <label><strong>Catanan</strong></label>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="text" class="form-control" name="catatan">
                     </div>
                 </div>
@@ -4604,6 +4628,8 @@
         <section id="blok10">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok10')?>
         </form>
     </div>
 </div>
@@ -4616,12 +4642,13 @@
         
     </div>
     <div class="card-body">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="<?php echo site_url('Survei/updateBlok11')?>" method="post" enctype="multipart/form-data">
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="position-relative form-group">
                     <div class="form-group">
                         <label>Nama pemberi jawaban</label>
+                            <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>" required>
                             <input type="text" class="form-control" name="namaPemberiJawaban">
                     </div>
                 </div>
@@ -4660,9 +4687,11 @@
             </div>
         </div>
         
-        <section id="blok10">
+        <section id="blok11">
             <button type="submit" class="btn btn-success">Simpan</button>
         </section>
+        
+        <?php echo $this->session->flashdata('blok11')?>
         </form>
     </div>
 </div>   

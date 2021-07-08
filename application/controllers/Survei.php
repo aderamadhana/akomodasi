@@ -140,5 +140,175 @@ class Survei extends CI_Controller
         redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok3b');
 
     }
+
+    public function updateBlok3BLanjutan1(){
+        $data = $_POST;
+
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok3blanjutan1', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 3b! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok3blanjutan1');
+    }
+
+    public function updateBlok3BLanjutan2(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok3blanjutan2', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 3b! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok3blanjutan2');
+    }
+
+    public function updateBlok4(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok4', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 4! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok4');
+    }
+
+    public function updateBlok5(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok5', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 5! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok5');
+    }
+
+    public function updateBlok6(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok6', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 6! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok6');
+    }
+
+    public function updateBlok6lanjutan(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok6lanjutan', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 6! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok6lanjutan');
+    }
+
+    public function updateBlok7(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok7', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 7! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok7');
+    }
+
+    public function updateBlok8(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok8', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 8! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok8');
+    }
+
+    public function updateBlok9(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok9', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 9! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok9');
+    }
+
+    public function updateBlok10(){
+        $data = $_POST;
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok10', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 10! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok10');
+    }
+
+    public function updateBlok11(){
+        $ttdPemberiJawaban = null;
+
+		$config = ['upload_path' => './upload/ttd/', 'allowed_types' => 'jpg|png|jpeg', 'max_size' => 1024];            
+        $this->upload->initialize($config);
+
+        if($this->upload->do_upload('ttdPemberiJawaban')){ 
+			$dataUpload     = $this->upload->data();
+			$ttdPemberiJawaban   = base_url('upload/ttd/' . $dataUpload['file_name']);
+        }
+
+        $data = array(
+            'namaPemberiJawaban'    => $this->input->post('namaPemberiJawaban'),
+            'jabatan'               => $this->input->post('jabatan'),
+            'nomorTelepon'          => $this->input->post('nomorTelepon'),
+            'tanggalPengesahan'     => $this->input->post('tanggalPengesahan'),
+            'ttdPemberiJawaban'     => $ttdPemberiJawaban
+        );
+        // echo print_r($data);
+        $where = array(
+            'id_survei' => $this->input->post('id_survei')
+        );
+
+        $this->SurveiModel->updateBlok($data, $where);
+
+        $this->session->set_flashdata('blok11', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 11! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok11');
+    }
 }
 
