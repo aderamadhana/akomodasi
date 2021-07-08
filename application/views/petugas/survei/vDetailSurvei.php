@@ -582,292 +582,329 @@
         <form action="#>" method="post">
         <label><b>4. Banyaknya kamar, tempat tidur yang tersedia, kapasitas tamu hotel, dan harga kamar setelah pajak per malam pada saat pencacahan </b></label>
         <div class="row mb-3">
-            <div class="col-sm-6 col-md-4 col-lg-12">
-                <table class="table table-bordered">
-                    <tr class="text-center">
-                        <th rowspan="3" >Jenis kamar</th>
-                        <th rowspan="3">Banyaknya kamar</th>
-                        <th rowspan="3">Banyaknya tempat tidur</th>
-                        <th rowspan="3">Kapasitas tamu hotel</th>
-                        <th colspan="4">Harga kamar per malam</th>
-                    </tr>
-                    <tr class="text-center">
-                        <td colspan="2">Umum</td>
-                        <td colspan="2">Pemerintah</td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>Single Occupancies</td>
-                        <td>Double Occupancies</td>
-                        <td>Single Occupancies</td>
-                        <td>Double Occupancies</td>
-                    </tr>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>1. Standar</strong></label><br>
+                        <label>Banyaknya</label>
+                        <input type="number" min=0 class="form-control" name="banyakKamarStandar">
+                    </div>
+                    <div class="form-group">
+                        <label>Banyaknya tempat tidur</label>
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurStandar">
+                    </div>
+                    <div class="form-group">
+                        <label>Kapasitas tamu hotel per kamar</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasStandar">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumStandar">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumStandar">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahStandar">
+                        </div>
+                    </div>
                     
-                    <tr>
-                        <td>Standar</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kamarStandar">
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="tempatTidurStandar">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahStandar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>2. Superior</strong></label><br>
+                        <label>Banyaknya</label>
+                        <input type="number" min=0 class="form-control" name="banyakKamarSuperior">
+                    </div>
+                    <div class="form-group">
+                        <label>Banyaknya tempat tidur</label>
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurSuperior">
+                    </div>
+                    <div class="form-group">
+                        <label>Kapasitas tamu hotel per kamar</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasSuperior">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kapasitasStandar">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumSuperior">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumSingle">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumSuperior">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDouble">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahSuperior">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahSingle">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahSuperior">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>3. Deluxe</strong></label><br>
+                        <label>Banyaknya</label>
+                        <input type="number" min=0 class="form-control" name="banyakKamarDeluxe">
+                    </div>
+                    <div class="form-group">
+                        <label>Banyaknya tempat tidur</label>
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurDouble">
+                    </div>
+                    <div class="form-group">
+                        <label>Kapasitas tamu hotel per kamar</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasDeluxe">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDouble">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumDeluxe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Superior</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kamarSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumDeluxe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="tempatTidurSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahDeluxe">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kapasitasSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahDeluxe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>4. Junior Suite</strong></label><br>
+                        <label>Banyaknya</label>
+                        <input type="number" min=0 class="form-control" name="banyakKamarJunior">
+                    </div>
+                    <div class="form-group">
+                        <label>Banyaknya tempat tidur</label>
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurJunior">
+                    </div>
+                    <div class="form-group">
+                        <label>Kapasitas tamu hotel per kamar</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasJunior">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumSingleSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumJunior">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDoubleSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumJunior">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahSingleSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahJunior">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDoubleSuperior">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahJunior">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>5. Suite</strong></label><br>
+                        <label>Banyaknya</label>
+                        <input type="number" min=0 class="form-control" name="banyakKamarSuite">
+                    </div>
+                    <div class="form-group">
+                        <label>Banyaknya tempat tidur</label>
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurSuite">
+                    </div>
+                    <div class="form-group">
+                        <label>Kapasitas tamu hotel per kamar</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasSuite">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Deluxe</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kamarDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumSuite">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="tempatTidurDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumSuite">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kapasitasDeluxer">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahSuite">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumSingleDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahSuite">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>6. President Suite</strong></label><br>
+                        <label>Banyaknya</label>
+                        <input type="number" min=0 class="form-control" name="banyakKamarPresident">
+                    </div>
+                    <div class="form-group">
+                        <label>Banyaknya tempat tidur</label>
+                        <input type="number" min=0 class="form-control" name="banyakTempatTidurPresident">
+                    </div>
+                    <div class="form-group">
+                        <label>Kapasitas tamu hotel per kamar</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasPresident">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDoubleDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaSingleUmumPresident">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Umum(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahSingleDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaDoubleUmumPresident">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Single Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDoubleDeluxe">
+                            <input type="number" min=0 class="form-control" name="hargaSinglePemerintahPresident">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Harga Pemerintah(Double Occupanies)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Junior Suite</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kamarJunior">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="tempatTidurJunior">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kapasitasJunior">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumSingleJunior">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDoubleJunior">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahSingleJunior">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDoubleJunior">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Suite</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kamarSuite">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="tempatTidurSuite">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kapasitasSuite">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumSingleSuite">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDoubleSuite">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahSingleSuite">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDoubleSuite">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>President Suite</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kamarPresident">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="tempatTidurPresident">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="kapasitasPresident">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumSinglePresident">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDoublePresident">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahSinglePresident">
-                            </div>
-                        </td>
-                        
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDoublePresident">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                
+                            <input type="number" min=0 class="form-control" name="hargaDoublePemerintahPresident">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <label><b>5. a. Apakah tersedia ruang pertemuan?</b></label>
@@ -889,167 +926,403 @@
         </div>
         <label><b>5. b. Nama, tarif, luas, dan kapasitas masing-masing ruang rapat</b></label>
         <div class="row mb-3">
-            <div class="col-sm-6 col-md-4 col-lg-12">
-                <table class="table table-bordered">
-                    <tr class="text-center">
-                        <th rowspan="2">No</th>
-                        <th rowspan="2">Nama ruang rapat</th>
-                        <th colspan="2">Harga setelah pajak (termasuk pajak)</th>
-                        <th rowspan="2">Luas (m2)</th>
-                        <th colspan="4">Kapasitas (kursi)</th>
-                    </tr>
-                    <tr class="text-center">
-                        <td>Umum</td>
-                        <td>Pemerintah</td>
-                        <td>U-Shape</td>
-                        <td>Class Room</td>
-                        <td>Round Table</td>
-                        <td>Theatre</td>
-                    </tr>
-                    <?php for($i=1; $i<=5; $i++){?>
-                    <tr>
-                        <td><?php echo $i?></td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="namaRuangRapat<?php echo $i?>">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>1. Nama ruang rapat</strong></label><br>
+                        <label>Public rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umum<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Government rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintah<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Luas</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">m2</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="luas<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>U-Shape</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape1">
+                    </div>
+                    <div class="form-group">
+                        <label>Class room</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Round table</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable1">
+                    </div>
+                    <div class="form-group">
+                        <label>Theatre</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>2. Nama ruang rapat</strong></label><br>
+                        <label>Public rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="ushape<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Government rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="classRoom<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat2">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Luas</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">m2</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="roundTable<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat2">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>U-Shape</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape2">
+                    </div>
+                    <div class="form-group">
+                        <label>Class room</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom2">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Round table</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable2">
+                    </div>
+                    <div class="form-group">
+                        <label>Theatre</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>3. Nama ruang rapat</strong></label><br>
+                        <label>Public rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="theater<?php echo $i?>">
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Government rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <?php }?>
-                </table>
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat3">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Luas</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">m2</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat3">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>U-Shape</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape3">
+                    </div>
+                    <div class="form-group">
+                        <label>Class room</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom3">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Round table</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable3">
+                    </div>
+                    <div class="form-group">
+                        <label>Theatre</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>4. Nama ruang rapat</strong></label><br>
+                        <label>Public rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Government rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat4">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Luas</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">m2</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat4">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>U-Shape</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape4">
+                    </div>
+                    <div class="form-group">
+                        <label>Class room</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom4">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Round table</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable4">
+                    </div>
+                    <div class="form-group">
+                        <label>Theatre</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre4">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>5. Nama ruang rapat</strong></label><br>
+                        <label>Public rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaUmumRapat5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Government rate</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahRapat5">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Luas</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">m2</div>
+                            </div>
+                            <input type="number" min=0 class="form-control" name="luasRuangRapat5">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>U-Shape</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasUshape5">
+                    </div>
+                    <div class="form-group">
+                        <label>Class room</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasClassRoom5">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Round table</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasRoundTable5">
+                    </div>
+                    <div class="form-group">
+                        <label>Theatre</label>
+                        <input type="number" min=0 class="form-control" name="kapasitasTheatre5">
+                    </div>
+                </div>
             </div>
         </div>
         <label><b>5. c. Harga Paket per orang per pax(pada tahun 2020)</b></label>
         <div class="row mb-3">
-            <div class="col-sm-6 col-md-4 col-lg-12">
-                <table class="table table-bordered">
-                    <tr class="text-center">
-                        <th rowspan="2">Jenis Paket</th>
-                        <th colspan="2">Harga setelah pajak (termasuk pajak)</th>
-                    </tr>
-                    <tr class="text-center">
-                        <td>Umum</td>
-                        <td>Pemerintah</td>
-                    </tr>
-                    <tr>
-                        <td>i. Pertemuan</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>a) Fullboard Single Occupancy (1 kamar isi 1 orang per pax)</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumFullboard">
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>1. Pertemuan/Meeting</strong></label><br>
+                        <label><strong>a. Fullboard Single Occupancy (1 kamar isi 1 orang per pax)</strong></label><br>
+                        <label>Umum (Public rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahFullboard">
+                            <input type="number" min=0 class="form-control" name="hargaUmumFullboardSingle">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pemerintah (Government rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>b) Fullboard Double Occupancy (1 kamar isi 1 orang per pax)</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumDoubleFullboard">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullboardSingle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>b. Fullboard Double Occupancy (1 kamar isi 1 orang per pax)</strong></label><br>
+                        <label>Umum (Public rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahDoubleFullboard">
+                            <input type="number" min=0 class="form-control" name="hargaUmumFullboardDouble">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pemerintah (Government rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>c) Fullday</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumFullday">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullboardDouble">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>c. Fullday</strong></label><br>
+                        <label>Umum (Public rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahFullday">
+                            <input type="number" min=0 class="form-control" name="hargaUmumFullday">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pemerintah (Government rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>d) Holiday</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumHoliday">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahFullday">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>d. Halfday</strong></label><br>
+                        <label>Umum (Public rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahHoliday">
+                            <input type="number" min=0 class="form-control" name="hargaUmumHalfday">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pemerintah (Government rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ii. Makan per orang per pax</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumMakan">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahHalfday">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>2. Makan per orang per pax</strong></label><br>
+                        <label>Umum (Public rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahMakan">
+                            <input type="number" min=0 class="form-control" name="hargaUmumMakanperOrang">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pemerintah (Government rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>iii. Coffee break per orang per pax</td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="umumCoffee">
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahMakanperOrang">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <div class="form-group">
+                        <label><strong>3. Coffee Break per orang per pax</strong></label><br>
+                        <label>Umum (Public rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="pemerintahCoffee">
+                            <input type="number" min=0 class="form-control" name="hargaUmumCoffeeperOrang">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pemerintah (Government rate)</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
                             </div>
-                        </td>
-                    </tr>
-                </table>
+                            <input type="number" min=0 class="form-control" name="hargaPemerintahCoffeeperOrang">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
