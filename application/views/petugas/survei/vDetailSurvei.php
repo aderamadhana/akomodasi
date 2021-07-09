@@ -244,7 +244,7 @@
     </div>
     
     <form action="<?php echo site_url('Survei/tambahSurvei')?>" method="post"> 
-    <div class="card-body">
+    <div class="card-body contr">
         <div class="control-group after-add-more">
             <div class="form-row">
                 <div class="col-md-4">
@@ -433,8 +433,10 @@
     $(document).ready(function() {
       $(".add-more").click(function(){ 
           var html = $(".copy").html();
-          $(".after-add-more").after(html);
+          $(".after-add-more").append(html);
       });
+
+      
 
       // saat tombol remove dklik control group akan dihapus 
       $("body").on("click",".remove",function(){ 
