@@ -31,19 +31,14 @@ class JobDesc extends CI_Controller
     public function tambahJobDesc(){
         $id_job_desc = null;
 
-        $data = array(
-            'id_user'           => $this->input->post('id_user'),
-            'id_blok1'          => $this->input->post('id_blok1'),
-            'tanggal_survei'    => $this->input->post('tanggal_survei'),
-            'keterangan'        => $this->input->post('keterangan'),
-        );
+        $data = $_POST;
 
         if($this->input->post('tanggal_survei') < date('Y-m-d')){
             $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Tanggal Survei sudah terlewat! </div>');
         
             redirect('JobDesc');
         }else{
-            $query = $this->db->select('*')->from('job_desc')->where('tanggal_survei', $this->input->post('tanggal_survei'))->where('id_blok1', $this->input->post('id_blok1'))->get()->num_rows();
+            $query = $this->db->select('*')->from('job_desc')->where('tanggal_survei', $this->input->post('tanggal_survei'))->where('id_lokasi', $this->input->post('id_lokasi'))->get()->num_rows();
             if($query == 0){
                 $this->JobDescModel->insertJobDesc($data);
 

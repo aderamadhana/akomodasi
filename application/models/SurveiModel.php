@@ -8,7 +8,7 @@ class SurveiModel extends CI_model
         $this->db->from('survei');
         $this->db->join('job_desc', 'job_desc.id_job_desc = survei.id_job_desc');
         $this->db->join('user', 'user.id_user = job_desc.id_user');
-        $this->db->join('blok1_pengenalan_tempat', 'blok1_pengenalan_tempat.id_blok1 = job_desc.id_blok1');
+        $this->db->join('lokasi', 'lokasi.id_lokasi = job_desc.id_lokasi');
         $this->db->where('job_desc.id_user', $this->session->userdata('id_user'));
         // $this->db->where('tanggal_survei', date('Y-m-d'));
         $this->db->order_by('tanggal_survei', 'asc');
@@ -20,7 +20,7 @@ class SurveiModel extends CI_model
         $this->db->from('survei');
         $this->db->join('job_desc', 'job_desc.id_job_desc = survei.id_job_desc');
         $this->db->join('user', 'user.id_user = job_desc.id_user');
-        $this->db->join('blok1_pengenalan_tempat', 'blok1_pengenalan_tempat.id_blok1 = job_desc.id_blok1');
+        $this->db->join('lokasi', 'lokasi.id_lokasi = job_desc.id_lokasi');
         $this->db->where('survei.id_survei', $id_survei);
         return $this->db->get();
     }

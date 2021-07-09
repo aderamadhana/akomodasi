@@ -24,26 +24,7 @@ class Lokasi extends CI_Controller
     }
 
     public function tambahLokasi(){
-        $data = array(
-            'provinsi'                      => $this->input->post('provinsi'),
-            'kabupatenkota'                 => $this->input->post('kabupatenkota'),
-            'kelurahan'                     => $this->input->post('kelurahan'),
-            'kecamatan'                     => $this->input->post('kecamatan'),
-            'nomor_sbr'                     => $this->input->post('nomorSBR'),
-            'id_infrastruktur_wilkerstat'   => $this->input->post('idInfrastruktur'),
-            'nama_komersial_usaha'          => $this->input->post('namaKemersialUsaha'),
-            'nama_perusahaan'               => $this->input->post('namaPerusahaan'),
-            'jalan'                         => $this->input->post('jalan'),
-            'kode_pos'                      => $this->input->post('kodePOS'),
-            'no_telepon'                    => $this->input->post('noTelp'),
-            'facebook'                      => $this->input->post('facebook'),
-            'email'                         => $this->input->post('email'),
-            'twitter'                       => $this->input->post('twitter'),
-            'website'                       => $this->input->post('website'),
-            'nama_pengusaha'                => $this->input->post('namaPengusaha'),
-            'lat'                           => $this->input->post('lat'),
-            'longi'                         => $this->input->post('long')
-        );
+        $data = $_POST;
 
         $this->LokasiModel->insert($data);
 

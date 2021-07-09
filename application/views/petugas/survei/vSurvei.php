@@ -33,8 +33,8 @@
                 ?>
                     <tr>
                         <td><?php echo $no++?></td>
-                        <td><?php echo $data->nama_perusahaan?></td>
-                        <td><?php echo $data->jalan?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenkota?>, <?php echo $data->provinsi?></td>
+                        <td><?php echo $data->namaKomersial?></td>
+                        <td><?php echo $data->alamat?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenKota?>, <?php echo $data->provinsi?></td>
                         <td><?php echo $status_job?></td>
                         <td>
                             <a class="btn btn-success btn-lg active btn-sm" title="Isi Survei" type="button" href="<?php echo site_url('Survei/detailSurvei/'.$data->id_survei)?>">

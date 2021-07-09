@@ -13,7 +13,7 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label class="mt-4">Kabupaten/Kota</label>
-                        <input type="text" class="form-control" name="kabupatenkota" required>
+                        <input type="text" class="form-control" name="kabupatenKota" required>
                     </div>
                 </div>
 
@@ -30,104 +30,48 @@
                         <input type="text" class="form-control" name="kelurahan" required>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                        <label class="mt-4">Nomor Identitas Perusahaan/Usaha (nomor SBR)</label>
-                        <input type="text" class="form-control" name="nomorSBR">
-                    </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                        <label class="mt-4">ID Infrastruktur Wilkerstat</label>
-                        <input type="text" class="form-control" name="idInfrastruktur">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
+                <div class="col-md-8">
                     <div class="position-relative form-group">
                         <label class="mt-4">Nama Komersial Usaha</label>
-                        <input type="text" class="form-control" name="namaKemersialUsaha">
+                        <input type="text" class="form-control" name="namaKomersial" required>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
-                    <label class="mt-4">Nama Perusahaan/Usaha</label>
-                    <input type="text" class="form-control" name="namaPerusahaan">
+                    <label class="mt-4">Jenis Akomodasi</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="jenisAkomodasi1" name="jenisAkomodasi" value="1" class="custom-control-input">
+                        <label class="custom-control-label" for="jenisAkomodasi1">Bintang</label>
+                    </div>
+                    
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="jenisAkomodasi2" name="jenisAkomodasi" value="2" class="custom-control-input">
+                        <label class="custom-control-label" for="jenisAkomodasi2">Non Bintang</label>
+                    </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
+                
+                <div class="col-md-8">
+                    <div class="position-relative form-group">
+                    <label class="mt-4">Kelas Akomodasi</label>
+                    <input type="text" class="form-control" name="kelasAkomodasi" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
                     <div class="position-relative form-group">
                     <label class="mt-4">Alamat</label>
-                    <input type="text" class="form-control" name="jalan">
+                    <textarea class="form-control" name="alamat" required></textarea>
                     </div>
                 </div>
-
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="position-relative form-group">
-                    <label class="mt-4">Kode POS</label>
-                    <input type="text" class="form-control" name="kodePOS">
+                    <label class="mt-4">Link Maps</label>
+                    <textarea class="form-control" name="linkMaps" required></textarea>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">No Telepon</label>
-                    <input type="text" class="form-control" name="noTelp">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Email</label>
-                    <input type="text" class="form-control" name="email">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Twitter</label>
-                    <input type="text" class="form-control" name="twitter">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Facebook</label>
-                    <input type="text" class="form-control" name="facebook">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Website</label>
-                    <input type="text" class="form-control" name="website">
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Nama Pengusaha/penaggung jawab</label>
-                    <input type="text" class="form-control" name="namaPengusaha">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Longitude</label>
-                    <input type="text" class="form-control" name="lat">
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="position-relative form-group">
-                    <label class="mt-4">Lattitude</label>
-                    <input type="text" class="form-control" name="long">
-                    </div>
-                </div>
+                
             </div>
             <button class="mt-2 btn btn-primary" type="submit">Submit</button>
         </form>
@@ -155,8 +99,8 @@
                 <?php $no=1; foreach($lokasi as $data){?>
                     <tr>
                         <td><?php echo $no++?></td>
-                        <td><?php echo $data->nama_perusahaan?></td>
-                        <td><?php echo $data->jalan?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenkota?>, <?php echo $data->provinsi?></td>
+                        <td><?php echo $data->namaKomersial?></td>
+                        <td><?php echo $data->alamat?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenKota?>, <?php echo $data->provinsi?></td>
                         <td>
                             <a class="btn btn-success btn-lg active btn-sm" title="Detail Petugas" type="button" href="#">
                                 <i class="fa fa-eye"></i>

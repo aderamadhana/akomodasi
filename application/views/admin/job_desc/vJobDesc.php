@@ -19,10 +19,10 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Lokasi Survei</label>
-                        <select name="id_blok1" class="form-control" required>
-                            <option value="">-- Pilih Lokasi</option>
+                        <select name="id_lokasi" class="form-control" required>
+                            <option value="">-- Pilih Lokasi --</option>
                             <?php foreach($lokasi as $data){?>
-                            <option value="<?php echo $data->id_blok1?>"><?php echo $data->nama_perusahaan?></option>
+                            <option value="<?php echo $data->id_lokasi?>"><?php echo $data->namaKomersial?></option>
                             <?php }?>
                         </select>
                     </div>
@@ -78,7 +78,7 @@
                     <tr>
                         <td><?php echo $no++?></td>
                         <td><?php echo $data->nama_petugas?></td>
-                        <td><?php echo $data->nama_perusahaan?></td>
+                        <td><?php echo $data->namaKomersial?></td>
                         <td><?php echo $data->tanggal_survei?></td>
                         <td><?php echo $status_job?></td>
                         <td>
