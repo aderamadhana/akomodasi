@@ -36,9 +36,20 @@ class Survei extends CI_Controller
     public function tambahSurvei(){
         $data = $this->input->post('tanggal');
 
-        foreach ($data as $color){ 
-            echo $color."<br />";
+        for ($i=0; $i < count($data) ; $i++) { 
+            $tgl[] = $data[$i];
         }
+        
+        // for ($i=0; $i < $countKategori; $i++) { 
+        //     $dataKegiatan = array(
+        //         'ID_PAKET'              => $idPaket,
+        //         'ID_KATEGORI_EVENT'    => $kategoriEvent[$i]
+        //     );
+
+        //     $this->MPaket->tambahKegiatanPaket($dataKegiatan);
+        // }
+
+        echo print_r($tgl);
     
     }
 }
