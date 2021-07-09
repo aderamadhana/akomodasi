@@ -40,4 +40,15 @@ class SurveiModel extends CI_model
         $this->db->where($where);
         $this->db->update('survei');
     }
+
+    public function selesaiSurvei($data, $where){
+        $this->db->set($data);
+        $this->db->where($where);
+        $this->db->update('survei');
+    }
+    public function selesaiSurveiJob($data, $where){
+        $this->db->set($data);
+        $this->db->where($where);
+        $this->db->update('job_desc');
+    }
 }

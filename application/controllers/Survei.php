@@ -57,9 +57,9 @@ class Survei extends CI_Controller
 
         $this->SurveiModel->updateBlok1($data, $where);
 
-        $this->session->set_flashdata('message1', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 1! </div>');
+        $this->session->set_flashdata('blok1', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 1! </div>');
         
-        redirect('Survei/detailSurvei/'.$this->input->post('id_job_desc').'/#blok1');
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok1');
     }
 
     public function updateBlok2(){
@@ -83,7 +83,7 @@ class Survei extends CI_Controller
 
         $this->SurveiModel->updateBlok($data, $where);
 
-        $this->session->set_flashdata('message2', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 2! </div>');
+        $this->session->set_flashdata('blok2', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 2! </div>');
         
         redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok2');
     }
@@ -104,7 +104,7 @@ class Survei extends CI_Controller
 
         $this->SurveiModel->updateBlok($data, $where);
 
-        $this->session->set_flashdata('message3a', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 3a! </div>');
+        $this->session->set_flashdata('blok3a', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 3a! </div>');
         
         redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok3a');
 
@@ -135,7 +135,7 @@ class Survei extends CI_Controller
 
         $this->SurveiModel->updateBlok($data, $where);
 
-        $this->session->set_flashdata('message3b', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 3b! </div>');
+        $this->session->set_flashdata('blok3b', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 3b! </div>');
         
         redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok3b');
 
@@ -309,6 +309,35 @@ class Survei extends CI_Controller
         $this->session->set_flashdata('blok11', '<br><div class="alert alert-success" role="alert"> Sukses Simpan Blok 11! </div>');
         
         redirect('Survei/detailSurvei/'.$this->input->post('id_survei').'/#blok11');
+    }
+
+    public function selesaiSurvei(){
+        $id_survei = $this->input->post('id_survei');
+        $id_job_desc = $this->input->post('id_job_desc');
+
+        $dataSurvei = array(
+            'status_survei' => 1
+        );
+
+        $dataJob = array(
+            'status_job' => 1
+        );
+
+        $whereSurvei = array(
+            'id_survei' => $id_survei
+        );
+
+        $whereJobDesc = array(
+            'id_job_desc' => $id_job_desc
+        );
+
+        $this->SurveiModel->selesaiSurvei($dataSurvei, $whereSurvei);
+        $this->SurveiModel->selesaiSurveiJob($dataJob, $whereJobDesc);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Sukses Simpan Survei, silahkan menunggu konfirmasi dari admin! </div>');
+        
+        redirect('Survei/detailSurvei/'.$this->input->post('id_survei'));
+
     }
 }
 
