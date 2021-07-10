@@ -68,7 +68,7 @@
                 <div class="col-md-3">
                     <div class="position-relative form-group">
                     <label class="mt-4">Password</label>
-                    <input type="text" class="form-control" name="password" required>
+                    <input type="password" class="form-control" name="password" required>
                     </div>
                 </div>
 
@@ -110,22 +110,21 @@
                 </thead>
                 <tbody>
                 <?php $no=1; foreach($lokasi as $data){?>
-                    <tr>
+                    <tr id="<?php echo $data->id_lokasi?>">
                         <td><?php echo $no++?></td>
                         <td><?php echo $data->namaKomersial?></td>
                         <td><?php echo $data->alamat?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenKota?>, <?php echo $data->provinsi?></td>
                         <td>
-                            <a class="btn btn-success btn-lg active btn-sm" title="Detail Petugas" type="button" href="#">
+                            <a class="btn btn-info" title="Detail Lokasi" type="button" href="<?php echo site_url('Lokasi/detailLokasi/'.$data->id_lokasi)?>">
                                 <i class="fa fa-eye"></i>
                             </a>
-                            
-                            <a class="btn btn-success btn-lg active btn-sm" type="button" href="#">
+
+                            <a class="btn btn-success" title="Edit Lokasi" type="button" href="<?php echo site_url('Lokasi/editLokasi/'.$data->id_lokasi)?>">
                                 <i class="fa fa-pencil"></i>
                             </a>
 
-                            <a class="btn btn-primary btn-lg active btn-sm" type="button" href="#">
-                                <i class="fa fa-trash"></i>
-                            </a>
+                            <button type="submit" title="Hapus Lokasi" class="btn btn-danger remove"> <i class="fa fa-trash"></i> </button>
+                        
 
                         </td>
                     </tr>
@@ -135,3 +134,36 @@
         </div>
         
     </div>   
+
+    <script type="text/javascript">
+		$(document).ready(function () {
+			// $('#datatable').dataTable();
+			$('.remove').click(function () {
+			var id = $(this).parents("tr").attr("id");
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '<?php echo site_url('Lokasi/delete/') ?>'+id,
+                        type: 'DELETE',
+                        error: function() {
+                            alert('Something is wrong');
+                        },
+                        success: function(data) {
+                            $("#"+id).remove();
+                            swal("Terhapus!", "Data berhasil dihapus.", "success");
+                        }
+                    });
+                }
+                })
+            });		
+		});
+    </script>

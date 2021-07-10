@@ -10,7 +10,7 @@ class SurveiModel extends CI_model
         $this->db->join('user', 'user.id_user = job_desc.id_user');
         $this->db->join('lokasi', 'lokasi.id_lokasi = job_desc.id_lokasi');
         $this->db->where('job_desc.id_user', $this->session->userdata('id_user'));
-        // $this->db->where('tanggal_survei', date('Y-m-d'));
+        $this->db->where('tanggal_survei', date('Y-m-d'));
         $this->db->order_by('tanggal_survei', 'asc');
         return $this->db->get();
     }
@@ -27,6 +27,10 @@ class SurveiModel extends CI_model
 
     public function tambahDetailTarif($data){
         $this->db->insert('detailtarifsurvei', $data);
+    }
+
+    public function insertLokasi($data){
+        $this->db->insert('survei', $data);
     }
 
     public function updateTarif($data, $where){

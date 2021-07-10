@@ -65,6 +65,7 @@ class Petugas extends CI_Controller
         $this->load->view('admin/petugas/veditpetugas', $data);
         $this->load->view('templates/footer');
     }
+    
     public function aksiEditPetugas(){
         $data = $_POST;
 

@@ -94,7 +94,7 @@
                             <div class="input-group-text">Rp</div>
                         </div>
                         <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
-                        <input type="text" class="form-control" value="<?php echo $data->standarHariKerjaSuite?>" name="standarHariKerjaSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariKerjaSuite?>" name="standarHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->superiorHariKerjaSuite?>" name="superiorHariKerjaSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariKerjaSuite?>" name="superiorHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariKerjaSuite?>" name="deluxeHariKerjaSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariKerjaSuite?>" name="deluxeHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->standarHariLiburSuite?>" name="standarHariLiburSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariLiburSuite?>" name="standarHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->superiorHariLiburSuite?>" name="superiorHariLiburSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariLiburSuite?>" name="superiorHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -153,7 +153,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariLiburSuite?>" name="deluxeHariLiburSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariLiburSuite?>" name="deluxeHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->standarHariKerjaNonSuite?>" name="standarHariKerjaNonSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariKerjaNonSuite?>" name="standarHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -179,7 +179,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->superiorHariKerjaNonSuite?>" name="superiorHariKerjaNonSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariKerjaNonSuite?>" name="superiorHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -190,7 +190,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariKerjaNonSuite?>" name="deluxeHariKerjaNonSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariKerjaNonSuite?>" name="deluxeHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->standarHariLiburNonSuite?>" name="standarHariLiburNonSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariLiburNonSuite?>" name="standarHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -215,7 +215,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->superiorHariLiburNonSuite?>" name="superiorHariLiburNonSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariLiburNonSuite?>" name="superiorHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariLiburNonSuite?>" name="deluxeHariLiburNonSuite">
+                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariLiburNonSuite?>" name="deluxeHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -272,13 +272,13 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Jumlah kamar tersedia</label>
-                        <input type="text" class="form-control" name="jumlahKamarTersedia[]" value="<?php echo $db->jumlahKamarTersedia?>">
+                        <input type="number" min=0 class="form-control" name="jumlahKamarTersedia[]" value="<?php echo $db->jumlahKamarTersedia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Kamar digunakan kemarin</label>
-                        <input type="text" class="form-control" name="kamarDigunakanKemarin[]" value="<?php echo $db->kamarDigunakanKemarin?>">
+                        <input type="number" min=0 class="form-control" name="kamarDigunakanKemarin[]" value="<?php echo $db->kamarDigunakanKemarin?>">
                     </div>
                 </div>
             </div>
@@ -287,21 +287,21 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Digunakan kemarin</label>
-                        <input type="text" class="form-control" name="digunakanKemarin[]" value="<?php echo $db->digunakanKemarin?>">
+                        <input type="number" min=0 class="form-control" name="digunakanKemarin[]" value="<?php echo $db->digunakanKemarin?>">
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Check in</label>
-                        <input type="text" class="form-control" name="checkIn[]" value="<?php echo $db->checkIn?>">
+                        <input type="number" min=0 class="form-control" name="checkIn[]" value="<?php echo $db->checkIn?>">
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Check out</label>
-                        <input type="text" class="form-control" name="checkOut[]" value="<?php echo $db->checkOut?>">
+                        <input type="number" min=0 class="form-control" name="checkOut[]" value="<?php echo $db->checkOut?>">
                     </div>
                 </div>
             </div>
@@ -313,33 +313,33 @@
                     <label><strong>Kemarin</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="text" class="form-control" name="kemarinAsing[]" value="<?php echo $db->kemarinAsing?>">
+                        <input type="number" min=0 class="form-control" name="kemarinAsing[]" value="<?php echo $db->kemarinAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="text" class="form-control" name="kemarinIndonesia[]" value="<?php echo $db->kemarinIndonesia?>">
+                        <input type="number" min=0 class="form-control" name="kemarinIndonesia[]" value="<?php echo $db->kemarinIndonesia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label><strong>Masuk hari ini</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="text" class="form-control" name="masukAsing[]" value="<?php echo $db->masukAsing?>">
+                        <input type="number" min=0 class="form-control" name="masukAsing[]" value="<?php echo $db->masukAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="text" class="form-control" name="masukIndonesia[]" value="<?php echo $db->masukIndonesia?>">
+                        <input type="number" min=0 class="form-control" name="masukIndonesia[]" value="<?php echo $db->masukIndonesia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label><strong>Keluar hari ini</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="text" class="form-control" name="keluarAsing[]" value="<?php echo $db->keluarAsing?>">
+                        <input type="number" min=0 class="form-control" name="keluarAsing[]" value="<?php echo $db->keluarAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="text" class="form-control" name="keluarIndonesia[]" value="<?php echo $db->keluarIndonesia?>">
+                        <input type="number" min=0 class="form-control" name="keluarIndonesia[]" value="<?php echo $db->keluarIndonesia?>">
                     </div>
                 </div>
             </div>
@@ -383,13 +383,13 @@
                     <div class="col-md-4">
                         <div class="position-relative form-group">
                             <label>Jumlah kamar tersedia</label>
-                            <input type="text" class="form-control" name="jumlahKamarTersedia[]">
+                            <input type="number" min=0 class="form-control" name="jumlahKamarTersedia[]">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="position-relative form-group">
                             <label>Kamar digunakan kemarin</label>
-                            <input type="text" class="form-control" name="kamarDigunakanKemarin[]">
+                            <input type="number" min=0 class="form-control" name="kamarDigunakanKemarin[]">
                         </div>
                     </div>
                 </div>
@@ -398,21 +398,21 @@
                     <div class="col-md-4">
                         <div class="position-relative form-group">
                             <label>Digunakan kemarin</label>
-                            <input type="text" class="form-control" name="digunakanKemarin[]">
+                            <input type="number" min=0 class="form-control" name="digunakanKemarin[]">
                         </div>
                     </div>
                     
                     <div class="col-md-4">
                         <div class="position-relative form-group">
                             <label>Check in</label>
-                            <input type="text" class="form-control" name="checkIn[]">
+                            <input type="number" min=0 class="form-control" name="checkIn[]">
                         </div>
                     </div>
                     
                     <div class="col-md-4">
                         <div class="position-relative form-group">
                             <label>Check out</label>
-                            <input type="text" class="form-control" name="checkOut[]">
+                            <input type="number" min=0 class="form-control" name="checkOut[]">
                         </div>
                     </div>
                 </div>
@@ -424,33 +424,33 @@
                         <label><strong>Kemarin</strong></label><br>
                         <div class="position-relative form-group">
                             <label>Asing</label>
-                            <input type="text" class="form-control" name="kemarinAsing[]">
+                            <input type="number" min=0 class="form-control" name="kemarinAsing[]">
                         </div>
                         <div class="position-relative form-group">
                             <label>Indonesia</label>
-                            <input type="text" class="form-control" name="kemarinIndonesia[]">
+                            <input type="number" min=0 class="form-control" name="kemarinIndonesia[]">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label><strong>Masuk hari ini</strong></label><br>
                         <div class="position-relative form-group">
                             <label>Asing</label>
-                            <input type="text" class="form-control" name="masukAsing[]">
+                            <input type="number" min=0 class="form-control" name="masukAsing[]">
                         </div>
                         <div class="position-relative form-group">
                             <label>Indonesia</label>
-                            <input type="text" class="form-control" name="masukIndonesia[]">
+                            <input type="number" min=0 class="form-control" name="masukIndonesia[]">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label><strong>Keluar hari ini</strong></label><br>
                         <div class="position-relative form-group">
                             <label>Asing</label>
-                            <input type="text" class="form-control" name="keluarAsing[]">
+                            <input type="number" min=0 class="form-control" name="keluarAsing[]">
                         </div>
                         <div class="position-relative form-group">
                             <label>Indonesia</label>
-                            <input type="text" class="form-control" name="keluarIndonesia[]">
+                            <input type="number" min=0 class="form-control" name="keluarIndonesia[]">
                         </div>
                     </div>
                 </div>    
