@@ -19,10 +19,10 @@
                 <?php $no=1; foreach($lokasi as $data){?>
                     <tr>
                         <td><?php echo $no++?></td>
-                        <td><?php echo $data->nama_perusahaan?></td>
-                        <td><?php echo $data->jalan?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenkota?>, <?php echo $data->provinsi?></td>
+                        <td><?php echo $data->namaKomersial?></td>
+                        <td><?php echo $data->alamat?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenKota?>, <?php echo $data->provinsi?></td>
                         <td>
-                            <a class="btn btn-success btn-lg active btn-sm" title="Detail Lokasi" type="button" href="#">
+                            <a class="btn btn-success btn-lg active btn-sm" title="Detail Lokasi" type="button" href="<?php echo site_url('LokasiPetugas/detailLokasi/'. $data->id_lokasi)?>">
                                 <i class="fa fa-eye"></i>
                             </a>
 

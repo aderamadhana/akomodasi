@@ -87,15 +87,6 @@
                                     </a>
                                     
                                 </li>
-
-                                <li class="">
-                                    <a href="<?php echo site_url('Kuisioner')?>">
-                                        <i class="metismenu-icon fa fa-tasks"></i>
-                                        Kuisioner
-                                    </a>
-                                    
-                                </li>
-                                
                         </div>
                     </div>
                 </div>

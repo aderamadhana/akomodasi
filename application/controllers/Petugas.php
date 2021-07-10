@@ -48,7 +48,41 @@ class Petugas extends CI_Controller
             
             redirect('Petugas');
         }
+    }
+
+    public function detailPetugas($id_user){
+        $data['petugas'] = $this->PetugasModel->getPetugasbyId($id_user)->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/petugas/vdetailpetugas', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function editPetugas($id_user){
+        $data['petugas'] = $this->PetugasModel->getPetugasbyId($id_user)->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/petugas/veditpetugas', $data);
+        $this->load->view('templates/footer');
+    }
+    public function aksiEditPetugas(){
+        $data = $_POST;
+
+        $where = array(
+            'id_user' => $this->input->post('id_user')
+        );
+
+        $this->PetugasModel->updatePetugas($data, $where);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terupdate! </div>');
+        redirect('Petugas');
+    }
+
+    public function delete($id){
+        $this->db->delete('user', array('id_user' => $id));
         
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terhapus! </div>');
+        redirect('Petugas');
     }
 }
 

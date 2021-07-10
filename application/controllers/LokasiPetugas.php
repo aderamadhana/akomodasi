@@ -22,5 +22,14 @@ class LokasiPetugas extends CI_Controller
         $this->load->view('petugas/lokasi/vlokasi', $data);
         $this->load->view('templates/footer');
     }
+
+    public function detailLokasi($id_lokasi)
+    {
+        $data['lokasi'] = $this->LokasiModel->getLokasibyId($id_lokasi)->result();
+
+        $this->load->view('templates/header_p');
+        $this->load->view('petugas/lokasi/vDetailLokasi', $data);
+        $this->load->view('templates/footer');
+    }
 }
 

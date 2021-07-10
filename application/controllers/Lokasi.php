@@ -7,6 +7,7 @@ class Lokasi extends CI_Controller
         parent::__construct();
 
         $this->load->model('LokasiModel');
+        $this->load->model('PetugasModel');
 
         if($this->session->userdata('role') != 1){
             echo $this->session->userdata('role');
@@ -24,9 +25,38 @@ class Lokasi extends CI_Controller
     }
 
     public function tambahLokasi(){
-        $data = $_POST;
+        $dataLokasi = array(
+            'provinsi'          => $this->input->post('provinsi'),
+            'kabupatenKota'     => $this->input->post('kabupatenKota'),
+            'kecamatan'         => $this->input->post('kecamatan'),
+            'kelurahan'         => $this->input->post('kelurahan'),
+            'namaKomersial'     => $this->input->post('namaKomersial'),
+            'jenisAkomodasi'    => $this->input->post('jenisAkomodasi'),
+            'kelasAkomodasi'    => $this->input->post('kelasAkomodasi'),
+            'alamat'            => $this->input->post('alamat'),
+            'linkMaps'          => $this->input->post('linkMaps')
+        );
 
-        $this->LokasiModel->insert($data);
+        $id_lokasi = null;
+
+        $this->LokasiModel->insert($dataLokasi);
+
+        $query = $this->LokasiModel->getDataLokasi($dataLokasi)->result();
+        
+        foreach($query as $data){
+            $id_lokasi = $data->id_lokasi;
+        }
+
+        $dataUser = array(
+            'id_lokasi'     => $id_lokasi,
+            'username'      => $this->input->post('username'),
+            'password'      => $this->input->post('password'),
+            'role'          => 3,
+            'nama_petugas'  => $this->input->post('namaKomersial'),
+        );
+
+        
+        $this->PetugasModel->insert($dataUser);
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Sukses Tambah Lokasi! </div>');
         

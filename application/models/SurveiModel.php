@@ -25,20 +25,19 @@ class SurveiModel extends CI_model
         return $this->db->get();
     }
 
-    public function insertBlok1($data){
-        return $this->db->insert('survei', $data);
+    public function tambahDetailTarif($data){
+        $this->db->insert('detailtarifsurvei', $data);
     }
 
-    public function updateBlok1($data, $where){
-        $this->db->set($data);
-        $this->db->where($where);
-        $this->db->update('blok1_pengenalan_tempat');
-    }
-
-    public function updateBlok($data, $where){
+    public function updateTarif($data, $where){
         $this->db->set($data);
         $this->db->where($where);
         $this->db->update('survei');
+    }
+
+    public function deleteDetailTarif($where){
+        $this->db->where($where);
+        $this->db->delete('detailtarifsurvei');
     }
 
     public function selesaiSurvei($data, $where){
@@ -46,7 +45,8 @@ class SurveiModel extends CI_model
         $this->db->where($where);
         $this->db->update('survei');
     }
-    public function selesaiSurveiJob($data, $where){
+
+    public function selesaiJob($data, $where){
         $this->db->set($data);
         $this->db->where($where);
         $this->db->update('job_desc');

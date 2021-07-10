@@ -3,7 +3,7 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Survei')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
     </div>
-
+<?php echo $this->session->flashdata('message')?>
 <?php foreach($survei as $data){?>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
@@ -82,7 +82,7 @@
         
     </div>
     
-    <form action="#" method="post"> 
+    <form action="<?php echo site_url('Survei/tambahTarif')?>" method="post"> 
     <div class="card-body">
         <label><strong>Suite</strong></label>
         <div class="form-row">
@@ -93,7 +93,8 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="standarHariKerjaSuite">
+                        <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
+                        <input type="text" class="form-control" value="<?php echo $data->standarHariKerjaSuite?>" name="standarHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="superiorHariKerjaSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->superiorHariKerjaSuite?>" name="superiorHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -116,7 +117,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="deluxeHariKerjaSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariKerjaSuite?>" name="deluxeHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -130,7 +131,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="standarHariLiburSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->standarHariLiburSuite?>" name="standarHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -141,7 +142,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="superiorHariLiburSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->superiorHariLiburSuite?>" name="superiorHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -152,7 +153,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="deluxeHariLiburSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariLiburSuite?>" name="deluxeHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -166,7 +167,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="standarHariKerjaNonSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->standarHariKerjaNonSuite?>" name="standarHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -178,7 +179,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="superiorHariKerjaNonSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->superiorHariKerjaNonSuite?>" name="superiorHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -189,7 +190,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="deluxeHariKerjaNonSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariKerjaNonSuite?>" name="deluxeHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -203,7 +204,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="standarHariLiburNonSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->standarHariLiburNonSuite?>" name="standarHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -214,7 +215,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="superiorHariLiburNonSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->superiorHariLiburNonSuite?>" name="superiorHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -225,7 +226,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="text" class="form-control" name="deluxeHariLiburNonSuite">
+                        <input type="text" class="form-control" value="<?php echo $data->deluxeHariLiburNonSuite?>" name="deluxeHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -245,24 +246,39 @@
     
     <form action="<?php echo site_url('Survei/tambahSurvei')?>" method="post"> 
     <div class="card-body contr">
+        
         <div class="control-group after-add-more">
+        <?php 
+            $query = $this->db->get_where('detailtarifsurvei', array('id_survei' => $data->id_survei))->result();
+            
+            if(count($query) == 0){
+                $d = [
+                   'id_survei' => $data->id_survei  
+                ];
+
+                $this->load->view('petugas/survei/vPoin2', $d);
+            }else{
+
+                foreach($query as $db){
+        ?>
             <div class="form-row">
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal[]">
+                        <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
+                        <input require type="date" class="form-control" value="<?php echo $db->tanggal?>" name="tanggal[]">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Jumlah kamar tersedia</label>
-                        <input type="text" class="form-control" name="jumlahKamarTersedia[]">
+                        <input type="text" class="form-control" name="jumlahKamarTersedia[]" value="<?php echo $db->jumlahKamarTersedia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Kamar digunakan kemarin</label>
-                        <input type="text" class="form-control" name="kamarDigunakanKemarin[]">
+                        <input type="text" class="form-control" name="kamarDigunakanKemarin[]" value="<?php echo $db->kamarDigunakanKemarin?>">
                     </div>
                 </div>
             </div>
@@ -271,21 +287,21 @@
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Digunakan kemarin</label>
-                        <input type="text" class="form-control" name="digunakanKemarin[]">
+                        <input type="text" class="form-control" name="digunakanKemarin[]" value="<?php echo $db->digunakanKemarin?>">
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Check in</label>
-                        <input type="text" class="form-control" name="checkIn[]">
+                        <input type="text" class="form-control" name="checkIn[]" value="<?php echo $db->checkIn?>">
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Check out</label>
-                        <input type="text" class="form-control" name="checkOut[]">
+                        <input type="text" class="form-control" name="checkOut[]" value="<?php echo $db->checkOut?>">
                     </div>
                 </div>
             </div>
@@ -297,54 +313,71 @@
                     <label><strong>Kemarin</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="text" class="form-control" name="kemarinAsing[]">
+                        <input type="text" class="form-control" name="kemarinAsing[]" value="<?php echo $db->kemarinAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="text" class="form-control" name="kemarinIndonesia[]">
+                        <input type="text" class="form-control" name="kemarinIndonesia[]" value="<?php echo $db->kemarinIndonesia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label><strong>Masuk hari ini</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="text" class="form-control" name="masukAsing[]">
+                        <input type="text" class="form-control" name="masukAsing[]" value="<?php echo $db->masukAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="text" class="form-control" name="masukIndonesia[]">
+                        <input type="text" class="form-control" name="masukIndonesia[]" value="<?php echo $db->masukIndonesia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label><strong>Keluar hari ini</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="text" class="form-control" name="masukAsing[]">
+                        <input type="text" class="form-control" name="keluarAsing[]" value="<?php echo $db->keluarAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="text" class="form-control" name="masukIndonesia[]">
+                        <input type="text" class="form-control" name="keluarIndonesia[]" value="<?php echo $db->keluarIndonesia?>">
                     </div>
                 </div>
             </div>
             <hr>
-        </div>
+            <?php }}?>
         
+        </div>
+
         <button class="btn btn-secondary add-more" type="button"><i class="glyphicon glyphicon-plus"></i> Tambah baris</button>
-            
+        
         <button class="btn btn-success" type="submit">
             <i class="glyphicon glyphicon-plus"></i> Simpan
         </button>
+        <br><br>
+
+        
 
         </form>
+        <section id="selesai">
+            <?php if($this->session->flashdata('selesai')){?>
+                <?php echo $this->session->flashdata('selesai')?>
+                <form action="<?php echo site_url('Survei/simpanSemua')?>" method="post">
+                    <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
+                    <input type="hidden" class="form-control" name="id_job_desc" value="<?php echo $data->id_job_desc?>">
+                    <button class="btn btn-info" type="submit">
+                        <i class="glyphicon glyphicon-plus"></i> Simpan semua survei
+                    </button>
+                </form>
+            <?php }?>
+        </section>
         
         <div class="copy hide" style="display:none">
-            <div class="control-group"><br>
+            <div class="control-group rem"><br>
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="position-relative form-group">
                             <label>Tanggal</label>
-                            <input type="date" class="form-control" name="tanggal[]">
+                            <input type="date" class="form-control" name="tanggal[]" require>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -413,11 +446,11 @@
                         <label><strong>Keluar hari ini</strong></label><br>
                         <div class="position-relative form-group">
                             <label>Asing</label>
-                            <input type="text" class="form-control" name="masukAsing[]">
+                            <input type="text" class="form-control" name="keluarAsing[]">
                         </div>
                         <div class="position-relative form-group">
                             <label>Indonesia</label>
-                            <input type="text" class="form-control" name="masukIndonesia[]">
+                            <input type="text" class="form-control" name="keluarIndonesia[]">
                         </div>
                     </div>
                 </div>    
@@ -437,10 +470,9 @@
       });
 
       
-
       // saat tombol remove dklik control group akan dihapus 
       $("body").on("click",".remove",function(){ 
-          $(this).parents(".control-group").remove();
+          $(this).parents(".rem").remove();
       });
     });
 </script>

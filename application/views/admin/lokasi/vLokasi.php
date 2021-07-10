@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="position-relative form-group">
                     <label class="mt-4">Jenis Akomodasi</label>
                     <div class="custom-control custom-radio">
@@ -53,12 +53,25 @@
                     </div>
                 </div>
                 
-                <div class="col-md-8">
+                <div class="col-md-3">
                     <div class="position-relative form-group">
                     <label class="mt-4">Kelas Akomodasi</label>
                     <input type="text" class="form-control" name="kelasAkomodasi" required>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="position-relative form-group">
+                    <label class="mt-4">Username</label>
+                    <input type="text" class="form-control" name="username" required>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="position-relative form-group">
+                    <label class="mt-4">Password</label>
+                    <input type="text" class="form-control" name="password" required>
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div class="position-relative form-group">
                     <label class="mt-4">Alamat</label>

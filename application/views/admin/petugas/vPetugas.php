@@ -80,28 +80,59 @@
                 </thead>
                 <tbody>
                     <?php $no=1; foreach($petugas as $data){?>
-                    <tr>
+                    <tr id="<?php echo $data->id_user?>">
                         <td><?php echo $no++?></td>
                         <td><?php echo $data->nip?></td>
                         <td><?php echo $data->nama_petugas?></td>
                         <td>
-                            <a class="btn btn-success btn-lg active btn-sm" title="Detail Petugas" type="button" href="#">
+                            <a class="btn btn-info" title="Detail Petugas" type="button" href="<?php echo site_url('Petugas/detailPetugas/'.$data->id_user)?>">
                                 <i class="fa fa-eye"></i>
                             </a>
 
-                            <a class="btn btn-success btn-lg active btn-sm" title="Edit Petugas" type="button" href="#">
+                            <a class="btn btn-success" title="Edit Petugas" type="button" href="<?php echo site_url('Petugas/editPetugas/'.$data->id_user)?>">
                                 <i class="fa fa-pencil"></i>
                             </a>
 
-                            <a class="btn btn-primary btn-lg active btn-sm" title="Hapus Petugas" type="button" href="#">
-                                <i class="fa fa-trash"></i>
-                            </a>
-
+                            <button type="submit" title="Hapus Petugas" class="btn btn-danger remove"> <i class="fa fa-trash"></i> </button>
                         </td>
                     </tr>
+                    
                     <?php }?>
                 </tbody>
             </table>
         </div>
         
     </div>   
+
+    <script type="text/javascript">
+		$(document).ready(function () {
+			// $('#datatable').dataTable();
+			$('.remove').click(function () {
+			var id = $(this).parents("tr").attr("id");
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '<?php echo site_url('Petugas/delete/') ?>'+id,
+                        type: 'DELETE',
+                        error: function() {
+                            alert('Something is wrong');
+                        },
+                        success: function(data) {
+                            $("#"+id).remove();
+                            swal("Terhapus!", "Data berhasil dihapus.", "success");
+                        }
+                    });
+                }
+                })
+            });		
+		});
+    </script>

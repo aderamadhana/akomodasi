@@ -3,7 +3,7 @@
     
     <?php endif; ?> -->
 
-
+<?php echo $this->session->flashdata('message')?>
 <div class="card mb-3 ">
         <div class="card-header-tab card-header">
             <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
