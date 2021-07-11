@@ -6,11 +6,11 @@
             </div> -->
             <div class="dbox__body">
                 <span class="dbox__count"><?php echo $countSurvei?></span>
-                <span class="dbox__title">Total Job</span>
+                <span class="dbox__title">Total Survei</span>
             </div>
             
             <div class="dbox__action">
-                <a href="<?php echo site_url('HasilSurveiAkomodasi')?>" style="text-decoration: none" class="dbox__action__btn">More Info</a>
+                <a href="<?php echo site_url('HasilSurvei')?>" style="text-decoration: none" class="dbox__action__btn">More Info</a>
             </div>				
         </div>
     </div>

@@ -10,7 +10,7 @@ class HasilSurveiModel extends CI_model
         $this->db->join('user', 'user.id_user = job_desc.id_user');
         $this->db->join('lokasi', 'lokasi.id_lokasi = job_desc.id_lokasi');
         $this->db->where('status_survei !=', 0);
-        $this->db->order_by('tanggal_survei', 'asc');
+        $this->db->order_by('tanggal_survei', 'desc');
         return $this->db->get();
     }
 

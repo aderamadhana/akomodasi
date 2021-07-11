@@ -46,26 +46,18 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Menu</li>
                                 <li class="">
-                                    <a href="<?php echo site_url('DashboardPetugas')?>">
+                                    <a href="<?php echo site_url('DashboardAkomodasi')?>">
                                         <i class="metismenu-icon fa fa-area-chart"></i>
                                         Dashboards
                                     </a>
                                 </li>
 
                                 <li class="">
-                                    <a href="<?php echo site_url('Survei')?>">
-                                        <i class="metismenu-icon fa fa-list"></i>
-                                        Survei Jobs
+                                    <a href="<?php echo site_url('HasilSurveiAkomodasi')?>">
+                                        <i class="metismenu-icon fa fa-history"></i>
+                                        Riwayat Survei
                                     </a>
-                                </li>
-                                
-                                <li class="">
-                                    <a href="<?php echo site_url('LokasiPetugas')?>">
-                                        <i class="metismenu-icon fa fa-map"></i>
-                                        Lokasi
-                                    </a>
-                                </li>
-                                
+                                </li>                                
                         </div>
                     </div>
                 </div>
