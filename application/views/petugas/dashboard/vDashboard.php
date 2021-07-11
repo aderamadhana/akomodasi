@@ -10,7 +10,7 @@
             </div>
             
             <div class="dbox__action">
-                <a href="<?php echo site_url('HasilSurveiAkomodasi')?>" style="text-decoration: none" class="dbox__action__btn">More Info</a>
+                <a href="<?php echo site_url('Survei')?>" style="text-decoration: none" class="dbox__action__btn">More Info</a>
             </div>				
         </div>
     </div>
