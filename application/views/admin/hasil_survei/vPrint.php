@@ -64,6 +64,7 @@
     <body>
     <center>
     <div class="text-align: center">
+        <img src="<?php echo base_url().'/assets/images/garuda.png';?>" width="50px"/>
         <h3>REPUBLIK INDONESIA<br>
         BADAN PUSAT STATISTIK<br>
         STATISTIK JASA AKOMODASI<br>

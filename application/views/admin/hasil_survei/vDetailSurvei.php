@@ -13,7 +13,9 @@
     <div class="card-header-tab card-header">
         <div class="card-header-title text-center font-size-lg text-capitalize font-weight-normal">
             <strong>PENGENALAN USAHA</strong>
+            
         </div>
+        
         
     </div>
     <div class="card-body">
@@ -161,6 +163,7 @@
                 </div>
             </div>
         </div>
+        
         <label><strong>Non Suite</strong></label>
         <div class="form-row">
             <div class="col-md-4">
@@ -339,6 +342,7 @@
             <hr>
             <?php }?>
         </div>
+        <?php if($data->status_survei == 1){?>
         <a href="<?php echo site_url('HasilSurvei/validasi/'.$data->id_survei.'/'.$data->id_job_desc)?>" type="button" id="validasi" class="btn btn-success">Validasi</a>
         <button type="button" id="tolak" class="btn btn-danger">Tolak</button>&nbsp;<br>
 
@@ -352,6 +356,7 @@
             </div>
             <button type="submit" class="btn btn-success">Simpan</button>
         </form>
+        <?php }?>
     </div>
 </div>
 <?php }?>
