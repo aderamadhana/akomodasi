@@ -70,14 +70,27 @@ class HasilSurvei extends CI_Controller
         redirect('HasilSurvei');
     }
 
-    public function print(){
+    public function print($id_survei){
 
-        $data = array(
-            "dataku" => array(
-                "nama" => "Petani Kode",
-                "url" => "http://petanikode.com"
-            )
-        );
+        $survei = $this->SurveiModel->getSurvei($id_survei)->result();
+
+        $getBulan = $this->db->select('*')->from('detailtarifsurvei')->where('id_survei', $id_survei)->group_by('id_survei')->get()->result();
+            
+        foreach($survei as $row){
+            $nama_petugas = $row->nama_petugas;
+            $namaKomersial = $row->namaKomersial;
+        }
+
+        foreach($getBulan as $bln){
+            $bulan = $bln->tanggal;
+        }
+
+        $data = [
+            'survei' => $survei,
+            'nama_petugas' => $nama_petugas,
+            'namaKomersial' => $namaKomersial,
+            'bulan' => $bulan
+        ];
     
         $this->load->library('pdf');
     

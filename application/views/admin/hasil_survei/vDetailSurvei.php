@@ -7,7 +7,7 @@
 <?php foreach($survei as $data){?>
 
 <div class="mb-3">
-    <a target="_blank" class="btn btn-info" href="<?php echo site_url('HasilSurvei/print')?>"><i class="fa fa-print"> Cetak</i></a>
+    <a target="_blank" class="btn btn-info" href="<?php echo site_url('HasilSurvei/print/'.$data->id_survei)?>"><i class="fa fa-print"> Cetak</i></a>
 </div>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
