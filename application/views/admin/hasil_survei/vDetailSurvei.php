@@ -5,6 +5,10 @@
     </div>
 <?php echo $this->session->flashdata('message')?>
 <?php foreach($survei as $data){?>
+
+<div class="mb-3">
+    <a target="_blank" class="btn btn-info" href="<?php echo site_url('HasilSurvei/print')?>"><i class="fa fa-print"> Cetak</i></a>
+</div>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title text-center font-size-lg text-capitalize font-weight-normal">
