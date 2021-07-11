@@ -1,26 +1,10 @@
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Survei')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
+        <p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('HasilSurvei')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
     </div>
 <?php echo $this->session->flashdata('message')?>
-
-<?php foreach($survei as $data){
-if($data->alasanPenolakan != null){
-?>
-<div class="card mb-3 ">
-    <div class="card-header-tab card-header">
-        <div class="card-header-title text-center font-size-lg text-capitalize font-weight-normal">
-            <strong>Alasan Penolakan</strong>
-        </div>
-        
-    </div>
-    <div class="card-body">
-        <span><strong><?php echo $data->alasanPenolakan ?></strong></span>
-        <p>Silahkan melakukan input ulang!</p>
-    </div>
-</div>
-<?php }?>
+<?php foreach($survei as $data){?>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title text-center font-size-lg text-capitalize font-weight-normal">
@@ -98,7 +82,6 @@ if($data->alasanPenolakan != null){
         
     </div>
     
-    <form action="<?php echo site_url('Survei/tambahTarif')?>" method="post"> 
     <div class="card-body">
         <label><strong>Suite</strong></label>
         <div class="form-row">
@@ -110,7 +93,7 @@ if($data->alasanPenolakan != null){
                             <div class="input-group-text">Rp</div>
                         </div>
                         <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariKerjaSuite?>" name="standarHariKerjaSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->standarHariKerjaSuite?>" name="standarHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -122,7 +105,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariKerjaSuite?>" name="superiorHariKerjaSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->superiorHariKerjaSuite?>" name="superiorHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -133,7 +116,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariKerjaSuite?>" name="deluxeHariKerjaSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->deluxeHariKerjaSuite?>" name="deluxeHariKerjaSuite">
                     </div>
                 </div>
             </div>
@@ -147,7 +130,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariLiburSuite?>" name="standarHariLiburSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->standarHariLiburSuite?>" name="standarHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -158,7 +141,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariLiburSuite?>" name="superiorHariLiburSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->superiorHariLiburSuite?>" name="superiorHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -169,7 +152,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariLiburSuite?>" name="deluxeHariLiburSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->deluxeHariLiburSuite?>" name="deluxeHariLiburSuite">
                     </div>
                 </div>
             </div>
@@ -183,7 +166,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariKerjaNonSuite?>" name="standarHariKerjaNonSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->standarHariKerjaNonSuite?>" name="standarHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -195,7 +178,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariKerjaNonSuite?>" name="superiorHariKerjaNonSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->superiorHariKerjaNonSuite?>" name="superiorHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -206,7 +189,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariKerjaNonSuite?>" name="deluxeHariKerjaNonSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->deluxeHariKerjaNonSuite?>" name="deluxeHariKerjaNonSuite">
                     </div>
                 </div>
             </div>
@@ -220,7 +203,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->standarHariLiburNonSuite?>" name="standarHariLiburNonSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->standarHariLiburNonSuite?>" name="standarHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -231,7 +214,7 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->superiorHariLiburNonSuite?>" name="superiorHariLiburNonSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->superiorHariLiburNonSuite?>" name="superiorHariLiburNonSuite">
                     </div>
                 </div>
             </div>
@@ -242,13 +225,11 @@ if($data->alasanPenolakan != null){
                         <div class="input-group-prepend">
                             <div class="input-group-text">Rp</div>
                         </div>
-                        <input type="number" min=0 class="form-control" value="<?php echo $data->deluxeHariLiburNonSuite?>" name="deluxeHariLiburNonSuite">
+                        <input type="number" disabled min=0 class="form-control" value="<?php echo $data->deluxeHariLiburNonSuite?>" name="deluxeHariLiburNonSuite">
                     </div>
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
-        </form>
     </div>
 </div>
 
@@ -260,41 +241,32 @@ if($data->alasanPenolakan != null){
         
     </div>
     
-    <form action="<?php echo site_url('Survei/tambahSurvei')?>" method="post"> 
     <div class="card-body contr">
         
         <div class="control-group after-add-more">
         <?php 
             $query = $this->db->get_where('detailtarifsurvei', array('id_survei' => $data->id_survei))->result();
             
-            if(count($query) == 0){
-                $d = [
-                   'id_survei' => $data->id_survei  
-                ];
-
-                $this->load->view('petugas/survei/vPoin2', $d);
-            }else{
-
-                foreach($query as $db){
+            foreach($query as $db){
         ?>
             <div class="form-row">
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Tanggal</label>
                         <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
-                        <input require type="date" class="form-control" value="<?php echo $db->tanggal?>" name="tanggal[]">
+                        <input disabled type="date" class="form-control" value="<?php echo $db->tanggal?>" name="tanggal[]">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Jumlah kamar tersedia</label>
-                        <input type="number" min=0 class="form-control" name="jumlahKamarTersedia[]" value="<?php echo $db->jumlahKamarTersedia?>">
+                        <input type="number" disabled min=0 class="form-control" name="jumlahKamarTersedia[]" value="<?php echo $db->jumlahKamarTersedia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Kamar digunakan kemarin</label>
-                        <input type="number" min=0 class="form-control" name="kamarDigunakanKemarin[]" value="<?php echo $db->kamarDigunakanKemarin?>">
+                        <input type="number" disabled min=0 class="form-control" name="kamarDigunakanKemarin[]" value="<?php echo $db->kamarDigunakanKemarin?>">
                     </div>
                 </div>
             </div>
@@ -303,21 +275,21 @@ if($data->alasanPenolakan != null){
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Digunakan kemarin</label>
-                        <input type="number" min=0 class="form-control" name="digunakanKemarin[]" value="<?php echo $db->digunakanKemarin?>">
+                        <input type="number" disabled min=0 class="form-control" name="digunakanKemarin[]" value="<?php echo $db->digunakanKemarin?>">
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Check in</label>
-                        <input type="number" min=0 class="form-control" name="checkIn[]" value="<?php echo $db->checkIn?>">
+                        <input type="number" disabled min=0 class="form-control" name="checkIn[]" value="<?php echo $db->checkIn?>">
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="position-relative form-group">
                         <label>Check out</label>
-                        <input type="number" min=0 class="form-control" name="checkOut[]" value="<?php echo $db->checkOut?>">
+                        <input type="number" disabled min=0 class="form-control" name="checkOut[]" value="<?php echo $db->checkOut?>">
                     </div>
                 </div>
             </div>
@@ -329,166 +301,63 @@ if($data->alasanPenolakan != null){
                     <label><strong>Kemarin</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="number" min=0 class="form-control" name="kemarinAsing[]" value="<?php echo $db->kemarinAsing?>">
+                        <input type="number" disabled min=0 class="form-control" name="kemarinAsing[]" value="<?php echo $db->kemarinAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="number" min=0 class="form-control" name="kemarinIndonesia[]" value="<?php echo $db->kemarinIndonesia?>">
+                        <input type="number" disabled min=0 class="form-control" name="kemarinIndonesia[]" value="<?php echo $db->kemarinIndonesia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label><strong>Masuk hari ini</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="number" min=0 class="form-control" name="masukAsing[]" value="<?php echo $db->masukAsing?>">
+                        <input type="number" disabled min=0 class="form-control" name="masukAsing[]" value="<?php echo $db->masukAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="number" min=0 class="form-control" name="masukIndonesia[]" value="<?php echo $db->masukIndonesia?>">
+                        <input type="number" disabled min=0 class="form-control" name="masukIndonesia[]" value="<?php echo $db->masukIndonesia?>">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label><strong>Keluar hari ini</strong></label><br>
                     <div class="position-relative form-group">
                         <label>Asing</label>
-                        <input type="number" min=0 class="form-control" name="keluarAsing[]" value="<?php echo $db->keluarAsing?>">
+                        <input type="number" disabled min=0 class="form-control" name="keluarAsing[]" value="<?php echo $db->keluarAsing?>">
                     </div>
                     <div class="position-relative form-group">
                         <label>Indonesia</label>
-                        <input type="number" min=0 class="form-control" name="keluarIndonesia[]" value="<?php echo $db->keluarIndonesia?>">
+                        <input type="number" disabled min=0 class="form-control" name="keluarIndonesia[]" value="<?php echo $db->keluarIndonesia?>">
                     </div>
                 </div>
             </div>
+            
             <hr>
-            <?php }}?>
-        
-        </div>
-
-        <button class="btn btn-secondary add-more" type="button"><i class="glyphicon glyphicon-plus"></i> Tambah baris</button>
-        
-        <button class="btn btn-success" type="submit">
-            <i class="glyphicon glyphicon-plus"></i> Simpan
-        </button>
-        <br><br>
-
-        
-
-        </form>
-        <section id="selesai">
-            <?php if($this->session->flashdata('selesai')){?>
-                <?php echo $this->session->flashdata('selesai')?>
-                <form action="<?php echo site_url('Survei/simpanSemua')?>" method="post">
-                    <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
-                    <input type="hidden" class="form-control" name="id_job_desc" value="<?php echo $data->id_job_desc?>">
-                    <button class="btn btn-info" type="submit">
-                        <i class="glyphicon glyphicon-plus"></i> Simpan semua survei
-                    </button>
-                </form>
             <?php }?>
-        </section>
-        
-        <div class="copy hide" style="display:none">
-            <div class="control-group rem"><br>
-                <div class="form-row">
-                    <div class="col-md-4">
-                        <div class="position-relative form-group">
-                            <label>Tanggal</label>
-                            <input type="date" class="form-control" name="tanggal[]" require>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="position-relative form-group">
-                            <label>Jumlah kamar tersedia</label>
-                            <input type="number" min=0 class="form-control" name="jumlahKamarTersedia[]">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="position-relative form-group">
-                            <label>Kamar digunakan kemarin</label>
-                            <input type="number" min=0 class="form-control" name="kamarDigunakanKemarin[]">
-                        </div>
-                    </div>
-                </div>
-                <label><strong>Banyaknya Kamar</strong></label>
-                <div class="form-row">
-                    <div class="col-md-4">
-                        <div class="position-relative form-group">
-                            <label>Digunakan kemarin</label>
-                            <input type="number" min=0 class="form-control" name="digunakanKemarin[]">
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="position-relative form-group">
-                            <label>Check in</label>
-                            <input type="number" min=0 class="form-control" name="checkIn[]">
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="position-relative form-group">
-                            <label>Check out</label>
-                            <input type="number" min=0 class="form-control" name="checkOut[]">
-                        </div>
-                    </div>
-                </div>
-
-                <label><strong>Banyaknya Tamu Menginap</strong></label><br>
-                
-                <div class="form-row">
-                    <div class="col-md-4">
-                        <label><strong>Kemarin</strong></label><br>
-                        <div class="position-relative form-group">
-                            <label>Asing</label>
-                            <input type="number" min=0 class="form-control" name="kemarinAsing[]">
-                        </div>
-                        <div class="position-relative form-group">
-                            <label>Indonesia</label>
-                            <input type="number" min=0 class="form-control" name="kemarinIndonesia[]">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label><strong>Masuk hari ini</strong></label><br>
-                        <div class="position-relative form-group">
-                            <label>Asing</label>
-                            <input type="number" min=0 class="form-control" name="masukAsing[]">
-                        </div>
-                        <div class="position-relative form-group">
-                            <label>Indonesia</label>
-                            <input type="number" min=0 class="form-control" name="masukIndonesia[]">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label><strong>Keluar hari ini</strong></label><br>
-                        <div class="position-relative form-group">
-                            <label>Asing</label>
-                            <input type="number" min=0 class="form-control" name="keluarAsing[]">
-                        </div>
-                        <div class="position-relative form-group">
-                            <label>Indonesia</label>
-                            <input type="number" min=0 class="form-control" name="keluarIndonesia[]">
-                        </div>
-                    </div>
-                </div>    
-                <button class="btn btn-danger remove" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
-                <hr>
-            </div>
         </div>
+        <a href="<?php echo site_url('HasilSurvei/validasi/'.$data->id_survei.'/'.$data->id_job_desc)?>" type="button" id="validasi" class="btn btn-success">Validasi</a>
+        <button type="button" id="tolak" class="btn btn-danger">Tolak</button>&nbsp;<br>
+
+        <form id="formTolak" style="display:none" action="<?php echo site_url('HasilSurvei/tolak')?>" method="post">
+            <br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Alasan Penolakan</label>
+                <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
+                <input type="hidden" class="form-control" name="id_job_desc" value="<?php echo $data->id_job_desc?>">
+                <textarea class="form-control" name="alasanPenolakan"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </form>
     </div>
 </div>
 <?php }?>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-      $(".add-more").click(function(){ 
-          var html = $(".copy").html();
-          $(".after-add-more").append(html);
-      });
-
-      
-      // saat tombol remove dklik control group akan dihapus 
-      $("body").on("click",".remove",function(){ 
-          $(this).parents(".rem").remove();
-      });
+<script>
+    $('#validasi').on('click', function(e) {
+        $('#formAksi').show();
+        $('#formTolak').hide();
     });
-</script>
+    $('#tolak').on('click', function(e) {
+        $('#formAksi').hide();
+        $('#formTolak').show();
+    });
+  </script>

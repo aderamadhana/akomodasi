@@ -33,6 +33,15 @@ class Survei extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function detailSurveiOutput($id_survei)
+    {
+        $data['survei'] = $this->SurveiModel->getSurvei($id_survei)->result();
+
+        $this->load->view('templates/header_p');
+        $this->load->view('petugas/survei/vdetailsurveiOutput', $data);
+        $this->load->view('templates/footer');
+    }
+
     public function tambahTarif(){
         $data = $_POST;
         // echo print_r($data);

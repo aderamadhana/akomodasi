@@ -26,9 +26,13 @@
                 <tbody>
                 <?php $no=1; foreach($job as $data){
                     if($data->status_job == 0){
-                        $status_job ='<span class="badge badge-danger">Belum Selesai</span>';
+                        $status_job ='<span class="badge badge-warning">Belum Selesai</span>';
                     }else if($data->status_job == 1){
                         $status_job ='<span class="badge badge-success">Sudah Selesai</span>';
+                    }else if($data->status_job == 2){
+                        $status_job ='<span class="badge badge-success">Sudah Tervalidasi</span>';
+                    }else if($data->status_job == 3){
+                        $status_job ='<span class="badge badge-danger">Validasi Tertolak</span>';
                     }
                 ?>
                     <tr>
@@ -36,11 +40,19 @@
                         <td><?php echo $data->namaKomersial?></td>
                         <td><?php echo $data->alamat?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenKota?>, <?php echo $data->provinsi?></td>
                         <td><?php echo $status_job?></td>
+                        
                         <td>
+                            <?php if($data->status_job != 2){?>
                             <a class="btn btn-success btn-lg active btn-sm" title="Isi Survei" type="button" href="<?php echo site_url('Survei/detailSurvei/'.$data->id_survei)?>">
                                 <i class="fa fa-pencil"></i>
                             </a>
+                            <?php }else{?>
+                            <a class="btn btn-info btn-lg active btn-sm" title="Detail Survei" type="button" href="<?php echo site_url('Survei/detailSurveiOutput/'.$data->id_survei)?>">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <?php }?>
                         </td>
+                        
                     </tr>
                 <?php }?>
                 </tbody>

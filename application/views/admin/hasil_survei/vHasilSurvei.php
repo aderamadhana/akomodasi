@@ -1,3 +1,4 @@
+<?php echo $this->session->flashdata('message')?>
 <div class="card mb-3 ">
         <div class="card-header-tab card-header">
             <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
@@ -19,10 +20,12 @@
                 </thead>
                 <tbody>
                     <?php $no=1; foreach($survei as $data){
-                        if($data->status_job == 1){
-                            $status_job ='<span class="badge badge-danger">Belum Tervalidasi</span>';
-                        }else if($data->status_job == 2){
-                            $status_job ='<span class="badge badge-danger">Sudah Tervalidasi</span>';
+                        if($data->status_survei == 1){
+                            $status_job ='<span class="badge badge-warning">Belum Tervalidasi</span>';
+                        }else if($data->status_survei == 2){
+                            $status_job ='<span class="badge badge-success">Sudah Tervalidasi</span>';
+                        }else if($data->status_survei == 3){
+                            $status_job ='<span class="badge badge-danger">Validasi Tertolak</span>';
                         }
                     ?>
                     <tr id="<?php echo $data->id_job_desc?>">

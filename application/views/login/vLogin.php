@@ -33,7 +33,7 @@
                                         <div class="h5 modal-title text-center">
                                             <h4 class="mt-2">
                                                 <div>Selamat Datang di Jasa Akomodasi BPS Kota Batu</div>
-                                                <span>Silahkan Login atau <i>Register</i></span>
+                                                <span>Silahkan Login</span>
                                             </h4>
                                         </div>
                                         <form class="" action="<?php echo site_url('Login/login');?>" method="post">
@@ -48,7 +48,7 @@
                                         
                                     </div>
                                     <div class="modal-footer clearfix">
-                                        <div class="float-left"><a href="<?= base_url(); ?>/login/validasi" class="btn-lg btn btn-link">Register</a></div>
+                                        <!-- <div class="float-left"><a href="<?= base_url(); ?>/login/validasi" class="btn-lg btn btn-link">Register</a></div> -->
                                         <div class="float-right">
                                             <button class="btn btn-primary btn-lg" type="submit">Login</button>
                                         </div>
