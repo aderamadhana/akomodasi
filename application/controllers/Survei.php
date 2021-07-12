@@ -11,7 +11,7 @@ class Survei extends CI_Controller
 
         if($this->session->userdata('role') != 2){
             
-            echo $this->session->userdata('role');
+            redirect("forbidden/");
         }
     }
 

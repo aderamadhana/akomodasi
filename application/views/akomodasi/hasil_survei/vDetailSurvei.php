@@ -2,9 +2,13 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('HasilSurveiAkomodasi')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
+
     </div>
 <?php echo $this->session->flashdata('message')?>
 <?php foreach($survei as $data){?>
+    <div class="mb-3">
+    <a target="_blank" class="btn btn-info" href="<?php echo site_url('HasilSurveiAkomodasi/print/'.$data->id_survei)?>"><i class="fa fa-print"> Cetak</i></a>
+</div>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">
         <div class="card-header-title text-center font-size-lg text-capitalize font-weight-normal">

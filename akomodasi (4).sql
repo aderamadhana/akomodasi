@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2021 at 05:51 AM
+-- Generation Time: Jul 12, 2021 at 06:52 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -91,16 +91,18 @@ CREATE TABLE `lokasi` (
   `alamat` varchar(100) NOT NULL,
   `jenisAkomodasi` int(11) NOT NULL,
   `kelasAkomodasi` varchar(100) NOT NULL,
-  `linkMaps` varchar(255) NOT NULL
+  `linkMaps` varchar(255) NOT NULL,
+  `lattitude` varchar(50) NOT NULL,
+  `longitude` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `lokasi`
 --
 
-INSERT INTO `lokasi` (`id_lokasi`, `provinsi`, `kabupatenKota`, `kecamatan`, `kelurahan`, `namaKomersial`, `alamat`, `jenisAkomodasi`, `kelasAkomodasi`, `linkMaps`) VALUES
-(5, 'Jawa Timur', 'Kota Malang', 'Klojen', 'Klojen', 'Savana Hotel & Convention', 'Jl. Letjen Sutoyo No.30-34', 1, 'Eksklusif', 'https://www.google.com/maps/place/Savana+Hotel+%26+Convention/@-7.9622433,112.6341093,17z/data=!4m8!3m7!1s0x2dd629cc7d30b547:0x1eaff2d670c7fc15!5m2!4m1!1i2!8m2!3d-7.9622433!4d112.636298'),
-(6, 'Jawa Timur', 'Kota Malang', 'Lowokwaru', 'Lowokwaru', 'Hotel Santika Premiere Malang', 'Jl. Letjen Sutoyo No.79', 1, 'Eksklusif', 'https://www.google.com/maps/place/Hotel+Santika+Premiere+Malang/@-7.9581602,112.6347913,17z/data=!3m1!4b1!4m8!3m7!1s0x2dd629cc7e38166b:0x597cec8e5a265271!5m2!4m1!1i2!8m2!3d-7.9581655!4d112.63698');
+INSERT INTO `lokasi` (`id_lokasi`, `provinsi`, `kabupatenKota`, `kecamatan`, `kelurahan`, `namaKomersial`, `alamat`, `jenisAkomodasi`, `kelasAkomodasi`, `linkMaps`, `lattitude`, `longitude`) VALUES
+(5, 'Jawa Timur', 'Kota Malang', 'Klojen', 'Klojen', 'Savana Hotel & Convention', 'Jl. Letjen Sutoyo No.30-34', 1, 'Eksklusif', 'https://www.google.com/maps/place/Savana+Hotel+%26+Convention/@-7.9622433,112.6341093,17z/data=!4m8!3m7!1s0x2dd629cc7d30b547:0x1eaff2d670c7fc15!5m2!4m1!1i2!8m2!3d-7.9622433!4d112.636298', '-7.962238', '112.6341093'),
+(6, 'Jawa Timur', 'Kota Malang', 'Lowokwaru', 'Lowokwaru', 'Hotel Santika Premiere Malang', 'Jl. Letjen Sutoyo No.79', 1, 'Eksklusif', 'https://www.google.com/maps/place/Hotel+Santika+Premiere+Malang/@-7.9581602,112.6347913,17z/data=!3m1!4b1!4m8!3m7!1s0x2dd629cc7e38166b:0x597cec8e5a265271!5m2!4m1!1i2!8m2!3d-7.9581655!4d112.63698', '-7.9581602', '112.6347913');
 
 -- --------------------------------------------------------
 
@@ -210,7 +212,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detailtarifsurvei`
 --
 ALTER TABLE `detailtarifsurvei`
-  MODIFY `id_detail_tarif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id_detail_tarif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `job_desc`
@@ -222,7 +224,7 @@ ALTER TABLE `job_desc`
 -- AUTO_INCREMENT for table `lokasi`
 --
 ALTER TABLE `lokasi`
-  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `survei`
@@ -234,7 +236,7 @@ ALTER TABLE `survei`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

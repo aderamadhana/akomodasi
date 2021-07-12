@@ -7,8 +7,8 @@ class DashboardAdmin extends CI_Controller
         parent::__construct();
         
         if($this->session->userdata('role') != 1){
-            echo $this->session->userdata('role');
-            // redirect("forbidden/");
+            // echo $this->session->userdata('role');
+            redirect("forbidden/");
         }
     }
 

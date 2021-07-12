@@ -75,6 +75,21 @@
                 <textarea class="form-control" name="linkMaps" ><?php echo $data->linkMaps?></textarea>
                 </div>
             </div>
+
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label class="mt-4">Lattitude</label>
+                    <input type="text" class="form-control" name="lattitude" value="<?php echo $data->lattitude?>" >
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label class="mt-4">Longitude</label>
+                    <input type="text" class="form-control" name="longitude" value="<?php echo $data->longitude?>" >
+                </div>
+            </div>
+
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
         </form>

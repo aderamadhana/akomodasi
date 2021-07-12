@@ -12,7 +12,9 @@
         
     </div> -->
     <div class="card-body">
-        <h4><strong>Detail Lokasi Survei</strong></h4><a target="_blank" href="<?php echo $data->linkMaps?>" class="btn btn-info"><i class="fa fa-map-marker" aria-hidden="true"></i> Link GMaps</a>
+        <h4><strong>Detail Lokasi Survei</strong></h4><a target="_blank" href="<?php echo $data->linkMaps?>" class="btn btn-success"><i class="fa fa-map-marker" aria-hidden="true"></i> Link GMaps</a>
+        
+        <a href="<?php echo site_url('LokasiPetugas/maps/'.$data->id_lokasi) ?>" class="btn btn-info"><i class="fa fa-map-marker"> Maps Marker</i></a>
         <div class="form-row">
             <div class="col-md-12">
                 <div class="position-relative form-group">

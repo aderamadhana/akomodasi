@@ -642,8 +642,7 @@
     <script src="<?= base_url(); ?>assets/scripts/select.js"></script>
     <script src="<?= base_url(); ?>assets/scripts/edit.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>assets/scripts/main.07a59de7b920cd76b874.js"></script>
-
-
+    <script src="<?php echo base_url() ?>assets/leaflet/leaflet.js"></script>
     <script>
     
     function goBack() {

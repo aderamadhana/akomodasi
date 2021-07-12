@@ -4,7 +4,8 @@
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Detail Data Lokasi Akomodasi</h5>
-        <a href="<?php echo $data->linkMaps?>" class="btn btn-info"><i class="fa fa-map-marker"> Link Maps </i></a>
+        <a href="<?php echo $data->linkMaps?>" class="btn btn-success"><i class="fa fa-map-marker"> Link Maps </i></a>
+        <a href="<?php echo site_url('Lokasi/detailMaps/'.$data->id_lokasi) ?>" class="btn btn-info"><i class="fa fa-map-marker"> Maps Marker</i></a>
         <div class="form-row">
             <div class="col-md-4">
                 <div class="position-relative form-group">

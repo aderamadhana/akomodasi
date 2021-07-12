@@ -85,19 +85,35 @@
                     </div>
                 </div>
                 
+                <div class="col-md-4">
+                    <div class="position-relative form-group">
+                        <label class="mt-4">Lattitude</label>
+                        <input type="text" class="form-control" name="lattitude" required>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="position-relative form-group">
+                        <label class="mt-4">Longitude</label>
+                        <input type="text" class="form-control" name="longitude" required>
+                    </div>
+                </div>
             </div>
             <button class="mt-2 btn btn-primary" type="submit">Submit</button>
         </form>
     </div>
 </div>
 
-<div class="card mb-3 ">
+    <div class="card mb-3 ">
         <div class="card-header-tab card-header">
             <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
                 <i class="header-icon fa fa-bars mr-3 text-muted opacity-6"> </i>Data Lokasi
             </div>
         </div>
         <div class="card-body">
+            <?php if(count($lokasi) != 0){?>
+                <a class="btn btn-info" style="margin-bottom:7px;" href="<?php echo site_url('Lokasi/maps')?>" ><i class="fa fa-map-marker"></i> Maps</a> <br>
+            <?php }?>
             <table style="width: 100%;" id="example"
                     class="table table-hover table-striped table-bordered">
                 <thead>

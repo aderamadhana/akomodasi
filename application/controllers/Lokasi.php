@@ -10,8 +10,7 @@ class Lokasi extends CI_Controller
         $this->load->model('PetugasModel');
 
         if($this->session->userdata('role') != 1){
-            echo $this->session->userdata('role');
-            // redirect("forbidden/");
+            redirect("forbidden/");
         }
     }
 
@@ -34,7 +33,9 @@ class Lokasi extends CI_Controller
             'jenisAkomodasi'    => $this->input->post('jenisAkomodasi'),
             'kelasAkomodasi'    => $this->input->post('kelasAkomodasi'),
             'alamat'            => $this->input->post('alamat'),
-            'linkMaps'          => $this->input->post('linkMaps')
+            'linkMaps'          => $this->input->post('linkMaps'),
+            'lattitude'         => $this->input->post('lattitude'),
+            'longitude'         => $this->input->post('longitude')
         );
 
         $id_lokasi = null;
@@ -107,6 +108,22 @@ class Lokasi extends CI_Controller
         
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terhapus! </div>');
         redirect('Lokasi');
+    }
+
+    public function maps(){
+        $data['lokasi'] = $this->LokasiModel->getAll()->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/lokasi/vmaps', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function detailMaps($id_lokasi){
+        $data['lokasi'] = $this->LokasiModel->getLokasibyId($id_lokasi)->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('admin/lokasi/vmapss', $data);
+        $this->load->view('templates/footer');
     }
 }
 

@@ -9,8 +9,7 @@ class Petugas extends CI_Controller
         $this->load->model('PetugasModel');
 
         if($this->session->userdata('role') != 1){
-            echo $this->session->userdata('role');
-            // redirect("forbidden/");
+            redirect("forbidden/");
         }
     }
 
