@@ -79,43 +79,32 @@ class Survei extends CI_Controller
             'id_survei' => $id_survei
         );
        
-        array_splice($tanggal, -1);
+        $this->SurveiModel->deleteDetailTarif($where);
 
-        $dates = array_unique(array_map(function($date) {
-            return DateTime::createFromFormat('Y-m-d', $date)->format('n');
-        }, $tanggal));
-        
-        if(count($dates) == 1){
-            $this->SurveiModel->deleteDetailTarif($where);
+        for ($i=0; $i < ($countTanggal -1) ; $i++) { 
+            $data = array(
+                'id_survei'                 => $id_survei,
+                'tanggal'                   => $tanggal[$i],
+                'jumlahKamarTersedia'       => $jumlahKamarTersedia[$i],
+                'kamarDigunakanKemarin'     => $kamarDigunakanKemarin[$i],
+                'digunakanKemarin'          => $digunakanKemarin[$i],
+                'checkIn'                   => $checkIn[$i],
+                'checkOut'                  => $checkOut[$i],
+                'kemarinAsing'              => $kemarinAsing[$i],
+                'kemarinIndonesia'          => $kemarinIndonesia[$i],
+                'masukAsing'                => $masukAsing[$i],
+                'masukIndonesia'            => $masukIndonesia[$i],
+                'keluarAsing'               => $keluarAsing[$i],
+                'keluarIndonesia'           => $keluarIndonesia[$i]
+            );
 
-            for ($i=0; $i < ($countTanggal -1) ; $i++) { 
-                $data = array(
-                    'id_survei'                 => $id_survei,
-                    'tanggal'                   => $tanggal[$i],
-                    'jumlahKamarTersedia'       => $jumlahKamarTersedia[$i],
-                    'kamarDigunakanKemarin'     => $kamarDigunakanKemarin[$i],
-                    'digunakanKemarin'          => $digunakanKemarin[$i],
-                    'checkIn'                   => $checkIn[$i],
-                    'checkOut'                  => $checkOut[$i],
-                    'kemarinAsing'              => $kemarinAsing[$i],
-                    'kemarinIndonesia'          => $kemarinIndonesia[$i],
-                    'masukAsing'                => $masukAsing[$i],
-                    'masukIndonesia'            => $masukIndonesia[$i],
-                    'keluarAsing'               => $keluarAsing[$i],
-                    'keluarIndonesia'           => $keluarIndonesia[$i]
-                );
-
-                $this->SurveiModel->tambahDetailTarif($data);
-            }
-
-            $this->session->set_flashdata('selesai', '<div class="alert alert-success" role="alert"> Silahkan klik <strong>"simpan semua survei"</strong> untuk mengakhiri sesi input! </div>');
-                
-            redirect('Survei/detailSurvei/'.$id_survei.'/#selesai');
-        }else{
-            $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong>Poin no 2,</strong> Pastikan bulan survei sama! </div>');
-        
-            redirect('Survei/detailSurvei/'.$id_survei);
+            $this->SurveiModel->tambahDetailTarif($data);
         }
+
+        $this->session->set_flashdata('selesai', '<br><div class="alert alert-success" role="alert"> Silahkan klik <strong>"simpan semua survei"</strong> untuk mengakhiri sesi input! </div>');
+            
+        redirect('Survei/detailSurvei/'.$id_survei.'/#selesai');
+        
     }
 
     public function simpanSemua(){

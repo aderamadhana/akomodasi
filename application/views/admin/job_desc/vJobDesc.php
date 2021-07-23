@@ -35,7 +35,14 @@
                     </div>
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-4">
+                    <div class="position-relative form-group">
+                        <label>Periode Pengisian</label>
+                        <input name="periode" type="month" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
                     <div class="position-relative form-group">
                         <label>Keterangan</label>
                         <textarea name="keterangan" class="form-control" required></textarea>
@@ -55,13 +62,13 @@
             </div>
         </div>
         <div class="card-body">
-            <table style="width: 100%;" id="example"
-                    class="table table-hover table-striped table-bordered">
+            <table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
                 <thead>
                 <tr>
                     <th>No</th>
                     <th>Nama Petugas</th>
                     <th>Lokasi Survei</th>
+                    <th>Periode</th>
                     <th>Tanggal Survei</th>
                     <th>Status</th>
                     <th>Aksi</th>
@@ -74,11 +81,14 @@
                         }else if($data->status_job == 1){
                             $status_job ='<span class="badge badge-success">Sudah Selesai</span>';
                         }
+
+                        $periode =  date("F Y", strtotime($data->periode));
                     ?>
                     <tr id="<?php echo $data->id_job_desc?>">
                         <td><?php echo $no++?></td>
                         <td><?php echo $data->nama_petugas?></td>
                         <td><?php echo $data->namaKomersial?></td>
+                        <td><?php echo $periode?></td>
                         <td><?php echo $data->tanggal_survei?></td>
                         <td><?php echo $status_job?></td>
                         <td>

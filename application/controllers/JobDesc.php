@@ -37,29 +37,38 @@ class JobDesc extends CI_Controller
         
             redirect('JobDesc');
         }else{
-            $query = $this->db->select('*')->from('job_desc')->where('tanggal_survei', $this->input->post('tanggal_survei'))->where('id_lokasi', $this->input->post('id_lokasi'))->get()->num_rows();
-            if($query == 0){
-                $this->JobDescModel->insertJobDesc($data);
-
-                $dataJobDesc = $this->JobDescModel->getJob($data)->result();
-                foreach($dataJobDesc as $djd){
-                    $id_job_desc = $djd->id_job_desc;
+            $countLokasi    = $this->db->select('*')->from('job_desc')->where('tanggal_survei', $this->input->post('tanggal_survei'))->where('id_lokasi', $this->input->post('id_lokasi'))->get()->num_rows();$countLokasi = $this->db->select('*')->from('job_desc')->where('tanggal_survei', $this->input->post('tanggal_survei'))->where('id_lokasi', $this->input->post('id_lokasi'))->get()->num_rows();
+            $countPeriode   = $this->db->select('*')->from('job_desc')->where('id_lokasi', $this->input->post('id_lokasi'))->where('periode', $this->input->post('periode'))->get()->num_rows();
+            
+            if($countPeriode == 0){
+                if($countLokasi == 0){
+                    $this->JobDescModel->insertJobDesc($data);
+    
+                    $dataJobDesc = $this->JobDescModel->getJob($data)->result();
+                    foreach($dataJobDesc as $djd){
+                        $id_job_desc = $djd->id_job_desc;
+                    }
+    
+                    $dataSurvei = array(
+                        'id_job_desc' => $id_job_desc
+                    );
+    
+                    $this->SurveiModel->insertLokasi($dataSurvei);
+    
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil tambah job! </div>');
+            
+                    redirect('JobDesc');
+                }else{
+                    $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Lokasi dan tanggal survei sudah tercatat sebelumnya! </div>');
+            
+                    redirect('JobDesc');
                 }
-
-                $dataSurvei = array(
-                    'id_job_desc' => $id_job_desc
-                );
-
-                $this->SurveiModel->insertLokasi($dataSurvei);
-
-                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil tambah job! </div>');
-        
-                redirect('JobDesc');
             }else{
-                $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Lokasi dan tanggal survei sudah tercatat sebelumnya! </div>');
-        
+                $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Lokasi telah disurvei pada periode tersebut! </div>');
+            
                 redirect('JobDesc');
             }
+            
         }
     }
 
