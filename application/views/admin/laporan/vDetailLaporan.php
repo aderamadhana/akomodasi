@@ -352,84 +352,36 @@
     </div>
     
     <div class="card-body">
-        
-    <table style="font-size: 10.5px; width: 100%;" class="table table-hover table-striped table-bordered">
+        <table style="font-size: 10.5px; width: 100%; text-align: center" class="table table-hover table-striped table-bordered">
             <thead>
-            <tr>
-                <th style="width:105px; vertical-align: middle; text-align:center" rowspan="3">Tanggal</th>
-                <th style="vertical-align: middle; text-align:center" rowspan="3">Jumlah Kamar Tersedia</th>
-                <th style="vertical-align: middle; text-align:center" rowspan="3">Kapasitas Tempat Tidur</th>
-                <th style="vertical-align: middle; text-align:center" colspan="3">Banyaknya Kamar</th>
-                <th style="vertical-align: middle; text-align:center" colspan="6">Banyaknya Tamu Menginap</th>
-            </tr>
-            <tr>
-                <th style="vertical-align: middle; text-align:center" rowspan="2">Digunakan kemarin</th>
-                <th style="vertical-align: middle; text-align:center" rowspan="2">Check in</th>
-                <th style="vertical-align: middle; text-align:center" rowspan="2">Check out</th>
-                <th style="vertical-align: middle; text-align:center" colspan="2">Kemarin</th>
-                <th style="vertical-align: middle; text-align:center" colspan="2">Masuk Hari ini</th>
-                <th style="vertical-align: middle; text-align:center" colspan="2">Keluar Hari ini</th>
-            </tr>
-            <tr>
-                <th style="vertical-align: middle; text-align:center">Asing</th>
-                <th style="vertical-align: middle; text-align:center">Indonesia</th>
-                <th style="vertical-align: middle; text-align:center">Asing</th>
-                <th style="vertical-align: middle; text-align:center">Indonesia</th>
-                <th style="vertical-align: middle; text-align:center">Asing</th>
-                <th style="vertical-align: middle; text-align:center">Indonesia</th>
-            </tr>
-            </thead>
-            <?php 
-                $getDetailSurvei = $this->db->select('*')->from('detailtarifsurvei')->where('id_survei', $data->id_survei)->get()->result();
-
-            ?>
-            <tbody>
-                <?php 
-                $totaljumlahKamarTersedia = 0;
-                $totalkamarDigunakanKemarin = 0;
-                $totaldigunakanKemarin = 0;
-                $totalcheckIn = 0;
-                $totalcheckOut = 0;
-                $totalkemarinAsing = 0;
-                $totalkemarinIndonesia = 0;
-                $totalmasukAsing = 0;
-                $totalmasukIndonesia = 0;
-                $totalkeluarAsing = 0;
-                $totalkeluarIndonesia = 0;
-
-                foreach($getDetailSurvei as $row){
-                ?>
                 <tr>
-                    <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
-                    <td style="vertical-align: middle; text-align:center"><?php echo $row->tanggal?><input style="font-size:10.5px; width:100px;" readonly type="hidden" class="form-control" value="<?php echo $row->tanggal?>" name="tanggal[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->jumlahKamarTersedia?>" name="jumlahKamarTersedia[]" ></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kamarDigunakanKemarin?>" name="kamarDigunakanKemarin[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->digunakanKemarin?>" name="digunakanKemarin[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkIn?>" name="checkIn[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkOut?>" name="checkOut[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kemarinAsing?>" name="kemarinAsing[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kemarinIndonesia?>" name="kemarinIndonesia[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->masukAsing?>" name="masukAsing[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->masukIndonesia?>" name="masukIndonesia[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->keluarAsing?>" name="keluarAsing[]"></td>
-                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->keluarIndonesia?>" name="keluarIndonesia[]"></td>
+                    <th style="vertical-align: middle;" rowspan="2">MKT</th>
+                    <th colspan="3">BANYAKNYA MALAM TAMU</th>
+                    <th colspan="3">BANYAKNYA JUMLAH TAMU</th>
+                    <th style="vertical-align: middle;" rowspan="2">TPK</th>
+                    <th style="vertical-align: middle;" rowspan="2">TPTT</th>
+                    <th style="vertical-align: middle;" rowspan="2">GPR</th>
+                    <th colspan="3">RATA-RATA TAMU MENGINAP</th>
+                    <th colspan="3">KOMPOSISI</th>
+                    <th style="vertical-align: middle;" rowspan="2">JML TT HITTG</th>
                 </tr>
-                <?php 
-                $totaljumlahKamarTersedia += $row->jumlahKamarTersedia;
-                $totalkamarDigunakanKemarin += $row->kamarDigunakanKemarin;
-                $totaldigunakanKemarin += $row->digunakanKemarin;
-                $totalcheckIn += $row->checkIn;
-                $totalcheckOut += $row->checkOut;
-                $totalkemarinAsing += $row->kemarinAsing;
-                $totalkemarinIndonesia += $row->kemarinIndonesia;
-                $totalmasukAsing += $row->masukAsing;
-                $totalmasukIndonesia += $row->masukIndonesia;
-                $totalkeluarAsing += $row->keluarAsing;
-                $totalkeluarIndonesia += $row->keluarIndonesia;
-                }?>
                 <tr>
-                    <th>Total</th>
-                    <th><?php echo $totaljumlahKamarTersedia?></th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <!-- <th><?php echo $totaljumlahKamarTersedia?></th>
                     <th><?php echo $totalkamarDigunakanKemarin?></th>
                     <th><?php echo $totaldigunakanKemarin?></th>
                     <th><?php echo $totalcheckIn?></th>
@@ -439,7 +391,43 @@
                     <th><?php echo $totalmasukAsing?></th>
                     <th><?php echo $totalmasukIndonesia?></th>
                     <th><?php echo $totalkeluarAsing?></th>
-                    <th><?php echo $totalkeluarIndonesia?></th>
+                    <th><?php echo $totalkeluarIndonesia?></th> -->
+                <?php 
+                    $mkt            = $totaldigunakanKemarin + $totalcheckIn + $totalcheckOut;
+                    $malamAsing     = $totalkemarinAsing + $totalmasukAsing + $totalkeluarAsing;
+                    $malamDomestik  = $totalkemarinIndonesia + $totalmasukIndonesia + $totalkeluarIndonesia;
+                    $totalMalam     = $malamAsing + $malamDomestik;
+                    $tamuAsing      = $totalmasukAsing;
+                    $tamuDomestik   = $totalmasukIndonesia;
+                    $totalTamu      = $tamuAsing + $tamuDomestik;
+                    $tpk            = ($mkt/$totaljumlahKamarTersedia)*100;
+                    $tptt           = ($totalMalam/$totalkamarDigunakanKemarin)*100;
+                    $gpr            = $totalMalam/$mkt;
+                    $rLamaAsing     = $malamAsing / $totalmasukAsing;
+                    $rLamaDomestik  = $malamDomestik / $totalmasukIndonesia;
+                    $totalR         = (($totalkemarinAsing+$totalkemarinIndonesia+$totalmasukAsing+$totalmasukIndonesia)-$totalmasukAsing-$totalkeluarIndonesia)/($totalmasukAsing+$totalmasukIndonesia);
+                    $komposisiAsing = ($totalmasukAsing/($totalmasukAsing+$totalmasukIndonesia))*100;
+                    $komposisiDomestik = ($totalmasukIndonesia/($totalmasukAsing+$totalmasukIndonesia))*100;
+                    $totalKomposisi = $komposisiAsing+$komposisiDomestik;
+                ?>
+                <tr>
+                    <td><?php echo $mkt?></td>
+                    <td><?php echo $malamAsing?></td>
+                    <td><?php echo $malamDomestik?></td>
+                    <td><?php echo $totalMalam?></td>
+                    <td><?php echo $tamuAsing?></td>
+                    <td><?php echo $tamuDomestik?></td>
+                    <td><?php echo $totalTamu?></td>
+                    <td><?php echo number_format((float)$tpk, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$tptt, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$gpr, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$rLamaAsing, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$rLamaDomestik, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$totalR, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$komposisiAsing, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$komposisiDomestik, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$totalKomposisi, 1, '.', '');?></td>    
+                    <td><?php if($totalkemarinAsing>$totaljumlahKamarTersedia){echo $totalkemarinAsing;}else{echo $totaljumlahKamarTersedia;}?></td>
                 </tr>
             </tbody>
         </table>

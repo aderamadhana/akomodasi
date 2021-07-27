@@ -3,7 +3,7 @@
         <title>Laporan</title>
         <style>
         body{
-            font-size: 11.5px;
+            font-size: 13px;
         }
         table{
             width:100%;
@@ -75,17 +75,17 @@
     </div>
     </center>
     <?php foreach($survei as $data){
-        $countjumlahKamarTersedia = 0;
-        $countkamarDigunakanKemarin = 0;
-        $countdigunakanKemarin = 0;
-        $countcheckIn = 0;
-        $countcheckOut = 0;
-        $countkemarinAsing = 0;
-        $countkemarinIndonesia = 0;
-        $countmasukAsing = 0;
-        $countmasukIndonesia = 0;
-        $countkeluarAsing = 0;
-        $countkeluarIndonesia = 0;
+        $totaljumlahKamarTersedia = 0;
+        $totalkamarDigunakanKemarin = 0;
+        $totaldigunakanKemarin = 0;
+        $totalcheckIn = 0;
+        $totalcheckOut = 0;
+        $totalkemarinAsing = 0;
+        $totalkemarinIndonesia = 0;
+        $totalmasukAsing = 0;
+        $totalmasukIndonesia = 0;
+        $totalkeluarAsing = 0;
+        $totalkeluarIndonesia = 0;
     ?>
     <table>
         <thead>
@@ -202,17 +202,17 @@
                 
             $newDate = date("d/m/Y", strtotime($db->tanggal)); 
             
-            $countjumlahKamarTersedia += $db->jumlahKamarTersedia;
-            $countkamarDigunakanKemarin += $db->kamarDigunakanKemarin;
-            $countdigunakanKemarin += $db->digunakanKemarin;
-            $countcheckIn += $db->checkIn;
-            $countcheckOut += $db->checkOut;
-            $countkemarinAsing += $db->kemarinAsing;
-            $countkemarinIndonesia += $db->kemarinIndonesia;
-            $countmasukAsing += $db->masukAsing;
-            $countmasukIndonesia += $db->masukIndonesia;
-            $countkeluarAsing += $db->keluarAsing;
-            $countkeluarIndonesia += $db->keluarIndonesia;
+            $totaljumlahKamarTersedia += $db->jumlahKamarTersedia;
+            $totalkamarDigunakanKemarin += $db->kamarDigunakanKemarin;
+            $totaldigunakanKemarin += $db->digunakanKemarin;
+            $totalcheckIn += $db->checkIn;
+            $totalcheckOut += $db->checkOut;
+            $totalkemarinAsing += $db->kemarinAsing;
+            $totalkemarinIndonesia += $db->kemarinIndonesia;
+            $totalmasukAsing += $db->masukAsing;
+            $totalmasukIndonesia += $db->masukIndonesia;
+            $totalkeluarAsing += $db->keluarAsing;
+            $totalkeluarIndonesia += $db->keluarIndonesia;
 
             ?>
             <tr>
@@ -233,20 +233,92 @@
             <?php }?>
             <tr>
                 <th colspan=2>Jumlah</th>
-                <td><?php echo $countjumlahKamarTersedia?></td>
-                <td><?php echo $countkamarDigunakanKemarin?></td>
-                <td><?php echo $countdigunakanKemarin?></td>
-                <td><?php echo $countcheckIn?></td>
-                <td><?php echo $countcheckOut?></td>
-                <td><?php echo $countkemarinAsing?></td>
-                <td><?php echo $countkemarinIndonesia?></td>
-                <td><?php echo $countmasukAsing?></td>
-                <td><?php echo $countmasukIndonesia?></td>
-                <td><?php echo $countkeluarAsing?></td>
-                <td><?php echo $countkeluarIndonesia?></td>
+                <td><?php echo $totaljumlahKamarTersedia?></td>
+                <td><?php echo $totalkamarDigunakanKemarin?></td>
+                <td><?php echo $totaldigunakanKemarin?></td>
+                <td><?php echo $totalcheckIn?></td>
+                <td><?php echo $totalcheckOut?></td>
+                <td><?php echo $totalkemarinAsing?></td>
+                <td><?php echo $totalkemarinIndonesia?></td>
+                <td><?php echo $totalmasukAsing?></td>
+                <td><?php echo $totalmasukIndonesia?></td>
+                <td><?php echo $totalkeluarAsing?></td>
+                <td><?php echo $totalkeluarIndonesia?></td>
             </tr>
             </tbody>
         </table>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="17">3. PERHITUNGAN</th>
+                </tr>
+                <tr>
+                    <th style="vertical-align: middle;" rowspan="2">MKT</th>
+                    <th style="vertical-align: middle;" colspan="3">BANYAKNYA MALAM TAMU</th>
+                    <th style="vertical-align: middle;" colspan="3">BANYAKNYA JUMLAH TAMU</th>
+                    <th style="vertical-align: middle;" rowspan="2">TPK</th>
+                    <th style="vertical-align: middle;" rowspan="2">TPTT</th>
+                    <th style="vertical-align: middle;" rowspan="2">GPR</th>
+                    <th style="vertical-align: middle;" colspan="3">RATA-RATA TAMU MENGINAP</th>
+                    <th style="vertical-align: middle;" colspan="3">KOMPOSISI</th>
+                    <th style="vertical-align: middle;" rowspan="2">JML TT HITTG</th>
+                </tr>
+                <tr>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                    <th>ASING</th>
+                    <th>DOMESTIK</th>
+                    <th>JUMLAH</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <?php 
+                    $mkt            = $totaldigunakanKemarin + $totalcheckIn + $totalcheckOut;
+                    $malamAsing     = $totalkemarinAsing + $totalmasukAsing + $totalkeluarAsing;
+                    $malamDomestik  = $totalkemarinIndonesia + $totalmasukIndonesia + $totalkeluarIndonesia;
+                    $totalMalam     = $malamAsing + $malamDomestik;
+                    $tamuAsing      = $totalmasukAsing;
+                    $tamuDomestik   = $totalmasukIndonesia;
+                    $totalTamu      = $tamuAsing + $tamuDomestik;
+                    $tpk            = ($mkt/$totaljumlahKamarTersedia)*100;
+                    $tptt           = ($totalMalam/$totalkamarDigunakanKemarin)*100;
+                    $gpr            = $totalMalam/$mkt;
+                    $rLamaAsing     = $malamAsing / $totalmasukAsing;
+                    $rLamaDomestik  = $malamDomestik / $totalmasukIndonesia;
+                    $totalR         = (($totalkemarinAsing+$totalkemarinIndonesia+$totalmasukAsing+$totalmasukIndonesia)-$totalmasukAsing-$totalkeluarIndonesia)/($totalmasukAsing+$totalmasukIndonesia);
+                    $komposisiAsing = ($totalmasukAsing/($totalmasukAsing+$totalmasukIndonesia))*100;
+                    $komposisiDomestik = ($totalmasukIndonesia/($totalmasukAsing+$totalmasukIndonesia))*100;
+                    $totalKomposisi = $komposisiAsing+$komposisiDomestik;
+                ?>
+                <tr>
+                    <td><?php echo $mkt?></td>
+                    <td><?php echo $malamAsing?></td>
+                    <td><?php echo $malamDomestik?></td>
+                    <td><?php echo $totalMalam?></td>
+                    <td><?php echo $tamuAsing?></td>
+                    <td><?php echo $tamuDomestik?></td>
+                    <td><?php echo $totalTamu?></td>
+                    <td><?php echo number_format((float)$tpk, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$tptt, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$gpr, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$rLamaAsing, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$rLamaDomestik, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$totalR, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$komposisiAsing, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$komposisiDomestik, 1, '.', '');?></td>
+                    <td><?php echo number_format((float)$totalKomposisi, 1, '.', '');?></td>    
+                    <td><?php if($totalkemarinAsing>$totaljumlahKamarTersedia){echo $totalkemarinAsing;}else{echo $totaljumlahKamarTersedia;}?></td>
+                </tr>
+            </tbody>
+        </table>
+        
         <?php }?>
         <div class="contentleft">
             <p>Petugas,</p>

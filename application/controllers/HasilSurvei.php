@@ -119,11 +119,9 @@ class HasilSurvei extends CI_Controller
         $this->load->library('pdf');
     
         $this->pdf->set_option('isRemoteEnabled', true);
-        $this->pdf->setPaper('A4', 'potrait');
+        $this->pdf->setPaper('A4', 'landscape');
         $this->pdf->filename = "Hasil Survei_".$namaKomersial."_".$blnBr.".pdf";
         $this->pdf->load_view('admin/hasil_survei/vprint', $data);
-    
-    
     }
 }
 
