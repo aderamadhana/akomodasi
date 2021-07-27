@@ -31,7 +31,30 @@ class HasilSurvei extends CI_Controller
     }
 
     public function validasi($id_survei, $id_job_desc){
+        $jumlahKamarTersedia = $this->input->post('totalJumlahKamarTersedia');
+        $kamarDigunakanKemarin = $this->input->post('totalKamarDigunakanKemarin');
+        $digunakanKemarin = $this->input->post('totalDigunakanKemarin');
+        $checkIn = $this->input->post('totalCheckIn');
+        $checkOut = $this->input->post('totalCheckOut');
+        $kemarinAsing = $this->input->post('totalKemarinAsing');
+        $kemarinIndonesia = $this->input->post('totalKemarinIndonesia');
+        $masukAsing = $this->input->post('totalMasukAsing');
+        $masukIndonesia = $this->input->post('totalMasukIndonesia');
+        $keluarAsing = $this->input->post('totalKeluarAsing');
+        $keluarIndonesia = $this->input->post('totalKeluarIndonesia');
+
         $dataSurvei = array(
+            'totalJumlahKamarTersedia'       => $jumlahKamarTersedia,
+            'totalKamarDigunakanKemarin'     => $kamarDigunakanKemarin,
+            'totalDigunakanKemarin'          => $digunakanKemarin,
+            'totalCheckIn'                   => $checkIn,
+            'totalCheckOut'                  => $checkOut,
+            'totalKemarinAsing'              => $kemarinAsing,
+            'totalKemarinIndonesia'          => $kemarinIndonesia,
+            'totalMasukAsing'                => $masukAsing,
+            'totalMasukIndonesia'            => $masukIndonesia,
+            'totalKeluarAsing'               => $keluarAsing,
+            'totalKeluarIndonesia'           => $keluarIndonesia,
             'status_survei' => 2
         );
 

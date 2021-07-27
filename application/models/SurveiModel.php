@@ -39,6 +39,12 @@ class SurveiModel extends CI_model
         $this->db->update('survei');
     }
 
+    public function updateDetailTarif($data, $where){
+        $this->db->set($data);
+        $this->db->where($where);
+        $this->db->update('detailtarifsurvei');
+    }
+
     public function deleteDetailTarif($where){
         $this->db->where($where);
         $this->db->delete('detailtarifsurvei');

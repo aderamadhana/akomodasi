@@ -91,7 +91,15 @@
                                 <li>
                                     <a href="<?php echo site_url('HasilSurvei')?>">
                                         <i class="metismenu-icon fa fa-list"></i>
-                                        Hasil Survei
+                                        Verifikasi Survei
+                                    </a>
+                                    
+                                </li>
+
+                                <li>
+                                    <a href="<?php echo site_url('Laporan')?>">
+                                        <i class="metismenu-icon fa fa-bar-chart"></i>
+                                        Laporan
                                     </a>
                                     
                                 </li>

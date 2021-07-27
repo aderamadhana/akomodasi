@@ -81,36 +81,41 @@ class Survei extends CI_Controller
        
         $this->SurveiModel->deleteDetailTarif($where);
 
-        for ($i=0; $i < ($countTanggal -1) ; $i++) { 
-            $data = array(
-                'id_survei'                 => $id_survei,
-                'tanggal'                   => $tanggal[$i],
-                'jumlahKamarTersedia'       => $jumlahKamarTersedia[$i],
-                'kamarDigunakanKemarin'     => $kamarDigunakanKemarin[$i],
-                'digunakanKemarin'          => $digunakanKemarin[$i],
-                'checkIn'                   => $checkIn[$i],
-                'checkOut'                  => $checkOut[$i],
-                'kemarinAsing'              => $kemarinAsing[$i],
-                'kemarinIndonesia'          => $kemarinIndonesia[$i],
-                'masukAsing'                => $masukAsing[$i],
-                'masukIndonesia'            => $masukIndonesia[$i],
-                'keluarAsing'               => $keluarAsing[$i],
-                'keluarIndonesia'           => $keluarIndonesia[$i]
-            );
-
-            $this->SurveiModel->tambahDetailTarif($data);
-        }
-
-        $this->session->set_flashdata('selesai', '<br><div class="alert alert-success" role="alert"> Silahkan klik <strong>"simpan semua survei"</strong> untuk mengakhiri sesi input! </div>');
+            for ($i=0; $i < $countTanggal ; $i++) { 
+                $data = array(
+                    'id_survei'                 => $id_survei,
+                    'tanggal'                   => $tanggal[$i],
+                    'jumlahKamarTersedia'       => $jumlahKamarTersedia[$i],
+                    'kamarDigunakanKemarin'     => $kamarDigunakanKemarin[$i],
+                    'digunakanKemarin'          => $digunakanKemarin[$i],
+                    'checkIn'                   => $checkIn[$i],
+                    'checkOut'                  => $checkOut[$i],
+                    'kemarinAsing'              => $kemarinAsing[$i],
+                    'kemarinIndonesia'          => $kemarinIndonesia[$i],
+                    'masukAsing'                => $masukAsing[$i],
+                    'masukIndonesia'            => $masukIndonesia[$i],
+                    'keluarAsing'               => $keluarAsing[$i],
+                    'keluarIndonesia'           => $keluarIndonesia[$i]
+                );
+    
+                $this->SurveiModel->tambahDetailTarif($data);
+            }
             
-        redirect('Survei/detailSurvei/'.$id_survei.'/#selesai');
-        
+            $this->session->set_flashdata('selesai', '<br><div class="alert alert-success" role="alert"> Silahkan klik <strong>"simpan semua survei"</strong> untuk mengakhiri sesi input! </div>');
+            
+            redirect('Survei/detailSurvei/'.$id_survei.'/#selesai');
     }
 
     public function simpanSemua(){
         $id_survei = $this->input->post('id_survei');
         $id_job_desc = $this->input->post('id_job_desc');
+        $tanggal = $this->input->post('tanggal');
+        $digunakanKemarin = $this->input->post('digunakanKemarin');
+        $kemarinAsing = $this->input->post('kemarinAsing');
+        $kemarinIndonesia = $this->input->post('kemarinIndonesia');
         
+        $countTanggal = count($tanggal);
+
         $statusSurvei = array(
             'status_survei' => 1
         );
@@ -126,6 +131,22 @@ class Survei extends CI_Controller
         $whereJob = array(
             'id_job_desc' => $id_job_desc
         );
+
+        for ($i=0; $i < $countTanggal ; $i++) { 
+            $data = array(
+                'tanggal'                   => $tanggal[$i],
+                'digunakanKemarin'          => $digunakanKemarin[$i],
+                'kemarinAsing'              => $kemarinAsing[$i],
+                'kemarinIndonesia'          => $kemarinIndonesia[$i]
+            );
+
+            $whereDetailTarif = array(
+                'id_survei' => $id_survei,
+                'tanggal'   => $tanggal[$i]
+            );
+
+            $this->SurveiModel->updateDetailTarif($data, $whereDetailTarif);
+        }
 
         $this->SurveiModel->selesaiSurvei($statusSurvei, $whereSurvei);
         $this->SurveiModel->selesaiJob($statusJob, $whereJob);

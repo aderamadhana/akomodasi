@@ -294,7 +294,12 @@ if($data->alasanPenolakan != null){
                 <th style="vertical-align: middle; text-align:center">Indonesia</th>
             </tr>
             </thead>
-            <tbody >
+            <?php 
+                $getDetailSurvei = $this->db->select('*')->from('detailtarifsurvei')->where('id_survei', $data->id_survei)->get()->result();
+
+                if($getDetailSurvei == null){
+            ?>
+            <tbody>
                 <?php
                 $getPeriode = strtotime($data->periode);
                 $periodePlusMonth = date("Y-m", strtotime("+1 month", $getPeriode));
@@ -319,7 +324,7 @@ if($data->alasanPenolakan != null){
                     <?php if($i == 1){?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="digunakanKemarin[]"></td>
                     <?php }else {?>
-                    <td></td>
+                    <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="digunakanKemarin[]"></td>
                     <?php }?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="checkIn[]"></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="checkOut[]"></td>
@@ -327,8 +332,8 @@ if($data->alasanPenolakan != null){
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kemarinAsing[]"></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kemarinIndonesia[]"></td>
                     <?php }else {?>
-                    <td></td>
-                    <td></td>
+                    <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="kemarinAsing[]"></td>
+                    <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="kemarinIndonesia[]"></td>
                     <?php }?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="masukAsing[]"></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="masukIndonesia[]"></td>
@@ -339,6 +344,48 @@ if($data->alasanPenolakan != null){
                     }
                 ?>
             </tbody>
+
+            <?php }else{?>
+
+            <tbody>
+                <form action="<?php echo site_url('Survei/tambahSurvei')?>" method="post"> 
+                <?php $i = 0; foreach($getDetailSurvei as $row){
+                    $i++;
+                ?>
+                <tr>
+                    <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
+                    <td style="vertical-align: middle; text-align:center"><?php echo $row->tanggal?><input style="font-size:10.5px; width:100px;" readonly type="hidden" class="form-control" value="<?php echo $row->tanggal?>" name="tanggal[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->jumlahKamarTersedia?>" name="jumlahKamarTersedia[]" ></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kamarDigunakanKemarin?>" name="kamarDigunakanKemarin[]"></td>
+                    <?php if($i == 1){?>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->digunakanKemarin?>" name="digunakanKemarin[]"></td>
+                    <?php }else {?>
+                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $digunakanKemarin?>" name="digunakanKemarin[]"></td>
+                    <?php }?>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkIn?>" name="checkIn[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkOut?>" name="checkOut[]"></td>
+                    <?php if($i == 1){?>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kemarinAsing?>" name="kemarinAsing[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kemarinIndonesia?>" name="kemarinIndonesia[]"></td>
+                    <?php }else {?>
+                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $kemarinAsing?>" name="kemarinAsing[]"></td>
+                    <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $kemarinIndonesia?>" name="kemarinIndonesia[]"></td>
+                    <?php }?>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->masukAsing?>" name="masukAsing[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->masukIndonesia?>" name="masukIndonesia[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->keluarAsing?>" name="keluarAsing[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->keluarIndonesia?>" name="keluarIndonesia[]"></td>
+                </tr>
+                <?php 
+                    $digunakanKemarin = 0;
+                    $kemarinAsing = 0;
+                    $kemarinIndonesia = 0;
+                    $digunakanKemarin += $row->checkIn;
+                    $kemarinAsing += $row->masukAsing;
+                    $kemarinIndonesia += $row->masukIndonesia;
+                }?>
+            </tbody>
+            <?php }?>
         </table>
         <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
@@ -348,6 +395,27 @@ if($data->alasanPenolakan != null){
                 <form action="<?php echo site_url('Survei/simpanSemua')?>" method="post">
                     <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
                     <input type="hidden" class="form-control" name="id_job_desc" value="<?php echo $data->id_job_desc?>">
+                    <div style="display: hidden">
+                    </div>
+                    <?php $i = 0; foreach($getDetailSurvei as $row){
+                    $i++;
+                    if($i != 1){
+                ?>
+                    <input style="font-size:10.5px; width:100px;" readonly type="hidden" class="form-control" value="<?php echo $row->tanggal?>" name="tanggal[]">
+                    <input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $digunakanKemarin?>" name="digunakanKemarin[]">
+                    
+                    <input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $kemarinAsing?>" name="kemarinAsing[]">
+                    <input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $kemarinIndonesia?>" name="kemarinIndonesia[]">
+                
+                
+                <?php }
+                    $digunakanKemarin = 0;
+                    $kemarinAsing = 0;
+                    $kemarinIndonesia = 0;
+                    $digunakanKemarin += $row->checkIn;
+                    $kemarinAsing += $row->masukAsing;
+                    $kemarinIndonesia += $row->masukIndonesia;
+                }?>
                     <button class="btn btn-info" type="submit">
                         <i class="glyphicon glyphicon-plus"></i> Simpan semua survei
                     </button>
