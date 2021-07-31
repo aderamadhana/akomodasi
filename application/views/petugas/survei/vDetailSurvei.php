@@ -319,14 +319,14 @@ if($data->alasanPenolakan != null){
                 <tr>
                     <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
                     <td style="vertical-align: middle; text-align:center"><?php echo $tanggal?><input style="font-size:10.5px; width:100px;" readonly type="hidden" class="form-control" value="<?php echo $tanggal?>" name="tanggal[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="jumlahKamarTersedia[]" ></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" id="kamarTersedia<?php echo $i?>" name="jumlahKamarTersedia[]" ></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kamarDigunakanKemarin[]"></td>
                     <?php if($i == 1){?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="digunakanKemarin[]"></td>
                     <?php }else {?>
                     <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="digunakanKemarin[]"></td>
                     <?php }?>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="checkIn[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" id="checkIn<?php echo $i?>" name="checkIn[]"></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="checkOut[]"></td>
                     <?php if($i == 1){?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kemarinAsing[]"></td>
@@ -355,14 +355,14 @@ if($data->alasanPenolakan != null){
                 <tr>
                     <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
                     <td style="vertical-align: middle; text-align:center"><?php echo $row->tanggal?><input style="font-size:10.5px; width:100px;" readonly type="hidden" class="form-control" value="<?php echo $row->tanggal?>" name="tanggal[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->jumlahKamarTersedia?>" name="jumlahKamarTersedia[]" ></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->jumlahKamarTersedia?>" id="kamarTersedia<?php echo $i?>" name="jumlahKamarTersedia[]" ></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kamarDigunakanKemarin?>" name="kamarDigunakanKemarin[]"></td>
                     <?php if($i == 1){?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->digunakanKemarin?>" name="digunakanKemarin[]"></td>
                     <?php }else {?>
                     <td><input readonly type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $digunakanKemarin?>" name="digunakanKemarin[]"></td>
                     <?php }?>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkIn?>" name="checkIn[]"></td>
+                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkIn?>" id="checkIn<?php echo $i?>" name="checkIn[]"></td>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->checkOut?>" name="checkOut[]"></td>
                     <?php if($i == 1){?>
                     <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="<?php echo $row->kemarinAsing?>" name="kemarinAsing[]"></td>
@@ -387,7 +387,7 @@ if($data->alasanPenolakan != null){
             </tbody>
             <?php }?>
         </table>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" id="submit" class="btn btn-primary">Simpan</button>
         </form>
         <section id="selesai">
             <?php if($this->session->flashdata('selesai')){?>
@@ -425,3 +425,20 @@ if($data->alasanPenolakan != null){
     </div>
 </div>
 <?php }?>
+
+<!-- <script>
+for (let i = 1; i <= 31; i++) {
+    $('#checkIn'+i).keyup(function () {
+    var kamarTersedia = document.getElementById("kamarTersedia"+i);
+    var checkIn = document.getElementById("checkIn"+i);
+    if (kamarTersedia.value >= checkIn.value) {  
+        checkIn.style.borderColor = "#2EFE2E";
+        // $("#submit").attr("disabled", false);
+    }
+    else {
+        checkIn.style.borderColor = "red";
+        // $("#submit").attr("disabled", true);
+    }
+    });
+}
+</script> -->

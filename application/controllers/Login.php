@@ -36,7 +36,9 @@ class Login extends CI_controller
                redirect('dashboardpetugas');
             }else if($role == 3){
                 redirect('dashboardakomodasi');
-             }
+            }else if($role == 4){
+                redirect('dashboardsupervisor');
+            }
         }else{
             $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert"><b>Username</b> atau <b>Password</b> salah</div>');
             redirect('welcome');
