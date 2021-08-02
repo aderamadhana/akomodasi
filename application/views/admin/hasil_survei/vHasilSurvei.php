@@ -39,6 +39,9 @@
                                 <i class="fa fa-eye"></i>
                             </a>
                         
+                            <a class="btn btn-info" title="Validasi Survei" type="button" href="<?php echo site_url('HasilSurvei/editSurvei/'.$data->id_survei)?>">
+                                <i class="fa fa-edit"></i>
+                            </a>
                         </td>
                     </tr>
                     <?php }?>

@@ -1,5 +1,5 @@
 
-<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Petugas')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
+<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('PetugasSupervisor')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
 <?php foreach($petugas as $data){?>
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
@@ -43,6 +43,16 @@
                 </div>
             </div>
 
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label>Role</label>
+                    <select disabled name="role" class="form-control">
+                        <option value="">-- Pilih --</option>
+                        <option value="1" <?php if($data->role == 1) echo 'selected'?>>Admin</option>
+                        <option value="2" <?php if($data->role == 2) echo 'selected'?> >Petugas</option>
+                    </select>
+                </div>
+            </div>
             <div class="col-md-4">
                 <div class="position-relative form-group">
                     <label>Username</label>

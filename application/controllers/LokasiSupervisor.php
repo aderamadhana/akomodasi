@@ -63,11 +63,11 @@ class LokasiSupervisor extends CI_Controller
     
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Sukses Tambah Lokasi! </div>');
             
-            redirect('Lokasi');
+            redirect('LokasiSupervisor');
         }else{
             $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Username sudah terpakai! </div>');
             
-            redirect('Lokasi');
+            redirect('LokasiSupervisor');
         }
 
         
@@ -77,7 +77,7 @@ class LokasiSupervisor extends CI_Controller
         $data['lokasi'] = $this->LokasiModel->getLokasibyId($id_lokasi)->result();
 
         $this->load->view('templates/header_s');
-        $this->load->view('supervisor/lokasi/vdetaillokasi', $data);
+        $this->load->view('supervisor/lokasi/vDetailLokasi', $data);
         $this->load->view('templates/footer');
     }
 
@@ -99,7 +99,7 @@ class LokasiSupervisor extends CI_Controller
         $this->LokasiModel->updateLokasi($data, $where);
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terupdate! </div>');
-        redirect('Lokasi');
+        redirect('LokasiSupervisor');
     }
 
     public function delete($id){
@@ -107,7 +107,7 @@ class LokasiSupervisor extends CI_Controller
         $this->db->delete('user', array('id_lokasi' => $id));
         
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terhapus! </div>');
-        redirect('Lokasi');
+        redirect('LokasiSupervisor');
     }
 
     public function maps(){

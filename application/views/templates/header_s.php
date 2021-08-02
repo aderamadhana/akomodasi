@@ -75,7 +75,7 @@
                                 <li>
                                     <a href="<?php echo site_url('PetugasSupervisor')?>">
                                         <i class="metismenu-icon fa fa-group"></i>
-                                        Petugas
+                                        User
                                     </a>
                                     
                                 </li>

@@ -50,7 +50,7 @@ class LaporanSupervisor extends CI_Controller
 					<td>'.$data->tanggal_survei.'</td>
 					<td>'.date("F Y", strtotime($data->periode)).'</td>
 					<td>
-                    <a class="btn btn-success" title="Detail Laporan" type="button" href="'.site_url('Laporan/detailLaporan/'.$data->id_survei).'">
+                    <a class="btn btn-success" title="Detail Laporan" type="button" href="'.site_url('LaporanSupervisor/detailLaporan/'.$data->id_survei).'">
                         <i class="fa fa-eye"></i>
                     </a>
                     </td>
@@ -99,7 +99,7 @@ class LaporanSupervisor extends CI_Controller
     }
 
     private function throw($statusCode, $response){
-        $this->output->set_status_header_s($statusCode)
+        $this->output->set_status_header($statusCode)
         ->set_content_type('application/json')
         ->set_output(json_encode($response));
     }

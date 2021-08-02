@@ -1,10 +1,10 @@
 
-<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Petugas')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
+<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('PetugasSupervisor')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
 <?php foreach($petugas as $data){?>
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Edit Data Petugas</h5>
-        <form action="<?php echo site_url('Petugas/aksiEditPetugas')?>" method="post">
+        <form action="<?php echo site_url('PetugasSupervisor/aksiEditPetugas')?>" method="post">
         <div class="form-row">
             <div class="col-md-4">
                 <div class="position-relative form-group">
@@ -41,6 +41,16 @@
                         <option value="">-- Pilih --</option>
                         <option value="1" <?php if($data->jk == 1) echo 'selected'?>>Laki - laki</option>
                         <option value="2" <?php if($data->jk == 2) echo 'selected'?> >Perempuan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative form-group">
+                    <label>Role</label>
+                    <select name="role" class="form-control">
+                        <option value="">-- Pilih --</option>
+                        <option value="1" <?php if($data->role == 1) echo 'selected'?>>Admin</option>
+                        <option value="2" <?php if($data->role == 2) echo 'selected'?> >Petugas</option>
                     </select>
                 </div>
             </div>

@@ -1,13 +1,13 @@
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Laporan')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
+        <p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('LaporanSupervisor')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p>
     </div>
 <?php echo $this->session->flashdata('message')?>
 <?php foreach($survei as $data){?>
 
 <div class="mb-3">
-    <a target="_blank" class="btn btn-info" href="<?php echo site_url('HasilSurvei/print/'.$data->id_survei)?>"><i class="fa fa-print"> Cetak</i></a>
+    <a target="_blank" class="btn btn-info" href="<?php echo site_url('HasilSurveiSupervisor/print/'.$data->id_survei)?>"><i class="fa fa-print"> Cetak</i></a>
 </div>
 <div class="card mb-3 ">
     <div class="card-header-tab card-header">

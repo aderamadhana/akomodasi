@@ -1,10 +1,10 @@
 
-<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Lokasi')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
+<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('LokasiSupervisor')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
 <?php foreach($lokasi as $data){?>
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Edit Data Lokasi Akomodasi</h5>
-        <form action="<?php echo site_url('Lokasi/aksiEditLokasi')?>" method="post">
+        <form action="<?php echo site_url('LokasiSupervisor/aksiEditLokasi')?>" method="post">
         <div class="form-row">
             <div class="col-md-4">
                 <div class="position-relative form-group">

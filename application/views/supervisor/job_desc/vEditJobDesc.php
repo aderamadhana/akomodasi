@@ -3,7 +3,7 @@
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Edit Data Job Petugas</h5>
-        <form id="signupForm" action="<?php echo site_url('jobdesc/aksiEditJob');?>" method="post">
+        <form id="signupForm" action="<?php echo site_url('JobDescSupervisor/aksiEditJob');?>" method="post">
             <?php foreach($job as $data) {?>
             <div class="form-row">
                 <div class="col-md-4">

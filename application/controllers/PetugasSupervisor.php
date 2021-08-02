@@ -15,7 +15,7 @@ class PetugasSupervisor extends CI_Controller
 
     public function index()
     {
-        $data['petugas'] = $this->PetugasModel->getAll()->result();
+        $data['petugas'] = $this->PetugasModel->getAllUser()->result();
 
         $this->load->view('templates/header_s');
         $this->load->view('supervisor/petugas/vpetugas', $data);
@@ -31,7 +31,7 @@ class PetugasSupervisor extends CI_Controller
             'jk'            => $this->input->post('jk'),
             'username'      => $this->input->post('username'),
             'password'      => $this->input->post('password'),
-            'role'          => 2
+            'role'          => $this->input->post('role')
         );
 
         $getDataUsername = $this->db->select('*')->from('user')->where('username', $this->input->post('username'))->get()->num_rows();
@@ -41,11 +41,11 @@ class PetugasSupervisor extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Sukses Tambah Petugas! </div>');
             
-            redirect('Petugas');
+            redirect('PetugasSupervisor');
         }else{
             $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Username sudah terpakai! </div>');
             
-            redirect('Petugas');
+            redirect('PetugasSupervisor');
         }
     }
 
@@ -75,14 +75,14 @@ class PetugasSupervisor extends CI_Controller
         $this->PetugasModel->updatePetugas($data, $where);
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terupdate! </div>');
-        redirect('Petugas');
+        redirect('PetugasSupervisor');
     }
 
     public function delete($id){
         $this->db->delete('user', array('id_user' => $id));
         
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil terhapus! </div>');
-        redirect('Petugas');
+        redirect('PetugasSupervisor');
     }
 }
 

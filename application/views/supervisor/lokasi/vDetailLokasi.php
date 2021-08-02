@@ -1,11 +1,11 @@
 
-<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Lokasi')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
+<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('LokasiSupervisor')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
 <?php foreach($lokasi as $data){?>
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Detail Data Lokasi Akomodasi</h5>
-        <a href="<?php echo $data->linkMaps?>" class="btn btn-success"><i class="fa fa-map-marker"> Link Maps </i></a>
-        <a href="<?php echo site_url('Lokasi/detailMaps/'.$data->id_lokasi) ?>" class="btn btn-info"><i class="fa fa-map-marker"> Maps Marker</i></a>
+        <a href="<?php echo $data->linkMaps?>" target="_blank" class="btn btn-success"><i class="fa fa-map-marker"> Link Maps </i></a>
+        <a href="<?php echo site_url('LokasiSupervisor/detailMaps/'.$data->id_lokasi) ?>" class="btn btn-info"><i class="fa fa-map-marker"> Maps Marker</i></a>
         <div class="form-row">
             <div class="col-md-4">
                 <div class="position-relative form-group">

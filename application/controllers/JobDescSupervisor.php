@@ -35,7 +35,7 @@ class JobDescSupervisor extends CI_Controller
         if($this->input->post('tanggal_survei') < date('Y-m-d')){
             $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Tanggal Survei sudah terlewat! </div>');
         
-            redirect('JobDesc');
+            redirect('JobDescSupervisor');
         }else{
             $countPeriode   = $this->db->select('*')->from('job_desc')->where('id_lokasi', $this->input->post('id_lokasi'))->where('periode', $this->input->post('periode'))->get()->num_rows();
             
@@ -55,11 +55,11 @@ class JobDescSupervisor extends CI_Controller
 
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil tambah job! </div>');
         
-                redirect('JobDesc');
+                redirect('JobDescSupervisor');
             }else{
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Lokasi telah disurvei pada periode tersebut! </div>');
             
-                redirect('JobDesc');
+                redirect('JobDescSupervisor');
             }
             
         }
@@ -117,7 +117,7 @@ class JobDescSupervisor extends CI_Controller
 
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil update job! </div>');
         
-                redirect('JobDesc');
+                redirect('JobDescSupervisor');
 
             }else if($tanggal_survei == $tanggal_survei_lama){
                 $data = array(
@@ -132,7 +132,7 @@ class JobDescSupervisor extends CI_Controller
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil update job! </div>');
             
-                    redirect('JobDesc');
+                    redirect('JobDescSupervisor');
                 }else{
                     $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Lokasi dan tanggal survei sudah tercatat sebelumnya! </div>');
         
@@ -152,7 +152,7 @@ class JobDescSupervisor extends CI_Controller
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil update job! </div>');
             
-                    redirect('JobDesc');
+                    redirect('JobDescSupervisor');
                 }else{
                     $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"> Lokasi dan tanggal survei sudah tercatat sebelumnya! </div>');
         

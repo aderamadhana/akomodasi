@@ -1,4 +1,4 @@
-<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('Lokasi')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
+<p class="h5 mb-0 text-gray-800"><a style="text-decoration: none;" href="<?php echo site_url('LokasiSupervisor')?>" ><i class="fa fa-chevron-left"></i> Kembali</a>  </p><br>
 
     <div id="mapid"></div>
 

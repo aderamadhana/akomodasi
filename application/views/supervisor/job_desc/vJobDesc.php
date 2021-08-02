@@ -2,7 +2,7 @@
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Tambah Data Job Petugas</h5>
-        <form id="signupForm" action="<?php echo site_url('jobdesc/tambahJobDesc');?>" method="post">
+        <form id="signupForm" action="<?php echo site_url('JobDescSupervisor/tambahJobDesc');?>" method="post">
             <div class="form-row">
                 <div class="col-md-4">
                     <div class="position-relative form-group">
@@ -92,7 +92,7 @@
                         <td><?php echo $data->tanggal_survei?></td>
                         <td><?php echo $status_job?></td>
                         <td>
-                            <a class="btn btn-success" title="Edit Job" type="button" href="<?php echo site_url('JobDesc/editJob/'.$data->id_job_desc)?>">
+                            <a class="btn btn-success" title="Edit Job" type="button" href="<?php echo site_url('JobDescSupervisor/editJob/'.$data->id_job_desc)?>">
                                 <i class="fa fa-pencil"></i>
                             </a>
                             <button type="submit" title="Hapus Job" class="btn btn-danger remove"> <i class="fa fa-trash"></i> </button>
@@ -122,7 +122,7 @@
 
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: '<?php echo site_url('JobDesc/delete/') ?>'+id,
+                        url: '<?php echo site_url('JobDescSupervisor/delete/') ?>'+id,
                         type: 'DELETE',
                         error: function() {
                             alert('Something is wrong');

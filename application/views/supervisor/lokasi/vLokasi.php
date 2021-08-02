@@ -2,7 +2,7 @@
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Tambah Data Lokasi Akomodasi</h5>
-        <form id="signupForm" action="<?php echo site_url('lokasi/tambahLokasi');?>" method="post">
+        <form id="signupForm" action="<?php echo site_url('LokasiSupervisor/tambahLokasi');?>" method="post">
             <div class="form-row">
                 <div class="col-md-4">
                     <div class="position-relative form-group">
@@ -112,7 +112,7 @@
         </div>
         <div class="card-body">
             <?php if(count($lokasi) != 0){?>
-                <a class="btn btn-info" style="margin-bottom:7px;" href="<?php echo site_url('Lokasi/maps')?>" ><i class="fa fa-map-marker"></i> Maps</a> <br>
+                <a class="btn btn-info" style="margin-bottom:7px;" href="<?php echo site_url('LokasiSupervisor/maps')?>" ><i class="fa fa-map-marker"></i> Maps</a> <br>
             <?php }?>
             <table style="width: 100%;" id="example"
                     class="table table-hover table-striped table-bordered">
@@ -131,11 +131,11 @@
                         <td><?php echo $data->namaKomersial?></td>
                         <td><?php echo $data->alamat?>, <?php echo $data->kelurahan?>, <?php echo $data->kecamatan?>, <?php echo $data->kabupatenKota?>, <?php echo $data->provinsi?></td>
                         <td>
-                            <a class="btn btn-info" title="Detail Lokasi" type="button" href="<?php echo site_url('Lokasi/detailLokasi/'.$data->id_lokasi)?>">
+                            <a class="btn btn-info" title="Detail Lokasi" type="button" href="<?php echo site_url('LokasiSupervisor/detailLokasi/'.$data->id_lokasi)?>">
                                 <i class="fa fa-eye"></i>
                             </a>
 
-                            <a class="btn btn-success" title="Edit Lokasi" type="button" href="<?php echo site_url('Lokasi/editLokasi/'.$data->id_lokasi)?>">
+                            <a class="btn btn-success" title="Edit Lokasi" type="button" href="<?php echo site_url('LokasiSupervisor/editLokasi/'.$data->id_lokasi)?>">
                                 <i class="fa fa-pencil"></i>
                             </a>
 
@@ -168,7 +168,7 @@
 
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: '<?php echo site_url('Lokasi/delete/') ?>'+id,
+                        url: '<?php echo site_url('LokasiSupervisor/delete/') ?>'+id,
                         type: 'DELETE',
                         error: function() {
                             alert('Something is wrong');

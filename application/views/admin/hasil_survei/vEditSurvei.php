@@ -104,7 +104,7 @@ if($data->alasanPenolakan != null){
         
     </div>
     
-    <form action="<?php echo site_url('Survei/tambahTarif')?>" method="post"> 
+    <form action="<?php echo site_url('HasilSurvei/tambahTarif')?>" method="post"> 
     <div class="card-body">
         <label><strong>Suite</strong></label>
         <div class="form-row">
@@ -296,59 +296,9 @@ if($data->alasanPenolakan != null){
             </thead>
             <?php 
                 $getDetailSurvei = $this->db->select('*')->from('detailtarifsurvei')->where('id_survei', $data->id_survei)->get()->result();
-
-                if($getDetailSurvei == null){
             ?>
             <tbody>
-                <?php
-                $getPeriode = strtotime($data->periode);
-                $periodePlusMonth = date("Y-m", strtotime("+1 month", $getPeriode));
-                
-                $array = array();
-                $period = new DatePeriod(
-                    new DateTime($data->periode),
-                    new DateInterval('P1D'),
-                    new DateTime($periodePlusMonth)
-                );
-                $i = 0; 
-                foreach ($period as $key => $value) {
-                    $tanggal = $value->format('Y-m-d');
-                ?>
-                <form action="" method="post"> 
-                <tr>
-                    <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
-                    <td style="vertical-align: middle; text-align:center"><?php echo $tanggal?><input style="font-size:10.5px; width:100px;" readonly type="hidden" class="form-control" value="<?php echo $tanggal?>" name="tanggal[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" id="jumlahKamarTersedia<?php echo $i?>" name="jumlahKamarTersedia[]" ></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kamarDigunakanKemarin[]"></td>
-                    <?php if($i == 0){?>
-                    <td><input required type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="digunakanKemarin[]"></td>
-                    <?php }else {?>
-                    <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="digunakanKemarin[]"></td>
-                    <?php }?>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" id="checkIn<?php echo $i?>" name="checkIn[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="checkOut[]"></td>
-                    <?php if($i == 0){?>
-                    <td><input required type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kemarinAsing[]"></td>
-                    <td><input required type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="kemarinIndonesia[]"></td>
-                    <?php }else {?>
-                    <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="kemarinAsing[]"></td>
-                    <td><input readonly type="hidden" min=0 style="font-size:10.5px; width:60px;"  class="form-control" value="0" name="kemarinIndonesia[]"></td>
-                    <?php }?>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="masukAsing[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="masukIndonesia[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="keluarAsing[]"></td>
-                    <td><input type="number" min=0 style="font-size:10.5px; width:60px;"  class="form-control" name="keluarIndonesia[]"></td>
-                </tr>
-                <?php
-                    
-                    $i++;}
-                ?>
-            </tbody>
-
-            <?php }else{?>
-
-            <tbody>
-                <form action="" method="post"> 
+                <form action="" method="post">  
                 <?php $i = 0; foreach($getDetailSurvei as $row){
                 ?>
                 <tr>
@@ -386,14 +336,13 @@ if($data->alasanPenolakan != null){
                     $i++;
                 }?>
             </tbody>
-            <?php }?>
         </table>
         <button type="button" class="btn btn-primary" id="btn_save">Simpan</button>
         </form>
         <section id="selesai">
             <?php if($this->session->flashdata('selesai')){?>
                 <?php echo $this->session->flashdata('selesai')?>
-                <form action="<?php echo site_url('Survei/simpanSemua')?>" method="post">
+                <form action="<?php echo site_url('HasilSurvei/simpanSemua')?>" method="post">
                     <input type="hidden" class="form-control" name="id_survei" value="<?php echo $data->id_survei?>">
                     <input type="hidden" class="form-control" name="id_job_desc" value="<?php echo $data->id_job_desc?>">
                     <div style="display: hidden">
@@ -481,7 +430,7 @@ if($data->alasanPenolakan != null){
             console.log('gak kenek');
         }else{
             $.ajax({
-                url: "<?php echo base_url()?>/Survei/tambahSurvei",
+                url: "<?php echo base_url()?>/HasilSurvei/tambahSurvei",
                 method: 'post',
                 dataType: 'JSON',
                 data: {

@@ -13,7 +13,7 @@
         <label>Filter berdasarkan bulan</label>
         <input type="month" id="date" class="form-control">
         <br>
-        <form id="buttonPrint" style="display:none" action="<?php echo site_url('Laporan/printLaporanFilter')?>" method="post">
+        <form id="buttonPrint" style="display:none" action="<?php echo site_url('LaporanSupervisor/printLaporanFilter')?>" method="post">
             <input type="hidden" id="datePrint" name="date">
             <button class="btn btn-info" type="submit" formtarget="_blank"><i class="fa fa-print"></i> Generate Report</button>
         </form>
@@ -40,7 +40,7 @@
                     <td><?php echo $data->tanggal_survei?></td>
                     <td><?php echo date("F Y", strtotime($data->periode));?></td>
                     <td>
-                        <a class="btn btn-success" title="Detail Laporan" type="button" href="<?php echo site_url('Laporan/detailLaporan/'.$data->id_survei)?>">
+                        <a class="btn btn-success" title="Detail Laporan" type="button" href="<?php echo site_url('LaporanSupervisor/detailLaporan/'.$data->id_survei)?>">
                             <i class="fa fa-eye"></i>
                         </a>
                     
@@ -58,7 +58,7 @@
         var date = this.value;
         $("tbody").empty();
         $.ajax({
-            url: "<?php echo base_url()?>/Laporan/getDataFilter",
+            url: "<?php echo base_url()?>/LaporanSupervisor/getDataFilter",
             method: 'post',
             data: {date: date},
             success : function(data){

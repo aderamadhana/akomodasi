@@ -2,7 +2,7 @@
 <div class="main-card card mb-3">
     <div class="card-body border border-warning">
         <h5 class="card-title">Tambah Data Petugas</h5>
-        <form id="signupForm" action="<?php echo site_url('petugas/tambahPetugas');?>" method="post">
+        <form id="signupForm" action="<?php echo site_url('PetugasSupervisor/tambahPetugas');?>" method="post">
             <div class="form-row">
                 <div class="col-md-4">
                     <div class="position-relative form-group">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="position-relative form-group">
                         <label>Jenis Kelamin</label>
                         <select name="jk" class="form-control">
@@ -42,14 +42,25 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <div class="position-relative form-group">
+                        <label>Role</label>
+                        <select name="role" class="form-control">
+                            <option value="">-- Pilih --</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Petugas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
                     <div class="position-relative form-group">
                         <label>Username</label>
                         <input name="username" type="text" class="form-control" required>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="position-relative form-group">
                         <label>Password</label>
                         <input name="password" type="password" class="form-control" required>
@@ -85,15 +96,15 @@
                         <td><?php echo $data->nip?></td>
                         <td><?php echo $data->nama_petugas?></td>
                         <td>
-                            <a class="btn btn-info" title="Detail Petugas" type="button" href="<?php echo site_url('Petugas/detailPetugas/'.$data->id_user)?>">
+                            <a class="btn btn-info" title="Detail User" type="button" href="<?php echo site_url('PetugasSupervisor/detailPetugas/'.$data->id_user)?>">
                                 <i class="fa fa-eye"></i>
                             </a>
 
-                            <a class="btn btn-success" title="Edit Petugas" type="button" href="<?php echo site_url('Petugas/editPetugas/'.$data->id_user)?>">
+                            <a class="btn btn-success" title="Edit User" type="button" href="<?php echo site_url('PetugasSupervisor/editPetugas/'.$data->id_user)?>">
                                 <i class="fa fa-pencil"></i>
                             </a>
 
-                            <button type="submit" title="Hapus Petugas" class="btn btn-danger remove"> <i class="fa fa-trash"></i> </button>
+                            <button type="submit" title="Hapus User" class="btn btn-danger remove"> <i class="fa fa-trash"></i> </button>
                         </td>
                     </tr>
                     
@@ -121,7 +132,7 @@
 
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: '<?php echo site_url('Petugas/delete/') ?>'+id,
+                        url: '<?php echo site_url('PetugasSupervisor/delete/') ?>'+id,
                         type: 'DELETE',
                         error: function() {
                             alert('Something is wrong');

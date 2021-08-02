@@ -101,9 +101,14 @@ class Survei extends CI_Controller
                 $this->SurveiModel->tambahDetailTarif($data);
             }
             
-            $this->session->set_flashdata('selesai', '<br><div class="alert alert-success" role="alert"> Silahkan klik <strong>"simpan semua survei"</strong> untuk mengakhiri sesi input! </div>');
-            
-            redirect('Survei/detailSurvei/'.$id_survei.'/#selesai');
+        $this->session->set_flashdata('selesai', '<br><div class="alert alert-success" role="alert"> Silahkan klik <strong>"simpan semua survei"</strong> untuk mengakhiri sesi input! </div>');
+        $result['status'] = 'success';
+        $result['redirect_url'] = site_url('Survei/detailSurvei/'.$id_survei.'/#selesai');
+        $this->output->set_content_type('application/json');
+        $this->output->set_output(json_encode($result));
+        $string = $this->output->get_output();
+        echo $string;
+        exit();
     }
 
     public function simpanSemua(){
@@ -155,6 +160,12 @@ class Survei extends CI_Controller
             
         redirect('Survei');
 
+    }
+
+    private function throw($statusCode, $response){
+        $this->output->set_status_header($statusCode)
+        ->set_content_type('application/json')
+        ->set_output(json_encode($response));
     }
 }
 
